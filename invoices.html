@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Spine Accounting">
+    <title>Spine Accounting</title>
+
+    <!-- Required External CSS -->
+    <link href="assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
+
+    <link href="assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
+    <link href="assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="assets/lib/select2/css/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- DashForge CSS -->
+    <link rel="stylesheet" href="assets/css/dashforge.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Page CSS --> 
+    
+    <link rel="stylesheet" href="assets/css/progress.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+  </head>
+  <body>
+    <aside class="aside aside-fixed">
+      <div class="aside-header">
+        <a href="dashboard.html" class="aside-logo">
+          <div class="pd-50">
+            <img src="./assets/img/logo.svg" class="img-fluid logo" alt="" srcset="">
+          </div>
+        </a>
+        <a href="" class="aside-menu-link">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="pd-y-30 pd-x-40">
+          <p class="tx-14 tx-white mb-0">Account balance</p>
+          <p class="tx-14 tx-lighter mb-1">0124914917</p>
+          <p class="tx-18 tx-bold tx-white">1,298,000</p>
+
+          <button class="btn btn-light tx-dark">Import transaction</button>
+        </div>
+        <div class="nav-menu">
+          <ul class="nav nav-aside">
+            <li class="nav-item"><a href="dashboard.html" class="nav-link"> <span class="marine-active-menu">Dashboard</span></a></li>
+            <li class="nav-item"><a href="./transactions.html" class="nav-link"><span>Transactions</span></a></li>
+            <li class="nav-item"><a href="./customers.html" class="nav-link"><span>Customers</span></a></li>
+            <li class="nav-item active"><a href="./invoices.html" class="nav-link"><span>Invoices</span></a></li>
+            <li class="nav-item"><a href="./report.html" class="nav-link"><span>Report</span></a></li>
+            <li class="nav-item"><a href="./setting.html" class="nav-link"><span>Settings</span></a></li>
+          </ul>
+        </div>
+        <div class="fixed-bottom pd-x-40">
+          <button class="nav-link btn tx-white"><span>Log out</span></button>
+        </div>
+       
+      </div>
+    </aside>
+
+    <div class="content pd-0">
+  
+      <div class="content-header shadow-dash bd-b-0">
+        <div class="content-search">
+          <i data-feather="search"></i>
+          <input type="search" class="form-control" placeholder="Search...">
+        </div>
+        <nav class="nav">
+          
+          <div class="dropdown dropdown-notification ml-md-4 ml-2 mg-t-5">
+            <a href="" class="dropdown-link new-indicator" data-toggle="dropdown">
+              <i data-feather="bell"></i>
+              <span>2</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-header">Notifications</div>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../https://via.placeholder.com/350" class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
+                    <span>Mar 15 12:32pm</span>
+                  </div>
+                </div>
+              </a>
+              
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Adrian Monino</strong> added new comment on your photo</p>
+                    <span>Mar 12 10:40pm</span>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-footer"><a href="">View all Notifications</a></div>
+            </div><!-- dropdown-menu -->
+          </div>
+
+          <div class="dropdown dropdown-profile ml-md-4 ml-2">
+            <a href="" class="dropdown-link" data-toggle="dropdown" data-display="static">
+              <div class="avatar avatar-sm"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+            </a><!-- dropdown-link -->
+            <div class="dropdown-menu dropdown-menu-right tx-13">
+              <div class="avatar avatar-lg mg-b-20"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+              <h6 class="tx-semibold mg-b-5">Katherine Pechon</h6>
+              <p class="mg-b-25 tx-12 tx-color-03">Administrator</p>
+  
+              <a href="" class="dropdown-item"><i data-feather="edit-3"></i> Edit Profile</a>
+              <a href="page-profile-view.html" class="dropdown-item"><i data-feather="user"></i> View Profile</a>
+              <div class="dropdown-divider"></div>
+              <a href="page-help-center.html" class="dropdown-item"><i data-feather="help-circle"></i> Help Center</a>
+              <a href="" class="dropdown-item"><i data-feather="life-buoy"></i> Forum</a>
+              <a href="" class="dropdown-item"><i data-feather="settings"></i>Account Settings</a>
+              <a href="" class="dropdown-item"><i data-feather="settings"></i>Privacy Settings</a>
+              <a href="page-signin.html" class="dropdown-item"><i data-feather="log-out"></i>Sign Out</a>
+            </div><!-- dropdown-menu -->
+          </div>
+        </nav>
+        
+      </div><!-- content-header -->
+
+      <div class="content-body">
+      <div class="container">
+       <div class="d-flex justify-content-between">
+         <p class="tx-20 tx-semibold mb-0 mg-t-10">Invoices</p>
+         <div>
+          <p class="mb-0">Available balance</p>
+          <p class="tx-24 mb-0">N1,298,000.60</p>
+         </div>
+       </div>
+
+       <div class="row mg-y-30 justify-content-between">
+         <div class="col-md-5 col-12 mg-t-10">
+           <div class="row">
+            <div class="col-6">
+              <select class="form-control width-control control-height d-inline" id="exampleFormControlSelect1">
+                <option>Most Recent</option>
+                <option>Oldest</option>
+                <option>Oldest</option>
+                <option>Oldest</option>
+              </select>
+             </div>
+             <div class="col-6">
+              <div id="reportrange" class="form-control date-picker tx-13">
+                <i class="fa fa-calendar"></i>&nbsp;
+                <span></span> <i class="fa fa-caret-down"></i>
+              </div>
+             </div>
+           </div>
+         </div>
+         <div class="col-md-5 col-12 mg-t-10">
+           <div class="row">
+            <div class="col-4">
+              <button class="btn btn-outline-light tx-dark  w-100 mb-0" data-toggle="modal" data-target="#exportModal">
+                <span>
+                    Export as
+                </span>
+              </button>
+            </div>
+            <div class="col-4">
+              <button class="btn btn-outline-light tx-dark w-100  mb-0" data-toggle="modal" data-target="#filterModal">
+                Filter
+              <span class="fa fa-list-ul ml-3"></span>  
+              </button>
+            </div>
+            <div class="col-4">
+              <button type="button" class="btn btn-primary w-100" data-toggle="modal" data-target="#createModal">
+                Create New
+              </button>
+            </div>
+           </div>
+         </div>
+    </div>
+    <div class="d-flex justify-content-between mg-t-40">
+      <p class="tx-20 title-text my-0">Saved Invoices</p>
+      <a href="./notification.html" class="tx-semibold">View all invoices</a>
+    </div>
+    <div class="card card-body">
+      <table class="table display table-hover" id="employee">
+        <thead class="thead-bg">
+          <tr class="tx-bold">
+            <th scope="col"></th>
+            <th scope="col">Recipient</th>
+            <th scope="col" class="">Invoice No</th>
+            <th scope="col" class="">Date</th>
+            <th scope="col" class="">Amount</th>
+            <th scope="col" class="">Attachments</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class=''>
+            <th scope="row">
+              
+            </th>
+            <td>Kolawaole Abdul </td>
+            <td class="">Inv-0001</td>
+            <td class="">12, Aug 2019</td>
+            <td>N25,000</td>
+            <td><img src="./assets/img/attachment.svg" class="wd-15 ht-15 mg-r-5">Rout.pf</td>
+            <td>
+                <div class="dropdown">
+                <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </span>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="./setting-access.html"> Preview and Send</a>
+                  <a class="dropdown-item" href="#">Share</a>
+                  <a class="dropdown-item" href="#">Send to multiple</a>
+                  <a class="dropdown-item tx-danger" href="#">Delete</a>
+                </div>
+              </div>
+              </td>
+          </tr>
+          <tr class=''>
+            <th scope="row">
+              
+            </th>
+            <td>Kolawaole Abdul </td>
+            <td class="">Inv-0002</td>
+            <td class="">12, Aug 2019</td>
+            <td>N25,000</td>
+            <td><img src="./assets/img/attachment.svg" class="wd-15 ht-15 mg-r-5">Rout.pf</td>
+            <td>
+                <div class="dropdown">
+                <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </span>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="./setting-access.html"> Preview and Send</a>
+                  <a class="dropdown-item" href="#">Share</a>
+                  <a class="dropdown-item" href="#">Send to multiple</a>
+                  <a class="dropdown-item tx-danger" href="#">Delete</a>
+                </div>
+              </div>
+              </td>
+          </tr>
+          <tr class=''>
+            <th scope="row">
+              
+            </th>
+            <td>Kolawaole Abdul </td>
+            <td class="">Inv-0003</td>
+            <td class="">12, Aug 2019</td>
+            <td>N25,000</td>
+            <td><img src="./assets/img/attachment.svg" class="wd-15 ht-15 mg-r-5">Spine.pdf</td>
+            <td>
+                <div class="dropdown">
+                <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </span>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="./setting-access.html"> Preview and Send</a>
+                  <a class="dropdown-item" href="#">Share</a>
+                  <a class="dropdown-item" href="#">Send to multiple</a>
+                  <a class="dropdown-item tx-danger" href="#">Delete</a>
+                </div>
+              </div>
+              </td>
+          </tr>
+          <tr class=''>
+            <th scope="row">
+              
+            </th>
+            <td>Kolawaole Abdul </td>
+            <td class="">Inv-0004</td>
+            <td class="">12, Aug 2019</td>
+            <td>N25,000</td>
+            <td><img src="./assets/img/attachment.svg" class="wd-15 ht-15 mg-r-5">Mentatis.pdf</td>
+            <td>
+                <div class="dropdown">
+                <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </span>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="./setting-access.html"> Preview and Send</a>
+                  <a class="dropdown-item" href="#">Share</a>
+                  <a class="dropdown-item" href="#">Send to multiple</a>
+                  <a class="dropdown-item tx-danger" href="#">Delete</a>
+                </div>
+              </div>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+
+    <!-- Modal -->
+      <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="width: 400px;">
+          <div class="modal-content">
+            <div class="modal-header pd-md-x-30">
+              <h5 class="modal-title" id="createModalLabel">Create New Invoice</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body pd-md-30">
+              <form action="">
+
+                <label for="" class="d-block">Choose upload Type</label>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                      <label class="custom-control-label text-secondary" for="customRadio1">Individual</label>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label text-secondary" for="customRadio2">Bulk Upload</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group mg-t-20">
+                  <label for="" class="d-block">What kind of Invoice will you like to create?</label>
+                  <select class="custom-select">
+                    <option selected>Invoice Type</option>
+                    <option value="1">Type 1</option>
+                    <option value="2">Tyoe 2</option>
+                    <option value="3">Type 3</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer bd-t-0 pd-md-x-30 pd-md-b-30">
+              <a href="./create-invoice.html" class="btn btn-primary w-100">Continue</a>
+            </div>
+          </div>
+        </div>
+      </div>
+       
+    </div><!-- container -->
+      
+  
+  
+    </div>
+    </div>
+
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/lib/prismjs/prism.js"></script>
+    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="../assets/lib/typeahead.js/typeahead.jquery.min.js"></script>
+    <script src="../assets/lib/typeahead.js/typeahead.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="../assets/lib/chart.js/Chart1.min.js"></script>
+    <script src="../assets/lib/chart.js/utils.js"></script>
+
+    <script src="../assets/js/dashforge.js"></script>
+    <script src="../assets/js/dashforge.aside.js"></script>
+    <script src="../assets/js/dashforge.sampledata.js"></script>
+    <!-- for multiselect dropdown  -->
+    <!-- <script type="text/javascript" src="../assets/js/bootstrap-multiselect.js"></script> -->
+
+    <script>
+      $(document).ready( function () {
+       $('.display').DataTable({
+         "paging": true,
+         "info": true,
+         "responsive": true,
+         "aoColumnDefs": [{
+             "bSortable": false,
+             "aTargets": ["no-sort"]
+         }],
+         
+         "bInfo": true
+       });
+       
+       $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+         $('.display:visible').each( function(e) {
+           $(this).DataTable().columns.adjust().responsive.recalc();
+         });
+       });
+
+         //date picker
+     let start = moment().subtract(29, 'days');
+      let end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM ') + ' - ' + end.format('MMMM D YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+
+     } );
+      </script>
+     
+<script>
+  function fullAdmin(){
+    let x = document.getElementById("userAccess");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } 
+  }
+  function myFunction() {
+    let x = document.getElementById("userAccess");
+    x.style.display = "block"
+    
+  }
+
+  function removeTag() {
+     let y = document.getElementById("employerTag");
+     y.style.display = "none"
+    }
+
+    function goBack() {
+  window.history.back();
+};
+  </script>
+  <script>
+    /* Set the width of the sidebar to 250px (show it) */
+  function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+  }
+
+  /* Set the width of the sidebar to 0 (hide it) */
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+</script>
+  </body>
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Spine Accounting">
+    <title>Spine Accounting</title>
+
+    <!-- Required External CSS -->
+    <link href="assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
+
+    <link href="assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
+    <link href="assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="assets/lib/select2/css/select2.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- DashForge CSS -->
+    <link rel="stylesheet" href="assets/css/dashforge.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Page CSS --> 
+    
+    <link rel="stylesheet" href="assets/css/progress.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+  </head>
+  <body>
+
+    <aside class="aside aside-fixed">
+      <div class="aside-header">
+        <a href="dashboard.html" class="aside-logo">
+          <div class="pd-50">
+            <img src="./assets/img/logo.svg" class="img-fluid logo" alt="" srcset="">
+          </div>
+        </a>
+        <a href="" class="aside-menu-link">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="pd-y-30 pd-x-40">
+          <p class="tx-14 tx-white mb-0">Account balance</p>
+          <p class="tx-14 tx-lighter mb-1">0124914917</p>
+          <p class="tx-18 tx-bold tx-white">1,298,000</p>
+
+          <button class="btn btn-light tx-dark">Import transaction</button>
+        </div>
+        <div class="nav-menu">
+          <ul class="nav nav-aside">
+            <li class="nav-item active"><a href="dashboard.html" class="nav-link"> <span class="marine-active-menu">Dashboard</span></a></li>
+            <li class="nav-item"><a href="./transactions.html" class="nav-link"><span>Transactions</span></a></li>
+            <li class="nav-item"><a href="./customers.html" class="nav-link"><span>Customers</span></a></li>
+            <li class="nav-item"><a href="./invoices.html" class="nav-link"><span>Invoices</span></a></li>
+            <li class="nav-item"><a href="./report.html" class="nav-link"><span>Report</span></a></li>
+            <li class="nav-item"><a href="./setting.html" class="nav-link"><span>Settings</span></a></li>
+          </ul>
+        </div>
+        <div class="fixed-bottom pd-x-40">
+          <button class="nav-link btn tx-white"><span>Log out</span></button>
+        </div>
+       
+      </div>
+    </aside>
+
+    <div class="content ht-100v pd-0">
+      <div class="content-header shadow-dash bd-b-0">
+        <div class="content-search">
+          <i data-feather="search"></i>
+          <input type="search" class="form-control" placeholder="Search...">
+        </div>
+        <nav class="nav">
+          
+          <div class="dropdown dropdown-notification ml-md-4 ml-2 mg-t-5">
+            <a href="" class="dropdown-link new-indicator" data-toggle="dropdown">
+              <i data-feather="bell"></i>
+              <span>2</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-header">Notifications</div>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../https://via.placeholder.com/350" class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
+                    <span>Mar 15 12:32pm</span>
+                  </div>
+                </div>
+              </a>
+              
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Adrian Monino</strong> added new comment on your photo</p>
+                    <span>Mar 12 10:40pm</span>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-footer"><a href="">View all Notifications</a></div>
+            </div><!-- dropdown-menu -->
+          </div>
+
+          <div class="dropdown dropdown-profile ml-md-4 ml-2">
+            <a href="" class="dropdown-link" data-toggle="dropdown" data-display="static">
+              <div class="avatar avatar-sm"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+            </a><!-- dropdown-link -->
+            <div class="dropdown-menu dropdown-menu-right tx-13">
+              <div class="avatar avatar-lg mg-b-15"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+              <h6 class="tx-semibold mg-b-5">Katherine Pechon</h6>
+              <p class="mg-b-25 tx-12 tx-color-03">Administrator</p>
+  
+              <a href="" class="dropdown-item"><i data-feather="edit-3"></i> Edit Profile</a>
+              <a href="page-profile-view.html" class="dropdown-item"><i data-feather="user"></i> View Profile</a>
+              <div class="dropdown-divider"></div>
+              <a href="page-help-center.html" class="dropdown-item"><i data-feather="help-circle"></i> Help Center</a>
+              <a href="" class="dropdown-item"><i data-feather="life-buoy"></i> Forum</a>
+              <a href="" class="dropdown-item"><i data-feather="settings"></i>Account Settings</a>
+              <a href="" class="dropdown-item"><i data-feather="settings"></i>Privacy Settings</a>
+              <a href="page-signin.html" class="dropdown-item"><i data-feather="log-out"></i>Sign Out</a>
+            </div><!-- dropdown-menu -->
+          </div>
+        </nav>
+        
+      </div><!-- content-header -->
+
+      <div class="content-body">
+        <div class="container pd-x-0">
+         <div class="col-md-12 col-lg-10 col-12 mx-auto">
+           <div class="card bg-primary">
+             <div class="card-body pd-t-100 pd-b-50 pd-x-30 tx-white">
+              <div class="row">
+                <div class="col-md-7">
+                  <p class="tx-30 tx-bold">Welcome to Spine, Goodwill</p>
+                  <p class="tx-16">Here you can see every transaction, trend, track expenses, and be in control of your business</p>
+                </div>
+              </div>
+             </div>
+           </div>
+           <div class="mg-t-50">
+             <p class="tx-16 tx-bold">Quick actions</p>
+
+             <div class="row">
+               <div class="col-md-6 col-12 col-lg-3 mg-b-20">
+                 <a href="./invoices.html">
+                 <div class="card bg-invoice">
+                   <div class="card-body pd-15">
+                     <img src="./assets/img/invooice.svg" class="img-fluid" alt="" srcset="">
+                     <p class="tx-16 pd-t-40 tx-dark mb-0">Create Invoice</p>
+                   </div>
+                 </div>
+                </a>
+               </div>
+               <div class="col-md-6 col-12 col-lg-3 mg-b-20">
+                 <a href="./transactions.html">
+                  <div class="card bg-transaction">
+                    <div class="card-body pd-15">
+                      <img src="./assets/img/invooice.svg" class="img-fluid" alt="" srcset="">
+                      <p class="tx-16 pd-t-40 tx-dark mb-0">Import Transactions</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-md-6 col-12 col-lg-3 mg-b-20">
+                <a href="./customers.html">
+                  <div class="card bg-customer">
+                    <div class="card-body pd-15">
+                      <img src="./assets/img/invooice.svg" class="img-fluid" alt="" srcset="">
+                      <p class="tx-16 pd-t-40 tx-dark mb-0">Add Customer</p>
+                    </div>
+                  </div>
+               </a>
+              </div>
+              <div class="col-md-6 col-12 col-lg-3 mg-b-20">
+                <a href="./settings.html">
+                  <div class="card bg-profile">
+                    <div class="card-body pd-15">
+                        <img src="./assets/img/invooice.svg" class="img-fluid" alt="" srcset="">
+                        <p class="tx-16 pd-t-40 tx-dark mb-0">Complete Profile</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+             </div>
+           </div>
+         </div>
+          
+      </div>
+    </div>
+
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/lib/feather-icons/feather.min.js"></script>
+    <script src="assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+    <script src="assets/lib/prismjs/prism.js"></script>
+    <script src="assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+
+    <script src="assets/lib/chart.js/Chart1.min.js"></script>
+    <script src="assets/lib/chart.js/utils.js"></script>
+
+    <script src="assets/js/dashforge.js"></script>
+    <script src="assets/js/dashforge.aside.js"></script>
+    <script src="assets/js/dashforge.sampledata.js"></script>
+
+    <!-- append theme customizer -->
+    <script src="assets/lib/js-cookie/js.cookie.js"></script>
+    <script src="assets/js/dashforge.settings.js"></script>
+
+    <script>
+      $(function(){
+        'use strict'
+        var ctxLabel = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        var ctxData1 = [19, 10, 14, 10, 9, 8, 20, 8, 5, 16, 10, 25];
+        var ctxData2 = [15, 9, 16, 7, 14, 6, 16, 9, 5, 10, 15, 0];
+        var ctxColor1 = '#4847E0';
+        var ctxColor2 = '#AF0606';
+
+        var stackLabel = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun'];
+        var stackData1 = [50, 25, 10, 15, 50,30,10];
+        var stackData2 = [0, 5, 0, 30, 10,20,5];
+        var stackData3 = [5, 5, 15, 10, 10,20,5];
+        var stackColor1 = '#4847E0';
+        var stackColor2 = '#F0F2F8';
+        var stackColor3 = '#FF9196'
+        
+        var ctx4 = document.getElementById('chartLine1');
+        new Chart(ctx4, {
+          type: 'line',
+          data: {
+            labels: ctxLabel,
+            datasets: [{
+              // lineTension: 0,
+              data: ctxData1,
+              borderColor: ctxColor1,
+              borderWidth: 2,
+              fill: false
+            },{
+              // lineTension: 0,
+              data: ctxData2,
+              borderColor: ctxColor2,
+              borderWidth: 2,
+              fill: false
+            }
+          ]
+          },
+          options: {
+            maintainAspectRatio: false,
+            legend: {
+              display: false,
+                labels: {
+                  display: false
+                }
+            },
+            scales: {
+              yAxes: [{
+                gridLines: {
+                  color: '#e5e9f2'
+                },
+                ticks: {
+                  beginAtZero:true,
+                  fontSize: 10,
+                  max: 25
+                }
+              }],
+              xAxes: [{
+                gridLines: {
+                  display: false
+                },
+                ticks: {
+                  beginAtZero:true,
+                  fontSize: 11
+                }
+              }]
+            }
+          }
+        });
+
+          /** PIE CHART 2 **/
+          var datapie2 = {
+            labels: ['2019', '2020', '2021', ],
+            datasets: [{
+              data: [5470,3340,1332],
+              backgroundColor: ['#AF0606', '#995BF5','#00DEA5'],
+              
+            }]
+          };
+  
+          var optionpie2 = {
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+              display: false,
+            },
+            animation: {
+              animateScale: true,
+              animateRotate: true
+            }
+          };
+  
+          // For a pie chart
+          var ctx2 = document.getElementById('chartDonut2');
+          var myDonutChart = new Chart(ctx2, {
+            type: 'doughnut',
+            data: datapie2,
+            cutoutPercentage: 10,
+            options: optionpie2
+          });
+
+          
+          /*=============================================
+           Stacked chart 
+           =======================*/
+
+          const barOptions_stacked = {
+          maintainAspectRatio: false,
+          showLines: true,
+          responsive: true,
+        
+          hover :{
+              animationDuration:0
+          },
+          scales: {
+              xAxes: [{
+                  ticks: {
+                      beginAtZero:true,
+                      fontSize:11
+                  },
+                  scaleLabel:{
+                      display:false
+                  },
+                  barPercentage: 0.4,
+                  borderRadius:20,
+                  gridLines: {
+                  }, 
+                  stacked: true
+              }],
+              yAxes: [{
+                  gridLines: {
+                      display:false,
+                      color: "#fff",
+                      zeroLineColor: "#fff",
+                      zeroLineWidth: 0
+                  },
+                  ticks: {
+                    fontSize: 14,
+                  },
+                  stacked: true
+              }],
+          },
+          legend:{
+              display:false
+          },
+      };
+
+      // Stacked chart
+ 
+    var ctx3 = document.getElementById('chartBar3').getContext('2d');
+    new Chart(ctx3, {
+    type: 'bar',
+    
+    data: {
+      labels: stackLabel,
+              datasets: [{
+                data: stackData3,
+                backgroundColor: stackColor3
+              },
+              {
+                
+                data: stackData1,
+                backgroundColor: stackColor1
+              }, {
+                data: stackData2,
+                backgroundColor: stackColor2
+              },
+              
+            ]
+        },
+
+    options: barOptions_stacked,
+          });
+      }) 
+     
+    </script>
+  </body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Spine Accounting">
+    <title>Spine Accounting</title>
+
+    <!-- Required External CSS -->
+    <link href="assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
+
+    <link href="assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
+    <link href="assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="assets/lib/select2/css/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- DashForge CSS -->
+    <link rel="stylesheet" href="assets/css/dashforge.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Page CSS --> 
+    
+    <link rel="stylesheet" href="assets/css/progress.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+  </head>
+  <body>
+    <aside class="aside aside-fixed">
+      <div class="aside-header">
+        <a href="dashboard.html" class="aside-logo">
+          <div class="pd-50">
+            <img src="./assets/img/logo.svg" class="img-fluid logo" alt="" srcset="">
+          </div>
+        </a>
+        <a href="" class="aside-menu-link">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="pd-y-30 pd-x-40">
+          <p class="tx-14 tx-white mb-0">Account balance</p>
+          <p class="tx-14 tx-lighter mb-1">0124914917</p>
+          <p class="tx-18 tx-bold tx-white">1,298,000</p>
+
+          <button class="btn btn-light tx-dark">Import transaction</button>
+        </div>
+        <div class="nav-menu">
+          <ul class="nav nav-aside">
+            <li class="nav-item"><a href="dashboard.html" class="nav-link"> <span class="marine-active-menu">Dashboard</span></a></li>
+            <li class="nav-item"><a href="./transactions.html" class="nav-link"><span>Transactions</span></a></li>
+            <li class="nav-item"><a href="./customers.html" class="nav-link"><span>Customers</span></a></li>
+            <li class="nav-item active"><a href="./invoices.html" class="nav-link"><span>Invoices</span></a></li>
+            <li class="nav-item"><a href="./report.html" class="nav-link"><span>Report</span></a></li>
+            <li class="nav-item"><a href="./setting.html" class="nav-link"><span>Settings</span></a></li>
+          </ul>
+        </div>
+        <div class="fixed-bottom pd-x-40">
+          <button class="nav-link btn tx-white"><span>Log out</span></button>
+        </div>
+       
+      </div>
+    </aside>
+
+    <div class="content pd-0">
+  
+      <div class="content-header shadow-dash bd-b-0">
+        <div class="content-search">
+          <i data-feather="search"></i>
+          <input type="search" class="form-control" placeholder="Search...">
+        </div>
+        <nav class="nav">
+          
+          <div class="dropdown dropdown-notification ml-md-4 ml-2 mg-t-5">
+            <a href="" class="dropdown-link new-indicator" data-toggle="dropdown">
+              <i data-feather="bell"></i>
+              <span>2</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-header">Notifications</div>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../https://via.placeholder.com/350" class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
+                    <span>Mar 15 12:32pm</span>
+                  </div>
+                </div>
+              </a>
+              
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Adrian Monino</strong> added new comment on your photo</p>
+                    <span>Mar 12 10:40pm</span>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-footer"><a href="">View all Notifications</a></div>
+            </div><!-- dropdown-menu -->
+          </div>
+
+          <div class="dropdown dropdown-profile ml-md-4 ml-2">
+            <a href="" class="dropdown-link" data-toggle="dropdown" data-display="static">
+              <div class="avatar avatar-sm"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+            </a><!-- dropdown-link -->
+            <div class="dropdown-menu dropdown-menu-right tx-13">
+              <div class="avatar avatar-lg mg-b-20"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+              <h6 class="tx-semibold mg-b-5">Katherine Pechon</h6>
+              <p class="mg-b-25 tx-12 tx-color-03">Administrator</p>
+  
+              <a href="" class="dropdown-item"><i data-feather="edit-3"></i> Edit Profile</a>
+              <a href="page-profile-view.html" class="dropdown-item"><i data-feather="user"></i> View Profile</a>
+              <div class="dropdown-divider"></div>
+              <a href="page-help-center.html" class="dropdown-item"><i data-feather="help-circle"></i> Help Center</a>
+              <a href="" class="dropdown-item"><i data-feather="life-buoy"></i> Forum</a>
+              <a href="" class="dropdown-item"><i data-feather="settings"></i>Account Settings</a>
+              <a href="" class="dropdown-item"><i data-feather="settings"></i>Privacy Settings</a>
+              <a href="page-signin.html" class="dropdown-item"><i data-feather="log-out"></i>Sign Out</a>
+            </div><!-- dropdown-menu -->
+          </div>
+        </nav>
+        
+      </div><!-- content-header -->
+
+      <div class="content-body">
+      <div class="container">
+        <div class="row  justify-content-between mb-2">
+          <div class="col-lg-4 col-md-4 col-12 mt-2"> 
+              <h3>New Invoice</h3>
+          </div>
+          <!-- <div class="col-lg-4 col-md-6 col-12 mt-2">
+              <div class="d-flex float-md-right">
+              <button class="btn btn-outline-primary"> <i class="fa fa-upload mr-1" aria-hidden="true"></i> Upload Bulk invoice</button>
+              <button class="btn btn-primary ml-3"><i class="fa fa-plus mr-1" aria-hidden="true"></i> Create New</button>
+              </div>
+          </div> -->
+      </div>
+
+
+      <div class="card shadow bg-white">
+          
+          <div class="card-body">
+            <form>
+              <div class="col-lg-8 col-12 py-4">
+                <div class="form-group form-row">
+                  <div class="col-md-4 col-12">
+                     <label for="formGroupExampleInput" class="">Customer Name</label>
+                  </div>
+                  <div class="col-md-8 col-12">
+                   <input type="text" class="form-control" placeholder="Enter Customer Name">
+                  </div>
+                </div>
+                <div class="form-group form-row">
+                  <div class="col-md-4 col-12">
+                     <label for="formGroupExampleInput" class="">Invoice Number</label>
+                  </div>
+                  <div class="col-md-8 col-12">
+                   <input type="text" class="form-control" placeholder="Enter Invoice Number">
+                  </div>
+                </div>
+                <div class="form-group form-row">
+                  <div class="col-md-4 col-12">
+                     <label for="formGroupExampleInput" class="">Invoice Date</label>
+                  </div>
+                  <div class="col-md-8 col-12">
+                   <input type="date" class="form-control" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group form-row">
+                  <div class="col-md-4 col-12">
+                     <label for="formGroupExampleInput" class="">Due Date</label>
+                  </div>
+                  <div class="col-md-8 col-12">
+                   <input type="date" class="form-control" placeholder="">
+                  </div>
+                </div>
+                <div class="form-group form-row">
+                  <div class="col-md-4 col-12">
+                     <label for="formGroupExampleInput" class="">Customer Email</label>
+                  </div>
+                  <div class="col-md-8 col-12">
+                   <input type="email" class="form-control" placeholder="Enter email">
+                  </div>
+                </div>
+                <div class="form-group form-row">
+                  <div class="col-md-4 col-12">
+                     <label for="formGroupExampleInput" class="">TIN</label>
+                  </div>
+                  <div class="col-md-8 col-12">
+                   <input type="email" class="form-control" placeholder="Enter TIN ">
+                  </div>
+                </div>
+                <div class="form-group form-row">
+                  <div class="col-md-4 col-12">
+                     <label for="formGroupExampleInput" class="">Subject</label>
+                  </div>
+                  <div class="col-md-8 col-12">
+                   <input type="email" class="form-control" placeholder="Let your customer know what your invoice is for">
+                  </div>
+                </div>
+              </div>
+              <div class="table-responsive">
+                <table id="" class="table mb-0">
+                  <thead class="thead-bg">
+                      <tr class="text-uppercase">
+                          <th></th>
+                          <th>S/N</th>
+                          <th>Description</th>
+                          <th>Tax</th>
+                          <th>Amount</th>
+                          <th></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <th scope="row">
+                            <i class="fa fa-th tx-gray" ></i>
+                          </th>
+                          <td >1</td>
+                          <td  class="tx-gray">Put in note about product and services</td>
+                          <td >
+                            <div class="form-group mb-0">
+                              <select class="form-control border-0" name="" id="">
+                                <option selected>Select Tax</option>
+                                <option>2</option>
+                                <option>4</option>
+                              </select>
+                            </div>
+                          </td>
+                          <td>0.00 </td>
+                          <td >
+                            <i class="fa fa-trash-o tx-gray"></i>
+                          </td>
+                      </tr>
+          
+                      <tr>
+                        <th scope="row">
+                          <i class="fa fa-th tx-gray" ></i>
+                        </th>
+                        <td >2</td>
+                        <td class="tx-gray">Put in note about product and services</td>
+                        <td >
+                          <div class="form-group mb-0">
+                            <select class="form-control border-0" name="" id="">
+                              <option selected>Select Tax</option>
+                              <option>2</option>
+                              <option>4</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td>0.00 </td>
+                        <td >
+                          <i class="fa fa-trash-o tx-gray"></i>
+                        </td>
+                    </tr>
+                  </tbody>
+          
+                </table>
+              </div>
+              <div class="border-top">
+                <div class="row justify-content-between">
+                  <div class="col-lg-4 col-12 mt-2">
+                    <div class="d-flex">
+                      <button class="btn btn-add w-100"><i class="fa fa-plus mr-2"></i> Add lines</button>
+                      <button class="btn btn-add ml-3  w-100"><i class="fa fa-plus mr-2"></i> Add Subtotal</button>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-12 mt-md-0 mt-2">
+                    <div class="card thead-bg">
+                      <div class="card-body  col-md-8 col-12 mx-auto">
+                      <div class="d-flex justify-content-between">
+                        <p class="text-uppercase font-weight-bold">
+                          Subtotal
+                        </p>
+                        <p>
+                          0.00
+                        </p>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <p class="text-uppercase mb-0 font-weight-bold">
+                          Total
+                        </p>
+                        <p class="mb-0">
+                          0.00
+                        </p>
+                      </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col-lg-8 col-12 py-4">
+                <div class="form-group form-row">
+                  <div class="col-md-4 col-12">
+                    <label for="formGroupExampleInput" class="">Customer Note</label>
+                  </div>
+                  <div class="col-md-8 col-12">
+                    <textarea name="" id="" class="form-control" rows="4" placeholder="Let your customer know what your invoice is for"></textarea>
+                  </div>
+                </div>
+                <div class="form-group form-row">
+                  <div class="col-md-4 col-12">
+                    <label for="formGroupExampleInput" class="">Attach Files</label>
+                  </div>
+                  <div class="col-md-8 col-12">
+                    <div class="form-drop">
+                      <div class="drop-zone p-4">
+                        <div class="cell"> 
+                          <div class="drop-zone__prompt">
+                            <p class="p-14 my-0 text-gray-700"><i class="fa fa-upload mr-3 tx-primary"></i> Browse file or drag and drop here</p>
+                          </div> 
+                          <input type="file" name="myFile" class="drop-zone__input">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group form-row">
+                  <div class="col-md-4 col-12">
+                    <label for="formGroupExampleInput" class="">Make Invoice Recurring</label>
+                  </div>
+                  <div class="col-md-8 col-12">
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadioInline1" name="customRadioInline" class="custom-control-input" checked>
+                      <label class="custom-control-label" for="customRadioInline1">Yes</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadioInline2" name="customRadioInline" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadioInline2">No</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadioInline3" name="customRadioInline" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadioInline3">Set Timeline</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group form-row">
+                  <div class="col-md-4 col-12">
+                    <label for="formGroupExampleInput" class="">Recurring Frequency</label>
+                  </div>
+                  <div class="col-md-8 col-12">
+                      <select class="form-control" name="" id="">
+                        <option selected>Monthy</option>
+                        <option>Daily</option>
+                        <option>Weekly</option>
+                      </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row col-lg-8 col-12 mx-auto">
+                <div class="col-md-3 col-7">
+                  <button class="btn btn-primary w-100">Save and Send</button>
+                </div>
+                <div class="col-md-3 col-5">
+                  <button class="btn btn-outline-primary w-100">Go back</button>
+                </div>
+                <div class="col-md-3 col-7 pr-0">
+                  <button class="btn btn-outline-gray w-100 border-top-0 border-bottom-0">Save as Draft</button>
+                </div>
+                <div class="col-md-3 col-5 pl-0">
+                  <button class="btn w-100"><i class="fa fa-share-alt tx-primary mr-1"></i> Share</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+      </div>
+      
+    </div><!-- container -->
+      
+  
+  
+    </div>
+    </div>
+
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/lib/prismjs/prism.js"></script>
+    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="../assets/lib/typeahead.js/typeahead.jquery.min.js"></script>
+    <script src="../assets/lib/typeahead.js/typeahead.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="../assets/lib/chart.js/Chart1.min.js"></script>
+    <script src="../assets/lib/chart.js/utils.js"></script>
+
+    <script src="../assets/js/dashforge.js"></script>
+    <script src="../assets/js/dashforge.aside.js"></script>
+    <script src="../assets/js/dashforge.sampledata.js"></script>
+    <!-- for multiselect dropdown  -->
+    <!-- <script type="text/javascript" src="../assets/js/bootstrap-multiselect.js"></script> -->
+
+    <script>
+      $(document).ready( function () {
+       $('.display').DataTable({
+         "paging": true,
+         "info": true,
+         "responsive": true,
+         "aoColumnDefs": [{
+             "bSortable": false,
+             "aTargets": ["no-sort"]
+         }],
+         
+         "bInfo": true
+       });
+       
+       $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+         $('.display:visible').each( function(e) {
+           $(this).DataTable().columns.adjust().responsive.recalc();
+         });
+       });
+
+         //date picker
+     let start = moment().subtract(29, 'days');
+      let end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM ') + ' - ' + end.format('MMMM D YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+
+     } );
+      </script>
+     
+<script>
+  function fullAdmin(){
+    let x = document.getElementById("userAccess");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } 
+  }
+  function myFunction() {
+    let x = document.getElementById("userAccess");
+    x.style.display = "block"
+    
+  }
+
+  function removeTag() {
+     let y = document.getElementById("employerTag");
+     y.style.display = "none"
+    }
+
+    function goBack() {
+  window.history.back();
+};
+  </script>
+  <script>
+    /* Set the width of the sidebar to 250px (show it) */
+  function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+  }
+
+  /* Set the width of the sidebar to 0 (hide it) */
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+</script>
+  </body>
+</html>
