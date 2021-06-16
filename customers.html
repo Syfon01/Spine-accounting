@@ -58,8 +58,8 @@
           <ul class="nav nav-aside">
             <li class="nav-item"><a href="dashboard.html" class="nav-link"> <span class="marine-active-menu">Dashboard</span></a></li>
             <li class="nav-item"><a href="./transactions.html" class="nav-link"><span>Transactions</span></a></li>
-            <li class="nav-item"><a href="./customers.html" class="nav-link"><span>Customers</span></a></li>
-            <li class="nav-item active"><a href="./invoices.html" class="nav-link"><span>Invoices</span></a></li>
+            <li class="nav-item active"><a href="./customers.html" class="nav-link"><span>Customers</span></a></li>
+            <li class="nav-item"><a href="./invoices.html" class="nav-link"><span>Invoices</span></a></li>
             <li class="nav-item"><a href="./report.html" class="nav-link"><span>Report</span></a></li>
             <li class="nav-item"><a href="./setting.html" class="nav-link"><span>Settings</span></a></li>
           </ul>
@@ -136,11 +136,8 @@
       <div class="content-body">
       <div class="container">
        <div class="d-flex justify-content-between">
-         <p class="tx-20 tx-semibold mb-0 mg-t-10">Invoices</p>
-         <div>
-          <p class="mb-0">Available balance</p>
-          <p class="tx-24 mb-0">N1,298,000.60</p>
-         </div>
+         <p class="tx-20 tx-semibold mb-0 mg-t-10">Customers</p>
+         
        </div>
 
        <div class="row mg-y-30 justify-content-between">
@@ -148,10 +145,10 @@
            <div class="row">
             <div class="col-6">
               <select class="form-control width-control control-height d-inline" id="exampleFormControlSelect1">
-                <option>Most Recent</option>
-                <option>Oldest</option>
-                <option>Oldest</option>
-                <option>Oldest</option>
+                <option>All Customers</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
               </select>
              </div>
              <div class="col-6">
@@ -186,22 +183,19 @@
          </div>
     </div>
     <div class="d-flex justify-content-between mg-t-40">
-      <p class="tx-20 title-text my-0 tx-semibold">Saved Invoices</p>
-      <a href="./invoices.html" class="tx-semibold">View all invoices</a>
+      <p class="tx-20 title-text my-0 tx-semibold">All Customers</p>
+      <!-- <a href="./notification.html" class="tx-semibold">View all invoices</a> -->
     </div>
     <div class="card card-body">
       <table class="table display table-hover" id="employee">
-        <thead class="thead tx-bold">
-          <tr class="tx-bold">
+        <thead class="thead-bg">
+          <tr class="">
             <th scope="col"></th>
-            <th scope="col">Recipient</th>
-            <th scope="col" class="">Invoice No</th>
-            <th scope="col" class="">Date</th>
-            <th scope="col" class="">Amount</th>
-            <th scope="col" class="">Balance Due</th>
-            <th scope="col" class="">From</th>
-            <th scope="col" class="">Status</th>
-            <th scope="col" class="">Attachments</th>
+            <th scope="col">Name</th>
+            <th scope="col" class="">Email Address</th>
+            <th scope="col" class="">Phone</th>
+            <th scope="col" class="">Total Received</th>
+            <th scope="col" class="">Amount Owed</th>
             <th></th>
           </tr>
         </thead>
@@ -212,13 +206,35 @@
               
             </th>
             <td>Kolawaole Abdul </td>
-            <td class="">Inv-0001</td>
-            <td class="">12, Aug 2019</td>
+            <td class="">Kolawole@gmail.com</td>
+            <td class="">08089257362</td>
             <td>N25,000</td>
+            <td>-</td>
+            <td>
+                <div class="dropdown">
+                <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </span>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="./setting-access.html"> Preview and Send</a>
+                  <a class="dropdown-item" href="#">Share</a>
+                  <a class="dropdown-item" href="#">Send to multiple</a>
+                  <a class="dropdown-item tx-danger" href="#">Delete</a>
+                </div>
+              </div>
+              </td>
+          </tr>
+          <tr class=''>
+            <th scope="row">
+              
+            </th>
+            <td>Sherif Abdul </td>
+            <td class="">Sherif@gmail.com</td>
+            <td class="">08089257362</td>
             <td>N25,000</td>
-            <td>Card</td>
-            <td class="tx-danger">Overdue by 10 days</td>
-            <td><img src="./assets/img/attachment.svg" class="wd-15 ht-15 mg-r-5">Rout.pf</td>
+            <td>N10,000</td>
             <td>
                 <div class="dropdown">
                 <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -240,13 +256,10 @@
               
             </th>
             <td>Kolawaole Abdul </td>
-            <td class="">Inv-0002</td>
-            <td class="">12, Aug 2019</td>
+            <td class="">Kolawole@gmail.com</td>
+            <td class="">08089257362</td>
             <td>N25,000</td>
             <td>N25,000</td>
-            <td>Card</td>
-            <td class="">Completed</td>
-            <td><img src="./assets/img/attachment.svg" class="wd-15 ht-15 mg-r-5">Rout.pf</td>
             <td>
                 <div class="dropdown">
                 <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -268,41 +281,10 @@
               
             </th>
             <td>Kolawaole Abdul </td>
-            <td class="">Inv-0003</td>
-            <td class="">12, Aug 2019</td>
+            <td class="">Kolawole@gmail.com</td>
+            <td class="">08089257362</td>
             <td>N25,000</td>
-            <td>N25,000</td>
-            <td>Card</td>
-            <td class="tx-danger">Overdue by 10 days</td>
-            <td><img src="./assets/img/attachment.svg" class="wd-15 ht-15 mg-r-5">Spine.pdf</td>
-            <td>
-                <div class="dropdown">
-                <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </span>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="./setting-access.html"> Preview and Send</a>
-                  <a class="dropdown-item" href="#">Share</a>
-                  <a class="dropdown-item" href="#">Send to multiple</a>
-                  <a class="dropdown-item tx-danger" href="#">Delete</a>
-                </div>
-              </div>
-              </td>
-          </tr>
-          <tr class=''>
-            <th scope="row">
-              
-            </th>
-            <td>Kolawaole Abdul </td>
-            <td class="">Inv-0004</td>
-            <td class="">12, Aug 2019</td>
-            <td>N25,000</td>
-            <td>N25,000</td>
-            <td>Card</td>
-            <td class="">Completed</td>
-            <td><img src="./assets/img/attachment.svg" class="wd-15 ht-15 mg-r-5">Mentatis.pdf</td>
+            <td>-</td>
             <td>
                 <div class="dropdown">
                 <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -329,7 +311,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document" style="width: 400px;">
           <div class="modal-content">
             <div class="modal-header pd-md-x-30">
-              <h5 class="modal-title" id="createModalLabel">Create New Invoice</h5>
+              <h5 class="modal-title" id="createModalLabel">Create New Customer</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -352,7 +334,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="form-group mg-t-20">
+                <!-- <div class="form-group mg-t-20">
                   <label for="" class="d-block">What kind of Invoice will you like to create?</label>
                   <select class="custom-select">
                     <option selected>Invoice Type</option>
@@ -360,11 +342,11 @@
                     <option value="2">Tyoe 2</option>
                     <option value="3">Type 3</option>
                   </select>
-                </div>
+                </div> -->
               </form>
             </div>
             <div class="modal-footer bd-t-0 pd-md-x-30 pd-md-b-30">
-              <a href="./create-invoice.html" class="btn btn-primary w-100">Continue</a>
+              <a href="./create-customer.html" class="btn btn-primary w-100">Continue</a>
             </div>
           </div>
         </div>
