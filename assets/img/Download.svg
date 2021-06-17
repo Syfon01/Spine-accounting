@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="ic-cloud-upload-24px" transform="translate(0)">
+    <path id="Path" d="M0,0H20V20H0Z" fill="none"/>
+    <path id="Shape" d="M15.834,13.333H5a5,5,0,0,1-.542-9.967A6.244,6.244,0,0,1,16.125,5.034a4.163,4.163,0,0,1,2.75,1.3A4.115,4.115,0,0,1,20,9.167,4.171,4.171,0,0,1,15.834,13.333ZM10,3.334h0L5.833,7.5h2.5v3.334h3.334V7.5h2.5L10,3.334Z" transform="translate(0 3.333)" fill="#2e5bff"/>
+  </g>
+</svg>

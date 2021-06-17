@@ -115,8 +115,12 @@
   min-height: 60vh;
 }
 .logo{
-  /* width: 100px; */
+  max-width: 250px!important;
+  margin-left: -50px;
   /* height:100px */
+}
+.aside-header{
+  height: 80px!important;
 }
 .shadow-dash{
   box-shadow: 0px 5px 20px #0000000A;
@@ -324,6 +328,12 @@
   .welcome-div{
     transform: translateY(0%);
   }
+  .aside-header{
+    height: 54px!important;
+  }
+  .neg-divv{
+    margin-top: 0px!important;
+  }
 }
 
 /* extra large screen  */
@@ -389,4 +399,10 @@ box-shadow: 4px 2px 6px #8a8787;
 }
 table.dataTable thead th, table.dataTable thead td{
   font-weight: 700;
+}
+.login-img{
+  max-width: 80%!important;
+}
+.neg-divv{
+  margin-top: -200px;
 }
