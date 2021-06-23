@@ -57,9 +57,9 @@
         <div class="nav-menu">
           <ul class="nav nav-aside">
             <li class="nav-item"><a href="dashboard.html" class="nav-link"> <span class="marine-active-menu">Dashboard</span></a></li>
-            <li class="nav-item"><a href="./transactions.html" class="nav-link"><span>Transactions</span></a></li>
+            <li class="nav-item active"><a href="./transactions.html" class="nav-link"><span>Transactions</span></a></li>
             <li class="nav-item"><a href="./customers.html" class="nav-link"><span>Customers</span></a></li>
-            <li class="nav-item active"><a href="./invoices.html" class="nav-link"><span>Invoices</span></a></li>
+            <li class="nav-item"><a href="./invoices.html" class="nav-link"><span>Invoices</span></a></li>
             <li class="nav-item"><a href="./report.html" class="nav-link"><span>Report</span></a></li>
             <li class="nav-item"><a href="./setting.html" class="nav-link"><span>Settings</span></a></li>
           </ul>
@@ -136,7 +136,10 @@
       <div class="content-body">
       <div class="container">
        <div class="d-flex justify-content-between">
-         <p class="tx-20 tx-semibold mb-0 mg-t-10">Invoices</p>
+        <div>
+          <p class="mb-0">Account details</p>
+          <p class="tx-24 mb-0">032812849</p>
+         </div>
          <div>
           <p class="mb-0">Available balance</p>
           <p class="tx-24 mb-0">N1,298,000.60</p>
@@ -148,7 +151,7 @@
            <div class="row">
             <div class="col-6">
               <select class="form-control width-control control-height d-inline" id="exampleFormControlSelect1">
-                <option>Most Recent</option>
+                <option>All Transactions</option>
                 <option>Oldest</option>
                 <option>Oldest</option>
                 <option>Oldest</option>
@@ -162,22 +165,19 @@
              </div>
            </div>
          </div>
-         <div class="col-md-5 col-12 mg-t-10">
-           <div class="row">
-            <div class="col-4">
-              <button class="btn btn-outline-light tx-dark  w-100 mb-0" data-toggle="modal" data-target="#exportModal">
-                <span>
-                    Export as
-                </span>
-              </button>
-            </div>
-            <div class="col-4">
+         <div class="col-md-7 col-12 mg-t-10">
+           <div class="d-flex float-md-right">
+             <div class="categorize mg-r-10">
+               <button class="btn pd-0"> <i class="fa fa-trash-alt tx-danger mg-r-5 tx-20"></i></button>
+               <button class="btn btn-outline-primary pd-x-30" data-toggle="modal" data-target="#categorizeModal">Categorize</button>
+             </div>
+            <div class="mg-r-10">
               <button class="btn btn-outline-light tx-dark w-100  mb-0" data-toggle="modal" data-target="#filterModal">
                 Filter
               <span class="fa fa-list-ul ml-3"></span>  
               </button>
             </div>
-            <div class="col-4">
+            <div class="">
               <button type="button" class="btn btn-primary w-100" data-toggle="modal" data-target="#createModal">
                 Start a transaction
               </button>
@@ -185,138 +185,94 @@
            </div>
          </div>
     </div>
-    <div class="d-flex justify-content-between mg-t-40">
-      <p class="tx-20 title-text my-0 tx-semibold">Saved Invoices</p>
-      <a href="./invoices.html" class="tx-semibold">View all invoices</a>
-    </div>
+    
     <div class="card card-body">
       <table class="table display table-hover" id="employee">
         <thead class="thead tx-bold">
           <tr class="tx-bold">
+            <th scope="col">
+              <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="selectAll">
+              <label class="custom-control-label" for="selectAll"></label>
+            </div>
+            </th>
             <th scope="col">Recipient</th>
-            <th scope="col" class="">Invoice No</th>
+            <th scope="col" class="">Category</th>
             <th scope="col" class="">Date</th>
             <th scope="col" class="">Amount</th>
-            <th scope="col" class="">Balance Due</th>
             <th scope="col" class="">From</th>
-            <th scope="col" class="">Status</th>
             <th scope="col" class="">Attachments</th>
-            <th></th>
           </tr>
         </thead>
 
         <tbody>
-          <tr class=''>
-            <td>
-              <img src="./assets/img/Invoices.svg" class="wd-30 ht-30 img-fluid mg-r-10"/>
-              Kolawaole Abdul 
-            </td>
-            <td class="">Inv-0001</td>
-            <td class="">12, Aug 2019</td>
-            <td>N25,000</td>
-            <td>N25,000</td>
-            <td>Card</td>
-            <td class="tx-danger">Overdue by 10 days</td>
-            <td><img src="./assets/img/attachment.svg" class="wd-15 ht-15 mg-r-5">Rout.pf</td>
-            <td>
-                <div class="dropdown">
-                <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </span>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="./setting-access.html"> Preview and Send</a>
-                  <a class="dropdown-item" href="#">Share</a>
-                  <a class="dropdown-item" href="#">Send to multiple</a>
-                  <a class="dropdown-item tx-danger" href="#">Delete</a>
-                </div>
+          <tr class='clickable-row'>
+            <th scope="row">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="check2">
+                <label class="custom-control-label" for="check2"></label>
               </div>
-              </td>
-          </tr>
-          <tr class=''>
-            <td>
+            </th>
+            <td class='clickable-row' data-toggle="modal" data-target="#detailModal">
               <img src="./assets/img/Invoices.svg" class="wd-30 ht-30 img-fluid mg-r-10"/>
               Kolawaole Abdul 
             </td>
-            <td class="">Inv-0002</td>
-            <td class="">12, Aug 2019</td>
-            <td>N25,000</td>
-            <td>N25,000</td>
-            <td>Card</td>
-            <td class="">Completed</td>
+            <td class='clickable-row' data-toggle="modal" data-target="#detailModal">Inv-0001</td>
+            <td class='clickable-row' data-toggle="modal" data-target="#detailModal">12, Aug 2019</td>
+            <td class="tx-success">N25,000</td>
+            <td class='clickable-row' data-toggle="modal" data-target="#detailModal">Card</td>
             <td><img src="./assets/img/attachment.svg" class="wd-15 ht-15 mg-r-5">Rout.pf</td>
-            <td>
-                <div class="dropdown">
-                <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </span>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="./setting-access.html"> Preview and Send</a>
-                  <a class="dropdown-item" href="#">Share</a>
-                  <a class="dropdown-item" href="#">Send to multiple</a>
-                  <a class="dropdown-item tx-danger" href="#">Delete</a>
-                </div>
-              </div>
-              </td>
           </tr>
-          <tr class=''>
-            <td>
+          <tr class='clickable-row'>
+            <th scope="row">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="check3">
+                <label class="custom-control-label" for="check3"></label>
+              </div>
+            </th>
+            <td class='clickable-row' data-toggle="modal" data-target="#detailModal">
               <img src="./assets/img/Invoices.svg" class="wd-30 ht-30 img-fluid mg-r-10"/>
               Kolawaole Abdul 
             </td>
-            <td class="">Inv-0003</td>
-            <td class="">12, Aug 2019</td>
-            <td>N25,000</td>
-            <td>N25,000</td>
-            <td>Card</td>
-            <td class="tx-danger">Overdue by 10 days</td>
+            <td class='clickable-row' data-toggle="modal" data-target="#detailModal">Inv-0002</td>
+            <td class='clickable-row' data-toggle="modal" data-target="#detailModal">12, Aug 2019</td>
+            <td class="tx-danger">N25,000</td>
+            <td class='clickable-row' data-toggle="modal" data-target="#detailModal">Card</td>
+            <td><img src="./assets/img/attachment.svg" class="wd-15 ht-15 mg-r-5">Rout.pf</td>
+          </tr>
+          <tr class='clickable-row'>
+            <th scope="row">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="check4">
+                <label class="custom-control-label" for="check4"></label>
+              </div>
+            </th>
+            <td class='clickable-row' data-toggle="modal" data-target="#detailModal">
+              <img src="./assets/img/Invoices.svg" class="wd-30 ht-30 img-fluid mg-r-10"/>
+              Kolawaole Abdul 
+            </td>
+            <td class='clickable-row' data-toggle="modal" data-target="#detailModal">Inv-0003</td>
+            <td class='clickable-row' data-toggle="modal" data-target="#detailModal">12, Aug 2019</td>
+            <td class="tx-success">N25,000</td>
+            <td class='clickable-row' data-toggle="modal" data-target="#detailModal">Card</td>
             <td><img src="./assets/img/attachment.svg" class="wd-15 ht-15 mg-r-5">Spine.pdf</td>
-            <td>
-                <div class="dropdown">
-                <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </span>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="./setting-access.html"> Preview and Send</a>
-                  <a class="dropdown-item" href="#">Share</a>
-                  <a class="dropdown-item" href="#">Send to multiple</a>
-                  <a class="dropdown-item tx-danger" href="#">Delete</a>
-                </div>
-              </div>
-              </td>
           </tr>
-          <tr class=''>
-            <td>
+          <tr class='clickable-row'>
+            <th scope="row">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="check5">
+                <label class="custom-control-label" for="check5"></label>
+              </div>
+            </th>
+            <td class='clickable-row' data-toggle="modal" data-target="#detailModal">
               <img src="./assets/img/Invoices.svg" class="wd-30 ht-30 img-fluid mg-r-10"/>
               Kolawaole Abdul 
             </td>
-            <td class="">Inv-0004</td>
-            <td class="">12, Aug 2019</td>
-            <td>N25,000</td>
-            <td>N25,000</td>
-            <td>Card</td>
-            <td class="">Completed</td>
+            <td class='clickable-row' data-toggle="modal" data-target="#detailModal">Inv-0004</td>
+            <td class='clickable-row' data-toggle="modal" data-target="#detailModal">12, Aug 2019</td>
+            <td class="tx-danger">N25,000</td>
+            <td class='clickable-row' data-toggle="modal" data-target="#detailModal">Card</td>
             <td><img src="./assets/img/attachment.svg" class="wd-15 ht-15 mg-r-5">Mentatis.pdf</td>
-            <td>
-                <div class="dropdown">
-                <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </span>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="./setting-access.html"> Preview and Send</a>
-                  <a class="dropdown-item" href="#">Share</a>
-                  <a class="dropdown-item" href="#">Send to multiple</a>
-                  <a class="dropdown-item tx-danger" href="#">Delete</a>
-                </div>
-              </div>
-              </td>
           </tr>
         </tbody>
       </table>
@@ -368,7 +324,163 @@
           </div>
         </div>
       </div>
-       
+      
+        <!--detail Modal -->
+        <div class="modal right fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content ">
+              <div class="modal-header pd-y-10 bd-b-0 modal-pink">
+                <p class=" tx-24 tx-bold tx-center modal-title" id="detailModalLabel"></p>
+                 
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              
+              <div class="modal-body pd-x-0 modal-pink">
+                <div class="bd-b pd-y-20 pd-x-20">
+                  <p class=" tx-24 tx-bold tx-center modal-title" id="detailModalLabel">-N25,000</p>
+                    <div class="row">
+                      <div class="col-md-6 mg-t-20">
+                      <p class="mb-0 tx-12 mg-t-10 mg-r-10">8:05am, Aug 12, 2019</p>
+                      </div> 
+                      <div class="col-md-6 pd-md-l-0 mg-t-20"> 
+                        <button class="btn bg-invoice rounded-20 pd-y-5 pd-x-5 w-100">Operating expenses <i class="fa fa-pen"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bd-b pd-20">
+                    <div class="row">
+                      <div class="col-md-6 mg-t-20 mg-md-t-10">
+                        <p class="tx-12 mg-b-5">Recipient</p>
+                        <p class="tx-18 mb-0">Meathub</p>
+                        <p class="tx-12 mb-0">012489425 <br/> Zenith bank</p>
+                      </div>
+                      <div class="col-md-6 mg-t-20 mg-md-t-10">
+                        <p class="tx-12 mg-b-5">Category</p>
+                        <p class="tx-18 mb-0">Operating expenses</p>
+                      </div>
+
+                      <div class="col-md-6 mg-t-20">
+                        <p class="tx-12 mg-b-5">Reference number</p>
+                        <p class="tx-18 mb-0">921N-1391V</p>
+                      </div>
+                      <div class="col-md-6 mg-t-20">
+                        <p class="tx-12 mg-b-5">Attachments</p>
+                        <p class="tx-14 mb-0">
+                        <img src="./assets/img/attachment.svg" class="wd-15 ht-15 mg-r-5"/>
+                          Oakceative139.pdf</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pd-20">
+                    <div class="d-flex">
+                      <img src="./assets/img/Upload Signature.svg" class="wd-20 ht-20 mg-r-5" alt="">
+                      <p class="mb-0">Upload attachments</p>
+                    </div>
+                  </div>
+              </div> 
+              <div class="modal-footer bg-white bd-t-0">
+                <button type="button" class="btn btn-primary w-100" >Download proof of transaction</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <!-- Modal -->
+      <div class="modal fade" id="categorizeModal" tabindex="-1" role="dialog" aria-labelledby="categorizeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="width: 400px;">
+          <div class="modal-content">
+            <div class="modal-header pd-md-x-30">
+              <h5 class="modal-title" id="categorizeModalLabel">Create New Invoice</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body pd-md-x-30 pd-md-t-30 pd-md-b-0">
+              <form action="">
+
+                <ul class="nav nav-tabs bd-0" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link cat" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Inflow tags</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active cat" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Outflow tags</a>
+                  </li>
+                </ul>
+                <div class="tab-content pd-b-10 pd-t-20" id="myTabContent">
+                  <div class="tab-pane fade " id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <p class="mg-b-8">Loan repayment</p>
+                    <p class="mg-b-8">Cost of sales</p>
+                    <p class="mg-b-8">Operating expenses </p>
+                    <p class="mg-b-8">Asset acquisition</p>
+
+                    <button class="btn pd-x-0 tx-primary mg-b-8" onclick="myCategory()" type="button"> + New category</button>
+                    <div id="new-category">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter category name">
+                      </div>
+                      <div class="form-group">
+                        <select class="custom-select">
+                          <option selected>Select flow</option>
+                          <option value="1">Flow 1</option>
+                          <option value="2">Flow 2</option>
+                          <option value="3">Flow 3</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <select class="custom-select">
+                          <option selected>Parent category</option>
+                          <option value="1">category 1</option>
+                          <option value="2">category 2</option>
+                          <option value="3">category 3</option>
+                        </select>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                     <p class="mg-b-8">Loan repayment</p>
+                    <p class="mg-b-8">Cost of sales</p>
+                    <p class="mg-b-8">Operating expenses </p>
+                    <p class="mg-b-8">Asset acquisition</p>
+
+                    <button class="btn pd-x-0 tx-primary mg-b-8" onclick="myCategor()" type="button"> + New category</button>
+                    <div id="new-categor">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter category name">
+                      </div>
+                      <div class="form-group">
+                        <select class="custom-select">
+                          <option selected>Select flow</option>
+                          <option value="1">Flow 1</option>
+                          <option value="2">Flow 2</option>
+                          <option value="3">Flow 3</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <select class="custom-select">
+                          <option selected>Parent category</option>
+                          <option value="1">category 1</option>
+                          <option value="2">category 2</option>
+                          <option value="3">category 3</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer bd-t-0 pd-md-x-30 pd-md-b-30">
+              <a href="./create-invoice.html" class="btn btn-primary w-100">Continue</a>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+
+
     </div><!-- container -->
       
   
@@ -418,6 +530,15 @@
          });
        });
 
+      // Listen for click on toggle checkbox
+      $("#selectAll").click(function () {
+     $('.custom-control-input').not(this).prop('checked', this.checked);
+    });
+  
+    //check for delete and categorize button
+    $(".custom-control-input").on("click",function() {
+    $(".categorize").toggle(this.checked);
+  });
          //date picker
      let start = moment().subtract(29, 'days');
       let end = moment();
@@ -445,17 +566,31 @@
       </script>
      
 <script>
-  function fullAdmin(){
-    let x = document.getElementById("userAccess");
-    if (x.style.display === "block") {
-      x.style.display = "none";
+
+  function myCategory(){
+    let x = document.getElementById("new-category");
+    if (x.style.display === "none") {
+      x.style.display = "block";
     } 
+    else{
+  x.style.display = "none"
+    }
   }
-  function myFunction() {
-    let x = document.getElementById("userAccess");
-    x.style.display = "block"
-    
+
+  function myCategor(){
+    let x = document.getElementById("new-categor");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } 
+    else{
+  x.style.display = "none"
+    }
   }
+  
+  // function myCategory() {
+  //   let x = document.getElementById("new-category");
+  //   x.style.display = "block"
+  // }
 
   function removeTag() {
      let y = document.getElementById("employerTag");
