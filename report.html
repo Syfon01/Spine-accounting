@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Spine Accounting">
+    <title>Spine Accounting</title>
+
+    <!-- Required External CSS -->
+    <link href="assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
+
+    <link href="assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
+    <link href="assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="assets/lib/select2/css/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- DashForge CSS -->
+    <link rel="stylesheet" href="assets/css/dashforge.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Page CSS --> 
+    
+    <link rel="stylesheet" href="assets/css/progress.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+  </head>
+  <body>
+    <aside class="aside aside-fixed">
+      <div class="aside-header">
+        <a href="dashboard.html" class="aside-logo">
+          <div class="pd-50">
+            <img src="./assets/img/logo.svg" class="img-fluid logo" alt="" srcset="">
+          </div>
+        </a>
+        <a href="" class="aside-menu-link">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="pd-b-30 pd-t-0 pd-x-40">
+          <p class="tx-14 tx-white mb-0">Account balance</p>
+          <p class="tx-14 tx-lighter mb-1">0124914917</p>
+          <p class="tx-18 tx-bold tx-white">1,298,000</p>
+
+          <button class="btn btn-light tx-dark">Import transaction</button>
+        </div>
+        <div class="nav-menu">
+          <ul class="nav nav-aside">
+            <li class="nav-item"><a href="dashboard.html" class="nav-link"> <span class="marine-active-menu">Dashboard</span></a></li>
+            <li class="nav-item"><a href="./transactions.html" class="nav-link"><span>Transactions</span></a></li>
+            <li class="nav-item"><a href="./customers.html" class="nav-link"><span>Customers</span></a></li>
+            <li class="nav-item"><a href="./invoices.html" class="nav-link"><span>Invoices</span></a></li>
+            <li class="nav-item  active"><a href="./report.html" class="nav-link"><span>Report</span></a></li>
+            <li class="nav-item"><a href="./setting.html" class="nav-link"><span>Settings</span></a></li>
+          </ul>
+        </div>
+        <div class="fixed-bottom pd-x-40">
+          <button class="nav-link btn tx-white"><span>Log out</span></button>
+        </div>
+       
+      </div>
+    </aside>
+
+    <div class="content pd-0">
+  
+      <div class="content-header shadow-dash bd-b-0">
+        <div class="content-search">
+          <i data-feather="search"></i>
+          <input type="search" class="form-control" placeholder="Search...">
+        </div>
+        <nav class="nav">
+          
+          <div class="dropdown dropdown-notification ml-md-4 ml-2 mg-t-5">
+            <a href="" class="dropdown-link new-indicator" data-toggle="dropdown">
+              <i data-feather="bell"></i>
+              <span>2</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-header">Notifications</div>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../https://via.placeholder.com/350" class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
+                    <span>Mar 15 12:32pm</span>
+                  </div>
+                </div>
+              </a>
+              
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Adrian Monino</strong> added new comment on your photo</p>
+                    <span>Mar 12 10:40pm</span>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-footer"><a href="">View all Notifications</a></div>
+            </div><!-- dropdown-menu -->
+          </div>
+
+          <div class="dropdown dropdown-profile ml-md-4 ml-2">
+            <a href="" class="dropdown-link" data-toggle="dropdown" data-display="static">
+              <div class="avatar avatar-sm"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+            </a><!-- dropdown-link -->
+            <div class="dropdown-menu dropdown-menu-right tx-13">
+              <div class="avatar avatar-lg mg-b-20"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+              <h6 class="tx-semibold mg-b-5">Katherine Pechon</h6>
+              <p class="mg-b-25 tx-12 tx-color-03">Administrator</p>
+  
+              <a href="" class="dropdown-item"><i data-feather="edit-3"></i> Edit Profile</a>
+              <a href="page-profile-view.html" class="dropdown-item"><i data-feather="user"></i> View Profile</a>
+              <div class="dropdown-divider"></div>
+              <a href="page-help-center.html" class="dropdown-item"><i data-feather="help-circle"></i> Help Center</a>
+              <a href="" class="dropdown-item"><i data-feather="life-buoy"></i> Forum</a>
+              <a href="" class="dropdown-item"><i data-feather="settings"></i>Account Settings</a>
+              <a href="" class="dropdown-item"><i data-feather="settings"></i>Privacy Settings</a>
+              <a href="page-signin.html" class="dropdown-item"><i data-feather="log-out"></i>Sign Out</a>
+            </div><!-- dropdown-menu -->
+          </div>
+        </nav>
+        
+      </div><!-- content-header -->
+
+      <div class="content-body">
+      <div class="container">
+       <div class="d-flex justify-content-between">
+        <div>
+          <p class="mb-0">Account info</p>
+          <p class="tx-24 mb-0 tx-bold">N1,298,000.60</p>
+          <p class="mb-0">Account number: 012391036</p>
+         </div>
+       </div>
+       <div class="row mg-y-30">
+        <div class="col-md-6 col-lg-3 col-12">
+          <div class="card card-body pd-y-15">
+            <img src="./assets/img/Invoices.svg" class="wd-40 ht-40" alt="" srcset="">
+            <p class="tx-36 mb-0">N158.3 mi</p>
+            <p class="tx-14 mb-0 tx-gray">Total expenses</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-12">
+          <div class="card card-body pd-y-15">
+            <img src="./assets/img/Invoices.svg" class="wd-40 ht-40" alt="" srcset="">
+            <p class="tx-36 mb-0">N192.9 mi</p>
+            <p class="tx-14 mb-0 tx-gray">Total Revenue</p>
+          </div>
+        </div>
+       </div>
+
+       <div class="mg-y-30">
+        <ul class="nav nav-line bd-0" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Summary</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Income statement</a>
+          </li>
+         
+        </ul>
+        <div class="tab-content pd-b-20" id="myTabContent">
+          <div class="tab-pane fade  show active " id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="row">
+              <div class="col-md-8">
+                <div class="d-flex mg-b-15">
+                  <div class="ml-md-auto">
+                    <div id="reportrange" class="form-control date-picker tx-13">
+                      <i class="fa fa-calendar"></i>&nbsp;
+                      <span></span> <i class="fa fa-caret-down"></i>
+                    </div>
+                   </div>
+                </div>
+                
+                <div class="card card-body">
+                  <div class="row col-lg-10 col-md-12 pd-x-0">
+                    <div class="col-md-4 col-lg-4 col-12 mg-t-10 mg-md-t-0">
+                      <div class="card card-body pd-15 bg-customer bd-0">
+                        <p class="mb-0 pd-t-20">Revenue</p>
+                        <p class="tx-16 mb-0 tx-bold">N10,390,000</p>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-12 mg-t-10 mg-md-t-0">
+                      <div class="card card-body pd-15 bg-transaction bd-0">
+                        <p class="mb-0 pd-t-20">Expenses</p>
+                        <p class="tx-16 mb-0 tx-bold">N10,390,000</p>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-12 mg-t-10 mg-md-t-0">
+                      <div class="card card-body pd-15 bg-invoice bd-0">
+                        <p class="mb-0 pd-t-20">Net Profiit</p>
+                        <p class="tx-16 mb-0 tx-bold">N10,390,000</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div data-label="Example" class="df-example mg-t-10">
+                    <div class="ht-200 ht-lg-250"><canvas id="chartLine1"></canvas></div>
+                  </div><!-- df-example -->
+          
+                </div>
+              </div>
+              <div class="col-md-4 col-12">
+                <p class="tx-18 pd-t-7 mg-b-20">Top 10 Expenses</p>
+                <div class="card card-body pd-15 ">
+                  <div class="d-flex justify-content-between mg-md-t-20 mg-t-10">
+                    <div class="">
+                      <div class="d-flex">
+                        <div class="bg-bluish wd-30 mg-r-5 rounded"></div>
+                        <div class="">
+                          <p class="mb-0">Restaurants</p>
+                          <p class="tx-11 tx-gray mb-0">3 transactions</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-7 pd-x-0 col-6">
+                      <div class="progress ht-35 justify-content-end bg-transparent">
+                      <div class="progress-bar wd-75p" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                        <span> $141.50<br/> </span> 
+                        <span class="tx-gray">75% </span>
+                      </div>
+                    </div>
+                    </div>
+                    
+                  </div>
+                  <div class="d-flex justify-content-between mg-md-t-20 mg-t-10">
+                    <div class="">
+                      <div class="d-flex">
+                        <div class="bg-bluish wd-30 mg-r-5 rounded"></div>
+                        <div class="">
+                          <p class="mb-0">Transport</p>
+                           <p class="tx-11 tx-gray mb-0">3 transactions</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-7 pd-x-0 col-6">
+                      <div class="progress ht-35 justify-content-end bg-transparent">
+                      <div class="progress-bar wd-45p" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                        <span> $135.50<br/> </span> 
+                        <span class="tx-gray">35% </span>
+                      </div>
+                    </div>
+                    </div>
+                    
+                  </div>
+                  <div class="d-flex justify-content-between mg-md-t-20 mg-t-10">
+                    <div class="">
+                      <div class="d-flex">
+                        <div class="bg-bluish wd-30 mg-r-5 rounded"></div>
+                        <div class="">
+                          <p class="mb-0">Cash</p>
+                          <p class="tx-11 tx-gray mb-0">3 transactions</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-7 pd-x-0 col-6">
+                      <div class="progress ht-35 justify-content-end bg-transparent">
+                      <div class="progress-bar wd-35p" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                        <span> $100<br/> </span> 
+                        <span class="tx-gray">25% </span>
+                      </div>
+                    </div>
+                    </div>
+                    
+                  </div>
+                  <div class="d-flex justify-content-between mg-md-t-20 mg-t-10">
+                    <div class="">
+                      <div class="d-flex">
+                        <div class="bg-bluish wd-30 mg-r-5 rounded"></div>
+                        <div class="">
+                          <p class="mb-0">Groceries</p>
+                      <p class="tx-11 tx-gray mb-0">13 transactions</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-7 pd-x-0 col-6">
+                      <div class="progress ht-35 justify-content-end bg-transparent">
+                      <div class="progress-bar wd-25p" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                        <span>$69.65<br/> </span> 
+                        <span class="tx-gray">15% </span>
+                      </div>
+                    </div>
+                    </div>
+                    
+                  </div>
+                  <div class="d-flex justify-content-between mg-md-t-20 mg-t-10">
+                    <div class="">
+                      <div class="d-flex">
+                        <div class="bg-bluish wd-30 mg-r-5 rounded"></div>
+                        <div class="">
+                          <p class="mb-0">Services</p>
+                           <p class="tx-11 tx-gray mb-0">2 transactions</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-7 pd-x-0 col-6">
+                      <div class="progress ht-35 justify-content-end bg-transparent">
+                      <div class="progress-bar wd-15p" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                        <span> $321.50<br/> </span> 
+                        <span class="tx-gray">5% </span>
+                      </div>
+                    </div>
+                    </div>
+                    
+                  </div>
+                  <div class="d-flex justify-content-between mg-md-t-20 mg-t-10 mg-b-20">
+                    <div class="">
+                      <div class="d-flex">
+                        <div class="bg-bluish wd-30 mg-r-5 rounded"></div>
+                        <div class="">
+                          <p class="mb-0">Entertainment</p>
+                          <p class="tx-11 tx-gray mb-0">3 transactions</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-7 pd-x-0 col-6">
+                      <div class="progress ht-35 justify-content-end bg-transparent">
+                      <div class="progress-bar wd-10p" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                        <span> $140<br/> </span> 
+                        <span class="tx-gray">3% </span>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="card card-body pd-y-0 mg-t-10">
+              <div class="row justify-content-between bd-b pd-y-15">
+                <div class="col-md-9 col-7 mg-b-10">
+                  <p class="tx-success mb-0 tx-18 tx-semibold">Revenue</p>
+                </div>
+                <div class="col-md-3 col-5">
+                  <p class="tx-success mb-0 tx-18 tx-semibold tx-right">N1,900,000</p>
+                </div>
+                <div class="col-md-9 col-7 mg-b-10">
+                  <p class="mb-0">Sales Revenue</p>
+                </div>
+                <div class="col-md-3 col-5">
+                  <p class="mb-0 tx-right">N90,000</p>
+                </div>
+              </div>
+              <div class="row justify-content-between bd-b pd-y-15">
+                <div class="col-md-9 col-7 mg-b-10">
+                  <p class="tx-danger mb-0 tx-18 tx-semibold">Cost of Sales</p>
+                </div>
+                <div class="col-md-3 col-5">
+                  <p class="tx-danger mb-0 tx-18 tx-semibold tx-right">N900,000</p>
+                </div>
+                <div class="col-md-9 col-7 mg-b-10">
+                  <p class="mb-0">Sales Revenue</p>
+                </div>
+                <div class="col-md-3 col-5">
+                  <p class="mb-0 tx-right">N23,000</p>
+                </div>
+              </div>
+              <div class="row justify-content-between bd-b pd-y-15">
+                <div class="col-md-9 col-7 mg-b-20">
+                  <p class="tx-warning mb-0 tx-18 tx-semibold">Gross profit</p>
+                </div>
+                <div class="col-md-3 col-5">
+                  <p class="tx-warning mb-0 tx-18 tx-semibold tx-right">N1,900,000</p>
+                </div>
+                <div class="col-md-9 col-7 mg-b-10">
+                  <p class="tx-danger mb-0 tx-18 tx-semibold">Operating expenses</p>
+                </div>
+                <div class="col-md-3 col-5">
+                  <p class="tx-danger mb-0 tx-18 tx-semibold tx-right">N900,000</p>
+                </div>
+                <div class="col-md-9 col-7 mg-b-10">
+                  <p class="mb-0">Sales Revenue</p>
+                </div>
+                <div class="col-md-3 col-5">
+                  <p class="mb-0 tx-right">N23,000</p>
+                </div>
+              </div>
+              <div class="row justify-content-between bd-b pd-y-15">
+                <div class="col-md-9 col-7 mg-b-10">
+                  <p class="mb-0">Sales Revenue</p>
+                </div>
+                <div class="col-md-3 col-5">
+                  <p class="mb-0 tx-right">N23,000</p>
+                </div>
+              </div>
+              <div class="row justify-content-between bd-b pd-y-15">
+                <div class="col-md-9 col-7 mg-b-10">
+                  <p class="mb-0">Sales Revenue</p>
+                </div>
+                <div class="col-md-3 col-5">
+                  <p class="mb-0 tx-right">N23,000</p>
+                </div>
+              </div>
+              <div class="row justify-content-between bd-b pd-y-15">
+                <div class="col-md-9 col-7 mg-b-10">
+                  <p class="mb-0">Sales Revenue</p>
+                </div>
+                <div class="col-md-3 col-5">
+                  <p class="mb-0 tx-right">N23,000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+       </div>
+   
+    <!-- Modal -->
+      <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="width: 400px;">
+          <div class="modal-content">
+            <div class="modal-header pd-md-x-30">
+              <h5 class="modal-title" id="createModalLabel">Create New Invoice</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body pd-md-30">
+              <form action="">
+
+                <label for="" class="d-block">Choose upload Type</label>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                      <label class="custom-control-label text-secondary" for="customRadio1">Individual</label>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label text-secondary" for="customRadio2">Bulk Upload</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group mg-md-t-20 mg-t-10">
+                  <label for="" class="d-block">What kind of Invoice will you like to create?</label>
+                  <select class="custom-select">
+                    <option selected>Invoice Type</option>
+                    <option value="1">Type 1</option>
+                    <option value="2">Tyoe 2</option>
+                    <option value="3">Type 3</option>
+                  </select>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer bd-t-0 pd-md-x-30 pd-md-b-30">
+              <a href="./create-invoice.html" class="btn btn-primary w-100">Continue</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+        <!--detail Modal -->
+        <div class="modal right fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content ">
+              <div class="modal-header pd-y-10 bd-b-0 modal-pink">
+                <p class=" tx-24 tx-bold tx-center modal-title" id="detailModalLabel"></p>
+                 
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              
+              <div class="modal-body pd-x-0 modal-pink">
+                <div class="bd-b pd-y-20 pd-x-20">
+                  <p class=" tx-24 tx-bold tx-center modal-title" id="detailModalLabel">-N25,000</p>
+                    <div class="row">
+                      <div class="col-md-6 mg-md-t-20 mg-t-10">
+                      <p class="mb-0 tx-12 mg-t-10 mg-r-10">8:05am, Aug 12, 2019</p>
+                      </div> 
+                      <div class="col-md-6 pd-md-l-0 mg-md-t-20 mg-t-10"> 
+                        <button class="btn bg-invoice rounded-20 pd-y-5 pd-x-5 w-100">Operating expenses <i class="fa fa-pen"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bd-b pd-20">
+                    <div class="row">
+                      <div class="col-md-6 mg-md-t-20 mg-t-10 mg-md-t-10">
+                        <p class="tx-12 mg-b-5">Recipient</p>
+                        <p class="tx-18 mb-0">Meathub</p>
+                        <p class="tx-12 mb-0">012489425 <br/> Zenith bank</p>
+                      </div>
+                      <div class="col-md-6 mg-md-t-20 mg-t-10 mg-md-t-10">
+                        <p class="tx-12 mg-b-5">Category</p>
+                        <p class="tx-18 mb-0">Operating expenses</p>
+                      </div>
+
+                      <div class="col-md-6 mg-md-t-20 mg-t-10">
+                        <p class="tx-12 mg-b-5">Reference number</p>
+                        <p class="tx-18 mb-0">921N-1391V</p>
+                      </div>
+                      <div class="col-md-6 mg-md-t-20 mg-t-10">
+                        <p class="tx-12 mg-b-5">Attachments</p>
+                        <p class="tx-14 mb-0">
+                        <img src="./assets/img/attachment.svg" class="wd-15 ht-15 mg-r-5"/>
+                          Oakceative139.pdf</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pd-20">
+                    <div class="d-flex">
+                      <img src="./assets/img/Upload Signature.svg" class="wd-20 ht-20 mg-r-5" alt="">
+                      <p class="mb-0">Upload attachments</p>
+                    </div>
+                  </div>
+              </div> 
+              <div class="modal-footer bg-white bd-t-0">
+                <button type="button" class="btn btn-primary w-100" >Download proof of transaction</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <!-- Modal -->
+      <div class="modal fade" id="categorizeModal" tabindex="-1" role="dialog" aria-labelledby="categorizeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="width: 400px;">
+          <div class="modal-content">
+            <div class="modal-header pd-md-x-30">
+              <h5 class="modal-title" id="categorizeModalLabel">Create New Invoice</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body pd-md-x-30 pd-md-t-30 pd-md-b-0">
+              <form action="">
+
+                <ul class="nav nav-tabs bd-0" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link cat" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Inflow tags</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active cat" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Outflow tags</a>
+                  </li>
+                </ul>
+                <div class="tab-content pd-b-10 pd-t-20" id="myTabContent">
+                  <div class="tab-pane fade " id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <p class="mg-b-8">Loan repayment</p>
+                    <p class="mg-b-8">Cost of sales</p>
+                    <p class="mg-b-8">Operating expenses </p>
+                    <p class="mg-b-8">Asset acquisition</p>
+
+                    <button class="btn pd-x-0 tx-primary mg-b-8" onclick="myCategory()" type="button"> + New category</button>
+                    <div id="new-category">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter category name">
+                      </div>
+                      <div class="form-group">
+                        <select class="custom-select">
+                          <option selected>Select flow</option>
+                          <option value="1">Flow 1</option>
+                          <option value="2">Flow 2</option>
+                          <option value="3">Flow 3</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <select class="custom-select">
+                          <option selected>Parent category</option>
+                          <option value="1">category 1</option>
+                          <option value="2">category 2</option>
+                          <option value="3">category 3</option>
+                        </select>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                     <p class="mg-b-8">Loan repayment</p>
+                    <p class="mg-b-8">Cost of sales</p>
+                    <p class="mg-b-8">Operating expenses </p>
+                    <p class="mg-b-8">Asset acquisition</p>
+
+                    <button class="btn pd-x-0 tx-primary mg-b-8" onclick="myCategor()" type="button"> + New category</button>
+                    <div id="new-categor">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter category name">
+                      </div>
+                      <div class="form-group">
+                        <select class="custom-select">
+                          <option selected>Select flow</option>
+                          <option value="1">Flow 1</option>
+                          <option value="2">Flow 2</option>
+                          <option value="3">Flow 3</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <select class="custom-select">
+                          <option selected>Parent category</option>
+                          <option value="1">category 1</option>
+                          <option value="2">category 2</option>
+                          <option value="3">category 3</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer bd-t-0 pd-md-x-30 pd-md-b-30">
+              <a href="./create-invoice.html" class="btn btn-primary w-100">Continue</a>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+
+
+    </div><!-- container -->
+      
+  
+  
+    </div>
+    </div>
+
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/lib/prismjs/prism.js"></script>
+    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="../assets/lib/typeahead.js/typeahead.jquery.min.js"></script>
+    <script src="../assets/lib/typeahead.js/typeahead.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="../assets/lib/chart.js/Chart1.min.js"></script>
+    <script src="../assets/lib/chart.js/utils.js"></script>
+
+    <script src="../assets/js/dashforge.js"></script>
+    <script src="../assets/js/dashforge.aside.js"></script>
+    <script src="../assets/js/dashforge.sampledata.js"></script>
+    <!-- for multiselect dropdown  -->
+    <!-- <script type="text/javascript" src="../assets/js/bootstrap-multiselect.js"></script> -->
+<script>
+  $(function(){
+  'use strict'
+
+  var ctxLabel = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var ctxData1 = [20, 60, 50, 45, 50, 60, 70, 40, 45, 35, 25, 30];
+  var ctxData2 = [10, 40, 30, 40, 60, 55, 45, 35, 30, 20, 15, 20];
+  var ctxData3 = [5, 10, 70, 40, 30, 55, 45, 15, 20, 30, 25, 50];
+
+  var ctxColor1 = '#1DB931';
+  var ctxColor2 = '#FFB600';
+  var ctxColor3 = '#F86226';
+
+   // Line chart
+   var ctx4 = document.getElementById('chartLine1');
+  new Chart(ctx4, {
+    type: 'line',
+    data: {
+      labels: ctxLabel,
+      datasets: [{
+        data: ctxData1,
+        borderColor: ctxColor1,
+        borderWidth: 1,
+        lineTension:0,
+        fill: false
+      },{
+        data: ctxData2,
+        borderColor: ctxColor2,
+        borderWidth: 1,
+        lineTension:0,
+        fill: false
+      },{
+        data: ctxData3,
+        borderColor: ctxColor3,
+        lineTension:0,
+        borderWidth: 1,
+        fill: false
+      }
+    ]
+    },
+    options: {
+      maintainAspectRatio: false,
+      legend: {
+        display: false,
+          labels: {
+            display: false
+          }
+      },
+      scales: {
+        yAxes: [{
+          gridLines: {
+            color: '#e5e9f2'
+          },
+          ticks: {
+            beginAtZero:true,
+            fontSize: 10,
+            max: 80
+          }
+        }],
+        xAxes: [{
+          gridLines: {
+            display: false
+          },
+          ticks: {
+            beginAtZero:true,
+            fontSize: 11
+          }
+        }]
+      }
+    }
+  });
+
+
+  })
+</script>
+    <script>
+      $(document).ready( function () {
+       $('.display').DataTable({
+         "paging": true,
+         "info": true,
+         "responsive": true,
+         "aoColumnDefs": [{
+             "bSortable": false,
+             "aTargets": ["no-sort"]
+         }],
+         
+         "bInfo": true
+       });
+       
+       $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+         $('.display:visible').each( function(e) {
+           $(this).DataTable().columns.adjust().responsive.recalc();
+         });
+       });
+
+      // Listen for click on toggle checkbox
+      $("#selectAll").click(function () {
+     $('.custom-control-input').not(this).prop('checked', this.checked);
+    });
+  
+    //check for delete and categorize button
+    $(".custom-control-input").on("click",function() {
+    $(".categorize").toggle(this.checked);
+  });
+         //date picker
+     let start = moment().subtract(29, 'days');
+      let end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMMM ') + ' - ' + end.format('MMMM D YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+
+     } );
+      </script>
+     
+<script>
+
+  function myCategory(){
+    let x = document.getElementById("new-category");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } 
+    else{
+  x.style.display = "none"
+    }
+  }
+
+  function myCategor(){
+    let x = document.getElementById("new-categor");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } 
+    else{
+  x.style.display = "none"
+    }
+  }
+  
+  // function myCategory() {
+  //   let x = document.getElementById("new-category");
+  //   x.style.display = "block"
+  // }
+
+  function removeTag() {
+     let y = document.getElementById("employerTag");
+     y.style.display = "none"
+    }
+
+    function goBack() {
+  window.history.back();
+};
+  </script>
+  <script>
+    /* Set the width of the sidebar to 250px (show it) */
+  function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+  }
+
+  /* Set the width of the sidebar to 0 (hide it) */
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+</script>
+  </body>
+</html>

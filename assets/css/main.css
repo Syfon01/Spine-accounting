@@ -198,7 +198,9 @@
 .bg-profile{
   background-color: #007FD73C!important;
 }
-
+.bg-bluish{
+  background-color:#E0E7FF;
+}
 /* Style the active class (and buttons on mouse-over) */
 .card-active, .card-active:hover {
   border: 1px solid #AF0606;
