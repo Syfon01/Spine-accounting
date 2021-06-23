@@ -64,8 +64,8 @@
             <li class="nav-item active show with-sub tx-14">
               <a href="" class="nav-link"><span>Settings</span></a>
               <ul>  
-                <li class="active"><a href="./setting">My Setup</a></li>
-                <li><a href="./profile">Business Profile</a></li>
+                <li class="active"><a href="./setting.html">My Setup</a></li>
+                <li><a href="./.html">Business Profile</a></li>
               </ul>
             </li>
           </ul>
@@ -206,23 +206,123 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-4">
+              <div class="col-md-3 col-12">
                 <div class="card card-body">
                   <div class="list-group" id="list-tab" role="tablist">
-                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
-                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>
-                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>
-                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>
+                    <a class="list-group-item prima list-group-item-action active" id="list-admin-list" data-toggle="list" href="#list-admin" role="tab" aria-controls="home">Admin</a>
+                    <a class="list-group-item prima list-group-item-action" id="list-operations-list" data-toggle="list" href="#list-operations" role="tab" aria-controls="profile">Operations</a>
+                    <a class="list-group-item prima list-group-item-action" id="list-developer-list" data-toggle="list" href="#list-developer" role="tab" aria-controls="messages">Developer Support</a>
+                    <a class="list-group-item prima list-group-item-action" id="list-customer-list" data-toggle="list" href="#list-customer" role="tab" aria-controls="settings">Customer Support</a>
+                    <a class="list-group-item prima list-group-item-action" id="list-direct-list" data-toggle="list" href="#list-direct" role="tab" aria-controls="settings">Direct Debit Admin</a>
                   </div>
+                </div>
+                <div class="pd-20">
+                  <p class="mg-b-7 tx-bold">Custom Roles</p>
+                  <p class="tx-12">Create your own roles and choose exactly What members can see and do</p>
+                  <button class="btn tx-primary pd-l-0 tx-semibold">Create Custom Role</button>
                 </div>
                
               </div>
-              <div class="col-8">
-                <div class="tab-content" id="nav-tabContent">
-                  <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">...</div>
-                  <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>
-                  <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>
-                  <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>
+              <div class="col-md-9 col-12">
+                <div class="card card-body modal-pink">
+                  <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-admin" role="tabpanel" aria-labelledby="list-admin-list">
+                      <div class="row">
+                        <div class="col-md-3 pd-r-0">
+                          <p class="tx-18 tx-bold">Team Members <span class="tx-14 tx-normal">(10)</span></p>
+                          <div class="custom-control custom-checkbox mg-b-10">
+                            <input type="checkbox" class="custom-control-input" id="member1" checked>
+                            <label class="custom-control-label" for="member1">April Anazado</label>
+                          </div>
+                          <div class="custom-control custom-checkbox mg-b-10">
+                            <input type="checkbox" class="custom-control-input" id="member2" checked>
+                            <label class="custom-control-label" for="member2">Kemi Ariyo</label>
+                          </div>
+                          <div class="custom-control custom-checkbox mg-b-10">
+                            <input type="checkbox" class="custom-control-input" id="member3" checked>
+                            <label class="custom-control-label" for="member3">Tosin Lasisi</label>
+                          </div>
+                          <div class="custom-control custom-checkbox mg-b-10">
+                            <input type="checkbox" class="custom-control-input" id="member4" checked>
+                            <label class="custom-control-label" for="member4">April Anazado</label>
+                          </div>
+                          <div class="custom-control custom-checkbox mg-b-10">
+                            <input type="checkbox" class="custom-control-input" id="member5" checked>
+                            <label class="custom-control-label" for="member5">April Anazado</label>
+                          </div>
+                          <div class="custom-control custom-checkbox mg-b-10">
+                            <input type="checkbox" class="custom-control-input" id="member6" checked>
+                            <label class="custom-control-label" for="member6">Kemi Ariyo</label>
+                          </div>
+                          <div class="custom-control custom-checkbox mg-b-10">
+                            <input type="checkbox" class="custom-control-input" id="member7" checked>
+                            <label class="custom-control-label" for="member7">Tosin Lasisi</label>
+                          </div>
+                          <div class="custom-control custom-checkbox mg-b-10">
+                            <input type="checkbox" class="custom-control-input" id="member8" checked>
+                            <label class="custom-control-label" for="member8">April Anazado</label>
+                          </div>
+                          <button class="btn tx-primary">+ Add New Member</button>
+                        </div>
+                        <div class="col-md-5">
+                          <p class="tx-bold">What this role has access to</p>
+                          <div class="custom-control custom-checkbox mg-b-10">
+                            <input type="checkbox" class="custom-control-input" id="role1">
+                            <label class="custom-control-label" for="role1">Can view business performance metrics</label>
+                          </div>
+                          <div class="custom-control custom-checkbox mg-b-10">
+                            <input type="checkbox" class="custom-control-input" id="role2">
+                            <label class="custom-control-label" for="role2">Can view transactions</label>
+                          </div>
+                          <div class="custom-control custom-checkbox mg-b-10">
+                            <input type="checkbox" class="custom-control-input" id="role3">
+                            <label class="custom-control-label" for="role3">Can export transactions</label>
+                          </div>
+                          <div class="custom-control custom-checkbox mg-b-10">
+                            <input type="checkbox" class="custom-control-input" id="role4">
+                            <label class="custom-control-label" for="role4">Can manage Refunds & Disputes</label>
+                          </div>
+                          <div class="custom-control custom-checkbox mg-b-10">
+                            <input type="checkbox" class="custom-control-input" id="role5">
+                            <label class="custom-control-label" for="role5">Can view customers</label>
+                          </div>
+                          <div class="custom-control custom-checkbox mg-b-10">
+                            <input type="checkbox" class="custom-control-input" id="role6">
+                            <label class="custom-control-label" for="role6">Can create new customers</label>
+                          </div>
+                          <div class="custom-control custom-checkbox mg-b-10">
+                            <input type="checkbox" class="custom-control-input" id="role7">
+                            <label class="custom-control-label" for="role7">Can manage and update customers</label>
+                          </div>
+                          <div class="custom-control custom-checkbox mg-b-10">
+                            <input type="checkbox" class="custom-control-input" id="role8">
+                            <label class="custom-control-label" for="role8">Can view customer insights</label>
+                          </div>
+                          <div class="custom-control custom-checkbox mg-b-10">
+                            <input type="checkbox" class="custom-control-input" id="role9">
+                            <label class="custom-control-label" for="role9">Can view payouts</label>
+                          </div>
+                          <div class="custom-control custom-checkbox mg-b-10">
+                            <input type="checkbox" class="custom-control-input" id="role10">
+                            <label class="custom-control-label" for="role10">Can export payouts</label>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <p class="tx-bold tx-danger">What this role does not have access to</p>
+                          <div class="card card-body tx-center pd-x-15 bd-danger">
+                            <i class="fa fa-exclamation-circle tx-danger fa-2x mg-b-10" aria-hidden="true"></i>
+                            <p class="tx-bold mg-b-10">This role has full Access</p>
+                            <p class="mb-0 tx-12">Any member of this role can access all section of this platform</p>
+                          </div>
+
+                        </div>
+                      </div>
+                     
+                    </div>
+                    <div class="tab-pane fade" id="list-operations" role="tabpanel" aria-labelledby="list-operations-list">...</div>
+                    <div class="tab-pane fade" id="list-developer" role="tabpanel" aria-labelledby="list-developer-list">...</div>
+                    <div class="tab-pane fade" id="list-customer" role="tabpanel" aria-labelledby="list-customer-list">...</div>
+                  </div>
                 </div>
               </div>
             </div>

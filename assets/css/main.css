@@ -477,3 +477,11 @@ table{
 .bg-tab{
   background-color: #F2F5F9;
 }
+.list-group-item.prima.active{
+  background-color: #CCE3FF!important;
+  color: #0E093B!important;
+  font-weight: 600;
+}
+.list-group-item{
+  border: none!important;
+}
