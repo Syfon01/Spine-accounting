@@ -463,3 +463,17 @@ table{
 #new-category, #new-categor{
   display: none;
 }
+.nav-aside .nav-item ul a{
+  color: white;
+}
+.nav-tabs .nav-link.set.active{
+  background-color: #2E5BFF;
+  color: #fff;
+}
+.nav-tabs .nav-link{
+  background-color: transparent;
+  border: 0;
+}
+.bg-tab{
+  background-color: #F2F5F9;
+}
