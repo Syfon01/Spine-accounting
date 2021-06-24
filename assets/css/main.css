@@ -506,3 +506,23 @@ table{
 .pro-bg{
   min-height: 120px;
 }
+.table-preview td, .table-preview th{
+  font-size: 12px!important;
+}
+.table-preview td{
+  background-color: #F2F5F9!important;
+}
+.border-dash{
+    border: 1px dashed #e5e5e5;
+
+}
+.top-primary{
+  border-top: 3px ridge #2E5BFF;
+  border-radius: 0;
+}
+.top-blue{
+  border-top: 4px ridge #062289;
+}
+.wd-68{
+  width: 70px;
+}
