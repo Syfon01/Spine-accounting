@@ -160,31 +160,41 @@
 
               <div class="card card-body mg-t-30 modal-pink">
                 <form action="">
-                  <div class="form-row">
-                    <div class="form-group col-md-4">
+                  <div class="form-row col-xl-11 col-12">
+                    <div class="form-group col-md-4 pad-space">
                       <p class="tx-18 tx-bold mg-b-15">Name</p>
                       <label for="">What is your full Name</label>
                       <input type="text" class="form-control">
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-4 pad-space">
                       <p class="tx-18 tx-bold mg-b-15">Phone</p>
                       <label for="">Input 11 digits phone number</label>
-                      <input type="text" class="form-control">
+                      <div class="input-group">
+                        <div class="input-group-prepend bg-white">
+                          <button class="btn btn-outline-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">234</button>
+                          <div class="dropdown-menu tx-13">
+                            <a class="dropdown-item" href="#">222</a>
+                            <a class="dropdown-item" href="#">212</a>
+                          </div>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                      </div>
+                      
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-4 pad-space">
                       <p class="tx-18 tx-bold mg-b-15">Email Address</p>
                       <label for="">Input functional Email Address</label>
                       <input type="email" class="form-control">
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-4 pad-space">
                       <p class="tx-18 tx-bold mg-b-15">Password</p>
                       <label for="">Ensure you use a very strong password</label>
                       <input type="password" class="form-control">
                     </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-4 pad-space">
                       <p class="tx-18 tx-bold mg-b-15">Two factor Authentication</p>
                       <label for="">Enabled</label>
-                      <div class="custom-control custom-switch pd-l-15 mg-t-10">
+                      <div class="custom-control custom-switch custom-switch-lg mg-t-10">
                         <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
                         <label class="custom-control-label" for="customSwitch1"></label>
                       </div>
@@ -211,44 +221,45 @@
                 </div>
               </div>
             </div>
-            <div class="card card-body">
-              <table class="table display table-hover" id="employee">
-                <thead class="thead-bg">
-                  <tr class="">
-                    <th scope="col">Name</th>
-                    <th scope="col" class="">Email Address</th>
-                    <th scope="col" class="">Role</th>
-                    <th scope="col" class="">2FA</th>
-                    <th scope="col" class="">Actions</th>
-                  </tr>
-                </thead>
-        
-                <tbody>
-                  <tr class=''>
-                    
-                    <td>
-                      <img src="./assets/img/Invoices.svg" class="wd-30 ht-30 img-fluid mg-r-10"/>
-                      Kolawaole Abdul 
-                    </td>
-                    <td class="">Kolawole@gmail.com</td>
-                    <td class="">Business Owner</td>
-                    <td class="tx-gray">Enabled</td>
-                    <td class=""><a href="http://">Change Business Owner</a></td>
-                  </tr>
-                  <tr class=''>
-                    
-                    <td>
-                      <img src="./assets/img/Invoices.svg" class="wd-30 ht-30 img-fluid mg-r-10"/>
-                      Sherif Abdul
-                    </td>
-                    <td class="">Sherif@gmail.com</td>
-                    <td class="">Business Owner</td>
-                    <td class="tx-danger">Disabled</td>
-                    <td class=""><a href="http://">Edit User</a></td>
-                  </tr>
-                </tbody>
-              </table>
-              
+            <div class="card card-body bd-0 shadow-sm pd-0">
+              <div class="table-responsive">
+                <table class="table table-hover" id="employee">
+                  <thead class="thead-bg">
+                    <tr class="">
+                      <th scope="col">Name</th>
+                      <th scope="col" class="">Email Address</th>
+                      <th scope="col" class="">Role</th>
+                      <th scope="col" class="">2FA</th>
+                      <th scope="col" class="">Actions</th>
+                    </tr>
+                  </thead>
+          
+                  <tbody>
+                    <tr class=''>
+                      
+                      <td>
+                        <img src="./assets/img/Invoices.svg" class="wd-30 ht-30 img-fluid mg-r-10"/>
+                        Kolawaole Abdul 
+                      </td>
+                      <td class="">Kolawole@gmail.com</td>
+                      <td class="">Business Owner</td>
+                      <td class="tx-gray">Enabled</td>
+                      <td class=""><a href="http://">Change Business Owner</a></td>
+                    </tr>
+                    <tr class=''>
+                      
+                      <td>
+                        <img src="./assets/img/Invoices.svg" class="wd-30 ht-30 img-fluid mg-r-10"/>
+                        Sherif Abdul
+                      </td>
+                      <td class="">Sherif@gmail.com</td>
+                      <td class="">Business Owner</td>
+                      <td class="tx-danger">Disabled</td>
+                      <td class=""><a href="http://">Edit User</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
         
          </div>

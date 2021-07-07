@@ -336,6 +336,10 @@
   .neg-divv{
     margin-top: 0px!important;
   }
+  .pad-space{
+    padding-right: 20px!important;
+  }
+  
 }
 
 /* extra large screen  */
@@ -525,4 +529,69 @@ table{
 }
 .wd-68{
   width: 70px;
+}
+.ui-datepicker {
+  z-index: 9999 !important;
+}
+.btn-outline-light:hover,.btn-outline-dark:hover, .btn-outline-light:focus,.btn-outline-dark:focus{
+  background: #2E5BFF;
+  color: #fff;
+}
+.table th, .table td{
+  padding: 15px 20px ;
+  font-size: 12px;
+}
+.table th{
+  font-weight: 600!important;
+  font-size: 13px;
+}
+.blue-box{
+  background-color: #2e5bffa6;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+}
+.form-group.col-md-4.pad-space, .form-group.col-md-6.pad-space{
+  padding-right: 80px;
+}
+.form-row > .col, .form-row > [class*="col-"]{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.tx-greenishh{
+  color:#435C0F
+}
+.tx-danger{
+  color: #902145;
+}
+.bd-danger{
+  border-color: #902145;
+}
+
+.custom-switch.custom-switch-lg {
+  padding-left: 1rem!important;
+}
+
+.custom-switch.custom-switch-lg .custom-control-label::before {
+  height: 1.75rem;
+  width: calc(2.55rem + 0.75rem);
+  border-radius: 4rem;
+}
+
+.custom-switch.custom-switch-lg .custom-control-label::after {
+  width: calc(1.7rem - 4px);
+  height: calc(1.7rem - 4px);
+  border-radius: calc(3rem - (2rem / 2));
+}
+
+.custom-switch.custom-switch-lg .custom-control-input:checked ~ .custom-control-label::after {
+  transform: translate(1.65rem, -50%);
+}
+.daterangepicker{
+  font-family: 'Mulish', sans-serif!important;
+
+}
+.daterangepicker .ranges li.active{
+  background-color: #2E5BFF;
 }
