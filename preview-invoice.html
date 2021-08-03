@@ -9,16 +9,10 @@
     <title>Spine Accounting</title>
 
     <!-- Required External CSS -->
-    <link href="assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
-
-    <link href="assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
-    <link href="assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
-    <link href="assets/lib/select2/css/select2.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
@@ -27,11 +21,56 @@
     <link rel="stylesheet" href="assets/css/dashforge.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
-    <!-- Page CSS --> 
-    
-    <link rel="stylesheet" href="assets/css/progress.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-
+    <style>
+      .bg-gray{
+     background-color: #F5F6FA;
+   }
+   .tx-gray{
+     color: #868686;
+   }
+   
+   .table-preview td, .table-preview th{
+     font-size: 14px!important;
+   }
+   .table-preview td{
+     background-color: #F2F5F9!important;
+   }
+   .border-dash{
+       border: 1px dashed #e5e5e5;
+   
+   }
+   .top-primary{
+     border-top: 3px ridge #2E5BFF;
+     border-radius: 0;
+   }
+   .top-blue{
+     border-top: 4px ridge #062289;
+   }
+   thead{
+         background-color: #F2F5F9;
+       }
+     p{
+       font-size: 14px;
+     }
+     .tx-18{
+       font-size: 18px;
+     }
+     .tx-14{
+       font-size: 14px;
+     }
+     .tx-40{
+       font-size: 36px;
+     }
+     .tx-primary{
+       color: #1342EB;
+     }
+     .tx-bold{
+       font-weight: 700;
+     }
+     .ht-100{
+       height: 100px;
+     }
+    </style>
   </head>
   <body>
     <aside class="aside aside-fixed">
@@ -117,7 +156,7 @@
             <div class="dropdown-menu dropdown-menu-right tx-13">
               <div class="avatar avatar-lg mg-b-20"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
               <h6 class="tx-semibold mg-b-5">Katherine Pechon</h6>
-              <p class="mg-b-25 tx-12 tx-color-03">Administrator</p>
+              <p class="mg-b-25 tx-14 tx-color-03">Administrator</p>
   
               <a href="" class="dropdown-item"><i data-feather="edit-3"></i> Edit Profile</a>
               <a href="page-profile-view.html" class="dropdown-item"><i data-feather="user"></i> View Profile</a>
@@ -136,155 +175,14 @@
       <div class="content-body">
       <div class="container">
         <div class="row  mb-5">
-          <div class="col-lg-4 col-md-4 col-12 mt-2 pd-md-r-0"> 
+          <div class="col-lg-2 col-md-3 col-12 mt-2 pd-md-r-0"> 
               <button class="btn btn-outline-dark" onclick="goBack()"><i class="fa fa-arrow-left mg-r-5"></i> Go back</button>
-              <div class="card card-body mg-t-20">
-                <form action="">
-                  <p class="tx-bold tx-16 mb-0">Pattern</p>
-                  <p class="mb-0">Select a pattern for your invoice</p>
-                  <div class="row">
-                    <div class="col-md-3 mg-t-5 pd-x-5">
-                      <img src="./assets/img/Pattern1.svg" class="wd-68 ht-30"  alt="" srcset="">
-                    </div>
-                    <div class="col-md-3 mg-t-5 pd-x-5">
-                      <img src="./assets/img/pattern2.svg" class="wd-68 ht-30" alt="" srcset="">
-                    </div>
-                    <div class="col-md-3 mg-t-5 pd-x-5">
-                      <img src="./assets/img/pattern3.svg" class="wd-68 ht-30" alt="" srcset="">
-                    </div>
-                    <div class="col-md-3 mg-t-5 pd-x-5">
-                      <img src="./assets/img/pattern4.svg" class="wd-68 ht-30" alt="" srcset="">
-                    </div>
-                    <div class="col-md-3 mg-t-5 pd-x-5">
-                      <img src="./assets/img/pattern5.svg" class="wd-68 ht-30" alt="" srcset="">
-                    </div>
-                    <div class="col-md-3 mg-t-5 pd-x-5">
-                      <img src="./assets/img/pattern6.svg" class="wd-68 ht-30" alt="" srcset="">
-                    </div>
-                    <div class="col-md-3 mg-t-5 pd-x-5">
-                      <img src="./assets/img/pattern7.svg" class="wd-68 ht-30" alt="" srcset="">
-                    </div>
-                    <div class="col-md-3 mg-t-5 pd-x-5">
-                      <button class="btn btn-outline-primary btn-sm tx-10 w-100 pd-x-10"> Add New</button>
-                    </div>
-                  </div>
-
-                  <div class="mg-t-20">
-                    <p class="tx-bold tx-16 mb-0">Theme</p>
-                    <p class="mb-2">Select a color theme for your invoice</p>
-                    <div class="form-row">
-                      <div class="form-group col-md-4">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-primary pd-y-15"></button>
-                          <button type="button" class="btn btn-light"></button>
-                          <button type="button" class="btn btn-dark"></button>
-                        </div>
-                        <div class="custom-control custom-radio mg-t-5">
-                          <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                          <label class="custom-control-label tx-bold tx-12" for="customRadio1">Shelob</label>
-                        </div>
-                      </div>
-
-                      <div class="form-group col-md-4">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-secondary pd-y-15"></button>
-                          <button type="button" class="btn btn-success"></button>
-                          <button type="button" class="btn btn-primary"></button>
-                        </div>
-                        <div class="custom-control custom-radio mg-t-5">
-                          <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                          <label class="custom-control-label tx-bold tx-12" for="customRadio1">Denethor</label>
-                        </div>
-                      </div>
-                      <div class="form-group col-md-4">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-info pd-y-15"></button>
-                          <button type="button" class="btn btn-light"></button>
-                          <button type="button" class="btn btn-dark"></button>
-                        </div>
-                        <div class="custom-control custom-radio mg-t-5">
-                          <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                          <label class="custom-control-label tx-bold tx-12" for="customRadio1">Quickbeam</label>
-                        </div>
-                      </div>
-                      <div class="form-group col-md-4">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-dark pd-y-15"></button>
-                          <button type="button" class="btn btn-white"></button>
-                          <button type="button" class="btn btn-success"></button>
-                        </div>
-                        <div class="custom-control custom-radio mg-t-5">
-                          <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                          <label class="custom-control-label tx-bold tx-12" for="customRadio1">Shadowfax</label>
-                        </div>
-                      </div>
-                      <div class="form-group col-md-4">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-danger pd-y-15"></button>
-                          <button type="button" class="btn btn-light"></button>
-                          <button type="button" class="btn btn-info"></button>
-                        </div>
-                        <div class="custom-control custom-radio mg-t-5">
-                          <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                          <label class="custom-control-label tx-bold tx-12" for="customRadio1">Grima</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mg-t-20">
-                    <p class="tx-bold tx-16 mb-2">Tax</p>
-                    <div class="form-row">
-                      <div class="col-md-4 form-group">
-                        <select class="custom-select tx-12">
-                          <option selected>On Total</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                      </div>
-                      <div class="col-md-4 form-group">
-                        <input type="text" class="form-control tx-12" placeholder="label">
-                      </div>
-                      <div class="col-md-4 form-group">
-                        <select class="custom-select tx-12">
-                          <option selected>6%</option>
-                          <option value="1">1%</option>
-                          <option value="2">2%</option>
-                          <option value="3">3%</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div class="mg-t-20">
-                    <p class="tx-bold tx-16 mb-2">Others</p>
-                    <div class="form-row">
-                      <div class="col-md-6 form-group">
-                        <select class="custom-select tx-12">
-                          <option selected>On Total</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                      </div>
-                      <div class="col-md-6 form-group">
-                        <select class="custom-select tx-12">
-                          <option selected>6%</option>
-                          <option value="1">1%</option>
-                          <option value="2">2%</option>
-                          <option value="3">3%</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  
-                </form>
-              </div>
+              
           </div>
-          <div class="col-lg-8 col-md-8 col-12 mg-t-20 mg-md-t-0">
+          <div class="col-lg-10 col-md-9 col-12 mg-t-20 mg-md-t-0">
             <div class="card shadow bg-white top-blue">
               <div class="card-body pd-x-0">
-                <div class="pd-md-x-30 pd-x-20">
+                <div class="px-md-4 px-3">
                   <div class="row justify-content-between">
                     <div class="col-md-6 col-12">
                       <div>
@@ -292,54 +190,53 @@
                         <p class="mb-0 tx-18">+234-809784784</p>
                       </div>
                     </div>
-                    <div class="col-md-4 col-12 mg-t-10">
-                      <div class="tx-md-right mg-md-t-30">
+                    <div class="col-md-4 col-12 mt-2">
+                      <div class="tx-md-right mt-md-4">
                         <p class="mb-0">795 Fudson Avenue</p>
                         <p class="mb-0">Suite 600, san Lekki</p>
                         <p class="mb-0">CA 9876</p>
                       </div>
                     </div>
                   </div>
-                  <div class="bg-gray ht-100 mg-t-20 tx-center pd-y-25">
-                    <i class="fa fa-ban tx-gray fa-2x"></i>
-                    <p class="tx-gray mb-0 tx-16 tx-semibold">You have no pattern or colour selected</p>
+                  <div class="ht-100 mt-4 rounded">
+                    <img src="./assets/img/pattern4.svg" alt="" class="ht-100 w-100 img-fluid" srcset="">
                   </div>
-                  <div class="row justify-content-between mg-t-20">
+                  <div class="row justify-content-between mt-3">
                     <div class="col-md-8 col-12">
                       <div class="row">
-                        <div class="col-md-4 mg-t-10">
-                          <label for="" class="mb-2 tx-gray tx-12">Billed To</label>
+                        <div class="col-md-4 mt-2">
+                          <label for="" class="mb-2 tx-gray tx-14">Billed To</label>
                           <p class="mb-0">Sheriff Bassey</p>
                         </div>
-                        <div class="col-md-4 mg-t-10">
-                          <label for="" class="mb-2 tx-gray tx-12">Invoice Date</label>
-                          <p class="mb-0 tx-12">25/09/2021</p>
+                        <div class="col-md-4 mt-2">
+                          <label for="" class="mb-2 tx-gray tx-14">Invoice Date</label>
+                          <p class="mb-0 tx-14">25/09/2021</p>
                         </div>
-                        <div class="col-md-4 mg-t-10">
-                          <label for="" class="mb-2 tx-gray tx-12">Invoice Number</label>
-                          <p class="mb-0 tx-12">INV-0987</p>
+                        <div class="col-md-4 mt-2">
+                          <label for="" class="mb-2 tx-gray tx-14">Invoice Number</label>
+                          <p class="mb-0 tx-14">INV-0987</p>
                         </div>
-                        <div class="col-md-4 mg-t-10">
-                          <p class="mb-0 tx-12">7 Heaven Avenue </p>
-                          <p class="mb-0 tx-12">Off Freedom Way</p>
-                          <p class="mb-0 tx-12">Lekki</p>
+                        <div class="col-md-4 mt-4">
+                          <p class="mb-0 tx-14">7 Heaven Avenue </p>
+                          <p class="mb-0 tx-14">Off Freedom Way</p>
+                          <p class="mb-0 tx-14">Lekki</p>
                         </div>
-                        <div class="col-md-4 mg-t-10">
-                          <label for="" class="mb-2 tx-gray tx-12">Due Date</label>
-                          <p class="mb-0 tx-12">07/06/2021</p>
+                        <div class="col-md-4 mt-4">
+                          <label for="" class="mb-2 tx-gray tx-14">Due Date</label>
+                          <p class="mb-0 tx-14">07/06/2021</p>
                         </div>
                       </div>
                     </div>
-                    <div class="col-md-4 col-12 mg-t-10">
-                      <div class="tx-md-right">
-                        <label for="" class="mb-2 tx-gray tx-12">Amount Due</label>
-                        <p class="mb-0 tx-20 tx-bold">N230,450.00</p>
+                    <div class="col-md-4 col-12 mt-2">
+                      <div class="text-md-right">
+                        <label for="" class="mb-2 tx-gray tx-14">Amount Due</label>
+                        <p class="mb-0 tx-40 tx-bold">#128,000.00</p>
                       </div>
                     </div>
                   </div>
                 </div>
                
-                  <div class="card card-body pd-y-0 pd-md-x-30 pd-x-20 bd-0 mg-t-20 top-primary">
+                  <div class="card card-body py-0 px-md-4 px-3 bd-0 mt-3 top-primary">
                     <div class="table-responsive">
                       <table id="" class="table  table-preview mb-0">
                         <thead>
@@ -376,29 +273,30 @@
                     </div>
                   
                   <div class="bd-0">
-                      <div class="col-lg-5 col-12  offset-md-7 pd-x-0">
-                       <div class="row mg-t-20">
-                         <div class="col-6 mg-t-10 tx-right">
+                      <div class="col-lg-4 col-md-5 col-12  offset-md-7 px-0 ml-auto">
+                       <div class="row mt-3 ml-md-auto">
+                         <div class="col-6 mt-2 text-right">
                             <p class="tx-blac mb-0">Sub-Total</p>
                          </div>
-                         <div class="col-6 mg-t-10">
+                         <div class="col-6 mt-2">
                            <p class="mb-0">N125,000.00</p>
                          </div>
-                         <div class="col-6 mg-t-10 tx-right">
+                         <div class="col-6 mt-2 text-right">
                           <p class="tx-blac mb-0">Tax</p>
                        </div>
-                       <div class="col-6 mg-t-10">
+                       <div class="col-6 mt-2">
                          <p class="mb-0">N3,000.00</p>
                        </div>
-                       <div class="col-6 mg-t-20 tx-right">
+                       <div class="col-6 mt-3 text-right">
                         <p class="tx-bold mb-0">Amount Due</p>
                      </div>
-                     <div class="col-6 mg-t-20">
+                     <div class="col-6 mt-3">
                        <p class="mb-0">N128,000.00</p>
                      </div>
                        </div>
                       </div>
                   </div>
+
 
                   <div>
                     <p class="tx-bold mb-2">Description</p>
@@ -406,9 +304,10 @@
                       <p class="mb-0 tx-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nulla, tempore minima iste fugit dolor. Aliquam dolor cum sequi repellendus nisi reprehenderit voluptatum, ipsum, eos facere in itaque a tempore eveniet voluptatibus ducimus magni, pariatur impedit. Earum animi, sit, harum, reiciendis fugit necessitatibus quia qui odio minima cumque quaerat dolor repellendus! Consequatur quae harum voluptatum quam quod aliquam iste tenetur.</p>
                     </div>
                   </div>
-                  <div class="mg-t-20">
+
+                  <div class="mt-5">
                     <div class="d-flex">
-                      <div class="avatar avatar-lg"><img src="..." class="rounded-circle" alt=""></div>
+                      <div class="avatar avatar-lg"><img src="./assets/img/staff.png" class="rounded-circle" alt=""></div>
                       <div class="mg-l-10 pd-t-5">
                         <p class="tx-18 tx-bold mb-1"> William Peter</p>
                         <p class=""> Accountant</p>
@@ -417,8 +316,7 @@
                             <div class="drop-zone-form pd-10 border-dash tx-center">
                               <div class="cell"> 
                                 <div class="drop-zone__prompt">
-                                  <img src="./assets/img/Upload Signature.svg" class="wd-30 ht-30" alt="" srcset="">
-                                  <p class="tx-12 tx-primary mg-t-10">Upload Signature</p>
+                                  <p class="tx-12 tx-primary mg-t-10"> Signature</p>
                                 </div>
                                 <input type="file" name="myFile" class="drop-zone__input">
                               </div>
@@ -429,15 +327,18 @@
                     </div>
                   </div>
 
-                  <div class="row col-lg-9 col-12 pd-x-0 pd-y-20">
-                    <div class="col-md-6 col-7 mg-t-20">
-                      <button class="btn btn-primary w-100">Save and Send</button>
-                    </div>
-                    <div class="col-md-3 col-5 mg-t-20">
+  
+                 
+                  <div class="row col-lg-8 col-12 px-0 py-3 ml-md-auto">
+                    
+                    <div class="col-md-3 col-5 mt-3">
                       <button class="btn w-100"><i class="fa fa-print tx-primary mr-1"></i> Print</button>
                     </div>
-                    <div class="col-md-3 col-5 pl-0 mg-t-20">
+                    <div class="col-md-3 col-5 pl-0 mt-3">
                       <button class="btn w-100"><i class="fa fa-share-alt tx-primary mr-1"></i> Share</button>
+                    </div>
+                    <div class="col-md-6 col-7 mt-3">
+                      <button class="btn btn-primary w-100">Download Invoice</button>
                     </div>
                   </div>
                 </div>
@@ -446,157 +347,91 @@
           </div>
           </div>
       </div>
-
-
-      
-      
     </div><!-- container -->
-      
-  
-  
+     
     </div>
     </div>
 
-    <script src="../assets/lib/jquery/jquery.min.js"></script>
-    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/lib/feather-icons/feather.min.js"></script>
-    <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="../assets/lib/prismjs/prism.js"></script>
-    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
-    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
-    <script src="../assets/lib/typeahead.js/typeahead.jquery.min.js"></script>
-    <script src="../assets/lib/typeahead.js/typeahead.bundle.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <script src="../assets/lib/chart.js/Chart1.min.js"></script>
-    <script src="../assets/lib/chart.js/utils.js"></script>
-
-    <script src="../assets/js/dashforge.js"></script>
-    <script src="../assets/js/dashforge.aside.js"></script>
-    <script src="../assets/js/dashforge.sampledata.js"></script>
-    <!-- for multiselect dropdown  -->
-    <!-- <script type="text/javascript" src="../assets/js/bootstrap-multiselect.js"></script> -->
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+     
     <script>
-      $(document).ready( function () {
-       $('.display').DataTable({
-         "paging": true,
-         "info": true,
-         "responsive": true,
-         "aoColumnDefs": [{
-             "bSortable": false,
-             "aTargets": ["no-sort"]
-         }],
-         
-         "bInfo": true
-       });
-       
-       $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-         $('.display:visible').each( function(e) {
-           $(this).DataTable().columns.adjust().responsive.recalc();
-         });
-       });
-
-         //date picker
-     let start = moment().subtract(29, 'days');
-      let end = moment();
-
-    function cb(start, end) {
-        $('#reportrange span').html(start.format('MMMM ') + ' - ' + end.format('MMMM D YYYY'));
-    }
-
-    $('#reportrange').daterangepicker({
-        startDate: start,
-        endDate: end,
-        ranges: {
-          'Today': [moment(), moment()],
-          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-          'This Month': [moment().startOf('month'), moment().endOf('month')],
-          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-        }
-    }, cb);
-
-    cb(start, end);
-
-     } );
-      </script>
+      document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+               const dropZoneElement = inputElement.closest(".drop-zone-form");
+     
+               dropZoneElement.addEventListener("click", (e) => {
+                 inputElement.click();
+               });
+     
+               inputElement.addEventListener("change", (e) => {
+                 if (inputElement.files.length) {
+                   updateThumbnail(dropZoneElement, inputElement.files[0]);
+                 }
+               });
+     
+               dropZoneElement.addEventListener("dragover", (e) => {
+                 e.preventDefault();
+                 dropZoneElement.classList.add("drop-zone--over");
+               });
+     
+               ["dragleave", "dragend"].forEach((type) => {
+                 dropZoneElement.addEventListener(type, (e) => {
+                   dropZoneElement.classList.remove("drop-zone--over");
+                 });
+               });
+     
+               dropZoneElement.addEventListener("drop", (e) => {
+                 e.preventDefault();
+     
+                 if (e.dataTransfer.files.length) {
+                   inputElement.files = e.dataTransfer.files;
+                   updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+                 }
+     
+                 dropZoneElement.classList.remove("drop-zone--over");
+               });
+             });
+     
+             /**
+              * Updates the thumbnail on a drop zone element.
+              *
+              * @param {HTMLElement} dropZoneElement
+              * @param {File} file
+              */
+             function updateThumbnail(dropZoneElement, file) {
+               let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+     
+               // First time - remove the prompt
+               if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+                 dropZoneElement.querySelector(".drop-zone__prompt").remove();
+               }
+     
+               // First time - there is no thumbnail element, so lets create it
+               if (!thumbnailElement) {
+                 thumbnailElement = document.createElement("div");
+                 thumbnailElement.classList.add("drop-zone__thumb");
+                 dropZoneElement.appendChild(thumbnailElement);
+               }
+     
+               thumbnailElement.dataset.label = file.name;
+     
+               // Show thumbnail for image files
+               if (file.type.startsWith("image/")) {
+                 const reader = new FileReader();
+     
+                 reader.readAsDataURL(file);
+                 reader.onload = () => {
+                   thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+                 };
+               } else {
+                 thumbnailElement.style.backgroundImage = null;
+               }
+             }
+      
+       </script>
      
 <script>
- document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
-          const dropZoneElement = inputElement.closest(".drop-zone-form");
-
-          dropZoneElement.addEventListener("click", (e) => {
-            inputElement.click();
-          });
-
-          inputElement.addEventListener("change", (e) => {
-            if (inputElement.files.length) {
-              updateThumbnail(dropZoneElement, inputElement.files[0]);
-            }
-          });
-
-          dropZoneElement.addEventListener("dragover", (e) => {
-            e.preventDefault();
-            dropZoneElement.classList.add("drop-zone--over");
-          });
-
-          ["dragleave", "dragend"].forEach((type) => {
-            dropZoneElement.addEventListener(type, (e) => {
-              dropZoneElement.classList.remove("drop-zone--over");
-            });
-          });
-
-          dropZoneElement.addEventListener("drop", (e) => {
-            e.preventDefault();
-
-            if (e.dataTransfer.files.length) {
-              inputElement.files = e.dataTransfer.files;
-              updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
-            }
-
-            dropZoneElement.classList.remove("drop-zone--over");
-          });
-        });
-
-        /**
-         * Updates the thumbnail on a drop zone element.
-         *
-         * @param {HTMLElement} dropZoneElement
-         * @param {File} file
-         */
-        function updateThumbnail(dropZoneElement, file) {
-          let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
-
-          // First time - remove the prompt
-          if (dropZoneElement.querySelector(".drop-zone__prompt")) {
-            dropZoneElement.querySelector(".drop-zone__prompt").remove();
-          }
-
-          // First time - there is no thumbnail element, so lets create it
-          if (!thumbnailElement) {
-            thumbnailElement = document.createElement("div");
-            thumbnailElement.classList.add("drop-zone__thumb");
-            dropZoneElement.appendChild(thumbnailElement);
-          }
-
-          thumbnailElement.dataset.label = file.name;
-
-          // Show thumbnail for image files
-          if (file.type.startsWith("image/")) {
-            const reader = new FileReader();
-
-            reader.readAsDataURL(file);
-            reader.onload = () => {
-              thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
-            };
-          } else {
-            thumbnailElement.style.backgroundImage = null;
-          }
-        }
     function goBack() {
   window.history.back();
 };

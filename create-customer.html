@@ -152,74 +152,119 @@
                          <input type="text" class="form-control bg-gray" placeholder="Sherif Sorunke">
                       </div>
                       <div class="form-group col-md-4 col-12">
+                        <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">GENDER (Optional)</label>
+                        <select class="custom-select bg-gray">
+                          <option selected>Male</option>
+                          <option value="1">Male</option>
+                          <option value="2">Female</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-4 col-12">
                         <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">phone number</label>
                        <input type="text" class="form-control bg-gray" placeholder="+234909134853">
                       </div>
+                    </div>
+                    <div class="form-row">
                       <div class="form-group col-md-4 col-12">
                         <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">Email</label>
                         <input type="text" class="form-control bg-gray" placeholder="sherifolatomiwa@gmail.com">
                        </div>
+                       <div class="form-group col-md-4 col-12">
+                        <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">Business name</label>
+                        <input type="text" class="form-control bg-gray" placeholder="Konsas">
+                     </div>
+                     <div class="form-group col-md-4 col-12">
+                       <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">Business type</label>
+                      <input type="text" class="form-control bg-gray" placeholder="Sole proprietorship">
+                     </div>
                     </div>
                     <div class="form-row">
                       <div class="form-group col-md-4 col-12">
-                         <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">Business name</label>
-                         <input type="text" class="form-control bg-gray" placeholder="Konsas">
+                         <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">Tax Identification number</label>
+                         <input type="text" class="form-control bg-gray" placeholder="TN-1234-01">
                       </div>
                       <div class="form-group col-md-4 col-12">
-                        <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">Business type</label>
-                       <input type="text" class="form-control bg-gray" placeholder="Sole proprietorship">
+                        <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">ONBOARDING DATE</label>
+                       <input type="text" class="form-control bg-gray" placeholder="26th July, 2021">
                       </div>
                       <div class="form-group col-md-4 col-12">
-                        <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">Sector business operates in</label>
-                        <input type="text" class="form-control bg-gray" placeholder="Agritech">
+                        <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">CUSTOMER PURCHASES</label>
+                        <input type="text" class="form-control bg-gray" placeholder="N2,752,000.00">
                        </div>
                     </div>
 
-                    <div class="mg-t-30">
-                      <p class="tx-16 tx-bold">BILLING INFORMATION</p>
-                      <div class="form-group">
-                        <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">Address</label>
-                        <input type="text" class="form-control bg-gray" placeholder="Lekki 55">
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md-4 col-12">
-                           <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">COUNTRY</label>
-                           <input type="text" class="form-control bg-gray" placeholder="Nigeria">
-                        </div>
-                        <div class="form-group col-md-4 col-12">
-                          <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">Postal code</label>
-                         <input type="text" class="form-control bg-gray" placeholder="100034">
-                        </div>
-                        <div class="form-group col-md-4 col-12">
-                          <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">STATE</label>
-                          <input type="text" class="form-control bg-gray" placeholder="Lagos">
-                         </div>
+                    <div class="bg-gray pd-y-15 pd-x-20 cursor" onclick="addMoreInfo()" id="add-btn">
+                      <div class="d-flex justify-content-between">
+                      <p class="tx-18 tx-bold mb-0">Add more Information</p>
+                        <i class="fa fa-chevron-down tx-gray tx-18 pd-t-5"></i>
                       </div>
                     </div>
                     
-                    <div class="mg-t-30">
-                      <p class="tx-16 tx-bold">SHIPPING INFORMATION</p>
-                      <div class="form-group">
-                        <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">Address</label>
-                        <input type="text" class="form-control bg-gray" placeholder="Lekki 55">
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-md-4 col-12">
-                           <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">COUNTRY</label>
-                           <input type="text" class="form-control bg-gray" placeholder="Nigeria">
+                    <div id="more-info">
+                      <div class="mg-t-30">
+                        <p class="tx-16 tx-bold">BILLING INFORMATION</p>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">Address 1</label>
+                          <input type="text" class="form-control bg-gray" placeholder="Lekki 55">
                         </div>
-                        <div class="form-group col-md-4 col-12">
-                          <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">Postal code</label>
-                         <input type="text" class="form-control bg-gray" placeholder="100034">
+                        <div class="form-group">
+                          <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">Address 2</label>
+                          <input type="text" class="form-control bg-gray" placeholder="Lekki 55">
                         </div>
-                        <div class="form-group col-md-4 col-12">
-                          <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">STATE</label>
-                          <input type="text" class="form-control bg-gray" placeholder="Lagos">
-                         </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-4 col-12">
+                             <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">COUNTRY</label>
+                             <input type="text" class="form-control bg-gray" placeholder="Nigeria">
+                          </div>
+                          <div class="form-group col-md-4 col-12">
+                            <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">Postal code</label>
+                           <input type="text" class="form-control bg-gray" placeholder="100034">
+                          </div>
+                          <div class="form-group col-md-4 col-12">
+                            <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">STATE</label>
+                            <input type="text" class="form-control bg-gray" placeholder="Lagos">
+                           </div>
+
+                        </div>
+                        <span class="bg-add tx-primary pd-10 d-inline-block cursor mg-l-5 mg-t-15">
+                          <i class="fa fa-plus mg-r-10"></i>
+                          <span class="tx-semibold">Add Billing Information</span>
+                        </span>
                       </div>
+                      
+                      <div class="mg-t-30">
+                        <p class="tx-16 tx-bold">SHIPPING INFORMATION</p>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">Address 1</label>
+                          <input type="text" class="form-control bg-gray" placeholder="Lekki 55">
+                        </div>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">Address 2</label>
+                          <input type="text" class="form-control bg-gray" placeholder="Lekki 55">
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-4 col-12">
+                             <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">COUNTRY</label>
+                             <input type="text" class="form-control bg-gray" placeholder="Nigeria">
+                          </div>
+                          <div class="form-group col-md-4 col-12">
+                            <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">Postal code</label>
+                           <input type="text" class="form-control bg-gray" placeholder="100034">
+                          </div>
+                          <div class="form-group col-md-4 col-12">
+                            <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">STATE</label>
+                            <input type="text" class="form-control bg-gray" placeholder="Lagos">
+                           </div>
+                        </div>
+                        <span class="bg-add tx-primary pd-10 cursor mg-l-5 mg-t-15 d-inline-block">
+                          <i class="fa fa-plus mg-r-10"></i>
+                          <span class="tx-semibold">Add Shipping Information</span>
+                        </span>
+                      </div>
+                      
                     </div>
                     
-                    <button class="btn btn-primary float-md-right pd-x-50" type="button" data-toggle="modal" data-target="#successModal">Create</button>
+                    <button class="btn btn-primary float-md-right pd-x-50 mg-t-40" type="button" data-toggle="modal" data-target="#successModal">Create</button>
 
                 </form>
               </div>
@@ -229,7 +274,7 @@
 
        <!-- Modal -->
        <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document" style="width: 400px;">
+        <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             <div class="modal-header pd-md-x-30 bd-b-0">
               <h5 class="modal-title" id="successModalLabel"></h5>
@@ -279,56 +324,23 @@
     <!-- for multiselect dropdown  -->
     <!-- <script type="text/javascript" src="../assets/js/bootstrap-multiselect.js"></script> -->
 
-    <script>
-      $(document).ready( function () {
-       $('.display').DataTable({
-         "paging": true,
-         "info": true,
-         "responsive": true,
-         "aoColumnDefs": [{
-             "bSortable": false,
-             "aTargets": ["no-sort"]
-         }],
-         
-         "bInfo": true
-       });
-       
-       $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-         $('.display:visible').each( function(e) {
-           $(this).DataTable().columns.adjust().responsive.recalc();
-         });
-       });
 
-         //date picker
-     let start = moment().subtract(29, 'days');
-      let end = moment();
-
-    function cb(start, end) {
-        $('#reportrange span').html(start.format('MMMM ') + ' - ' + end.format('MMMM D YYYY'));
-    }
-
-    $('#reportrange').daterangepicker({
-        startDate: start,
-        endDate: end,
-        ranges: {
-          'Today': [moment(), moment()],
-          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-          'This Month': [moment().startOf('month'), moment().endOf('month')],
-          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-        }
-    }, cb);
-
-    cb(start, end);
-
-     } );
-      </script>
-     
-<script>
+  <script>
     function goBack() {
   window.history.back();
-};
+  };
+  function addMoreInfo(){
+    console.log('click')
+    // let x = document.getElementById("userAccess");
+    // x.style.display = "block"
+    let x = document.getElementById("more-info");
+    let y = document.getElementById("add-btn");
+
+      x.style.display = "block";
+      y.style.display = "none";
+
+  }
+
   </script>
  
   </body>

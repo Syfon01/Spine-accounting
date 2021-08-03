@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Spine Accounting">
+    <title>Spine Accounting</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <!-- Required External CSS -->
+    <link href="assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="assets/lib/select2/css/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="assets/css/dashforge.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body class="">
+    <section class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 primary-bg d-none d-md-block d-lg-block d-xl-block pd-lg-30">
+          <div class="card card-body h-100 bg-transparent border-0">
+            <div class="pd-lg-l-50">
+              <p class="tx-24 tx-semibold mb-1 pd-t-50">Thank you for signing up</p>
+              <p class="tx-20">You’re the real MVP</p>
+              <p class="tx-40 tx-bold mb-0"> Add Subscription Plan</p>
+              <img src="./assets/img/Sign_up.png" class="w-50 img-fluid mg-t-20" alt="...">
+  
+              <div class="pd-t-40 mg-xl-t-50">
+              <a href="./login.html" class="tx-dark tx-bold"><span class="tx-normal">Already have an account?</span> Login.</a>
+              </div>
+              <div class="mg-t-50 mg-xl-t-80">
+                <p>
+                Need help?
+                <br/>
+                Contact us on 0800-872-912
+                </p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-md-6">
+        <div class="d-flex flex-column h-100 justify-content-center align-items-start">
+          <div class="container pd-lg-20 pd-x-10 pd-y-30 pd-xl-r-50">
+            <div class=" ">
+              <p class="tx-28 tx-bold mb-0">Select Payment Option</p>
+              <p class="tx-18 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                <div class="card mg-t-25">
+                  <div class="card-body bg-grey pd-y-30">
+                    <div class="tx-center">
+                      <p class="tx-28 tx-bold mb-0"><span class="tx-20"> N</span>70,999.99</p>
+                      <p class="tx-22">Basic Plan</p>
+                    </div>
+                    <form action="" method="post" class="mg-t-20">
+                      <div class="tx-center">
+                        <p class="tx-16 tx-center">Dial the code below to complete this transaction with GTBank's 737</p>
+                        <p class="tx-22  mb-0 tx-bold tx-center" id="myCode">*737*6*33*74825#</p>
+                        <button class="btn pd-y-0 tx-18" onclick="copyCode('#myCode')">Click to copy</button>
+                      </div>
+                     
+                      <div class="modal-footer pd-x-0 mg-t-20 bd-t-0">
+                        <a href="./signUp_complete.html" class="btn-primary btn tx-bold pd-x-30">I've completed the Payment</a>
+                       
+                      </div>
+                    </form>
+                  </div>
+                  <div class="card-body bg-white pd-y-30">
+                    <a href="./payment.html" class="tx-dark">
+                      <div class="d-flex">
+                        <div>
+                          <i class="fa fa-credit-card mg-r-10 tx-lighter pd-t-7 tx-18" aria-hidden="true"></i>
+                        </div>
+                        <p class="tx-18 mb-0">Pay with Card</p>
+                      </div>
+                    </a>
+                    <hr class="mg-y-10">
+                    <a href="./ussd.html" class="tx-dark">
+                      <div class="d-flex">
+                        <div>
+                          <i class="fa fa-phone-volume mg-r-10 tx-lighter pd-t-7 tx-18" aria-hidden="true"></i>
+                        </div>
+                        <p class="tx-18 mb-0">Pay with USSD</p>
+                      </div>
+                    </a>
+                    
+                  </div>
+                </div>
+            </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/lib/feather-icons/feather.min.js"></script>
+    <script src="/assets/js/dashforge.js"></script>
+    <script src="assets/lib/select2/js/select2.min.js"></script>
+    <script>
+  
+function copyCode(element) {
+  let $temp = $("<input>");
+  $("body").append($temp);
+ let copiedText = $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  alert("Code Copied");
+  // $temp.remove();
+}
+
+
+    </script>
+
+    
+  </body>
+</html>
