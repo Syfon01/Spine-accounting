@@ -339,6 +339,9 @@
   .pad-space{
     padding-right: 20px!important;
   }
+  .modal-dialog{
+    width: auto!important;
+  }
   
 }
 
@@ -719,3 +722,23 @@ table{
   background-color: #BBBBBB;
   color: #fff;
 }
+.bg-deep-blue{
+  background-color: #05154E;
+}
+
+.bg-grey-round{
+  background-color: #b3b7c9;
+  height: 60px;
+  width: 60px;
+  
+}
+.blue-div{
+  width:18.5rem;
+}
+.badge-lightt{
+  background-color: #1DB93117;
+  border-radius: 5px;
+}
+/* .sub-input:checked ~ .sub-input::before{
+  background-color: #00C644;
+} */
