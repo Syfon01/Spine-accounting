@@ -777,6 +777,10 @@ table{
 .details-table tr td{
   font-size: 14px;
 }
+.form-group.required .control-label:after {
+  content:"*";
+  color:#BC0303;
+}
 /* .sub-input:checked ~ .sub-input::before{
   background-color: #00C644;
 } */

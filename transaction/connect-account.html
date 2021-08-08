@@ -139,48 +139,47 @@
             <div class="col-lg-9 col-md-11 col-12 pd-lg-r-0 mg-t-20 mg-md-t-0">
               <div class="card shadow-sm bg-white">
                 <div class="card-body pd-md-50">
-                  <div class="col-md-10 col-lg-9 col-xl-8">
+                  <div class="col-md-10 col-lg-9 col-xl-9">
                     <p class="tx-24 tx-bold mb-1">Connect Account</p>
                     <p class="mb-0 tx-16 tx-blac">Connect your Bank to Spine and we will take care of the rest</p>
                     <form class="mg-t-30">
-                      <div class="form-group ">
-                        <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">BANK NAME</label>
-                        <select id="bank" class="custom-select" type="button" onChange="window.location.href=this.value">
-                          <option>   </option>
-                          <option value="./connect-account.html"> First Bank </option>
-                          <option value="./connect-account.html">Fidelity Bank</option>
-                          <option value="./connect-account.html">KUDA Microfinance Bank</option>
-                          <option value="./connect-account.html">Keystone Bank</option>
-                          <option value="./connect-account.html">GTB </option>
-                          <option value="./connect-account.html">Union Bank</option>
-                          <option value="7">LAPO Microfinance</option>
-                        </select>
-                      </div>
-                      <p class="tx-14">Select from popular banks.</p>
-                      <div class="row col-lg-11">
-                        <div class="col-md-4 mg-t-10">
-                          <img src="../assets/img/firstbank.png" class="img-fluid ht-40" alt="" srcset="">
-                        </div>
-                        <div class="col-md-4 mg-t-10">
-                          <img src="../assets/img/wema.jpg" class="img-fluid ht-40" alt="" srcset="">
-                        </div>
-                        <div class="col-md-4 mg-t-10">
-                          <img src="../assets/img/UBA.png" class="img-fluid ht-40 wd-70"  alt="" srcset="">
-                        </div>
-                        <div class="col-md-4 mg-t-20">
-                          <img src="../assets/img/fcmb.png"  class="img-fluid ht-40" alt="" srcset="">
-                        </div>
-                        <div class="col-md-4 mg-t-20">
-                          <img src="../assets/img/gtb.jpg" class="img-fluid ht-40 wd-50" alt="" srcset="">
-                        </div>
-                        <div class="col-md-4 mg-t-20">
-                          <img src="../assets/img/zenith.png" class="img-fluid ht-40 wd-50" alt="" srcset="">
+                      <div class="form-group required row">
+                        <label for="inputEmail3" class="col-12 col-md-4 col-form-label control-label">Choose Bank</label>
+                        <div class="col-12  col-md-8">
+                          <input type="text" class="form-control bg-gray" placeholder="Enter Your User ID">
                         </div>
                       </div>
-                      <div class="mg-t-60 mg-lg-t-100">
-                        <p class="tx-gray mb-0">Can’t find your bank on the list? Let’s do it the old-fashioned way.</p>
-                        <a href="./manual-upload" class="btn btn-primary wd-md-50p wd-100 mg-t-10" type="button">Upload Manually</a>
-
+                      <div class="form-group required row">
+                        <label for="inputEmail3" class="col-12 col-md-4 col-form-label control-label">Password</label>
+                        <div class="col-12  col-md-8">
+                          <div class="input-group">
+                            <input type="password" class="form-control bd-r-0 bg-gray" id="password" placeholder="Enter Your Password">
+                          <div class="input-group-append">
+                            <span class="input-group-text border-l-0 bg-gray" id="basic-addon2">
+                            <i class="fa fa-eye-slash" id="togglePassword"></i>
+                            </span>
+                          </div>
+                          </div>
+      
+                        </div>
+                      </div>
+                      <div class="form-group required row">
+                        <label for="inputEmail3" class="col-12 col-md-4 col-form-label control-label">Confirm Password</label>
+                        <div class="col-12  col-md-8">
+                          <div class="input-group">
+                            <input type="password" class="form-control bd-r-0 bg-gray" id="confirmPassword" placeholder="Enter Your Password">
+                          <div class="input-group-append">
+                            <span class="input-group-text border-l-0 bg-gray" id="basic-addon2">
+                            <i class="fa fa-eye-slash" id="toggleconfirmPassword"></i>
+                            </span>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row mg-b-60 mg-t-40">
+                        <div class="col-md-8 offset-md-4">
+                          <button type="submit" class="btn btn-primary w-100 tx-14">Continue</button>
+                        </div>
                       </div>
                     </form>
                   </div>
@@ -230,36 +229,29 @@
     
      
   <script>
-   function showMoreInfo(){
-    let x = document.getElementById("more-info");
-    let y = document.getElementById("add-btn");
+      const togglePassword = document.querySelector('#togglePassword');
+      const password = document.querySelector('#password');
 
-      x.style.display = "block";
-      y.style.display = "none";
+      const toggleconfirmPassword = document.querySelector('#toggleconfirmPassword');
+      const confirmPassword = document.querySelector('#confirmPassword');
 
-  }
-  function showLessInfo(){
-    let x = document.getElementById("more-info");
-    let y = document.getElementById("add-btn");
 
-      x.style.display = "none";
-      y.style.display = "block";
+      togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye / eye slash icon
+    this.classList.toggle('fa-eye');
+});
 
-  }
-   // Listen for click on toggle checkbox
-   $("#selectAll").click(function () {
-     $('.custom-control-input').not(this).prop('checked', this.checked);
-    });
-  
-    //check for delete and categorize button
-    $(".table-input").on("click",function() {
-    $(".categorize").toggle(this.checked);
-  });
-  $('#bank').select2({
-    placeholder: 'Find your bank',
-    searchInputPlaceholder: 'Search options',
-      width: '100%' ,
-    });
+//confirmPassword
+toggleconfirmPassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = confirmPassword.getAttribute('type') === 'password' ? 'text' : 'password';
+    confirmPassword.setAttribute('type', type);
+    // toggle the eye / eye slash icon
+    this.classList.toggle('fa-eye');
+});
 
   function goBack() {
   window.history.back();
