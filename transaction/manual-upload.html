@@ -132,62 +132,86 @@
       <div class="content-body">
         
         <div class="container">
-          <div class="row  mb-5">
-            <div class="col-lg-2 col-md-3 col-12 mt-2 pd-lg-r-0"> 
-                <button class="btn btn-outline-dark" onclick="goBack()"><i class="fa fa-arrow-left mg-r-5"></i> Go back</button>
-            </div>
-            <div class="col-lg-9 col-md-11 col-12 pd-lg-r-0 mg-t-20 mg-md-t-0">
-              <div class="card shadow-sm bg-white">
-                <div class="card-body pd-md-50">
-                  <div class="col-md-10 col-lg-9 col-xl-8">
-                    <p class="tx-24 tx-bold mb-1">Connect Account</p>
-                    <p class="mb-0 tx-16 tx-blac">Connect your Bank to Spine and we will take care of the rest</p>
-                    <form class="mg-t-30">
-                      <div class="form-group ">
-                        <label for="formGroupExampleInput" class="mb-1 tx-uppercase tx-12 tx-medium tx-gray">BANK NAME</label>
-                        <select id="bank" class="custom-select" type="button" onChange="window.location.href=this.value">
-                          <option>   </option>
-                          <option value="./connect-account.html"> First Bank </option>
-                          <option value="./connect-account.html">Fidelity Bank</option>
-                          <option value="./connect-account.html">KUDA Microfinance Bank</option>
-                          <option value="./connect-account.html">Keystone Bank</option>
-                          <option value="./connect-account.html">GTB </option>
-                          <option value="./connect-account.html">Union Bank</option>
-                          <option value="7">LAPO Microfinance</option>
-                        </select>
-                      </div>
-                      <p class="tx-14">Select from popular banks.</p>
-                      <div class="row col-lg-11">
-                        <div class="col-md-4 mg-t-10">
-                          <img src="../assets/img/firstbank.png" class="img-fluid ht-40" alt="" srcset="">
-                        </div>
-                        <div class="col-md-4 mg-t-10">
-                          <img src="../assets/img/wema.jpg" class="img-fluid ht-40" alt="" srcset="">
-                        </div>
-                        <div class="col-md-4 mg-t-10">
-                          <img src="../assets/img/UBA.png" class="img-fluid ht-40 wd-70"  alt="" srcset="">
-                        </div>
-                        <div class="col-md-4 mg-t-20">
-                          <img src="../assets/img/fcmb.png"  class="img-fluid ht-40" alt="" srcset="">
-                        </div>
-                        <div class="col-md-4 mg-t-20">
-                          <img src="../assets/img/gtb.jpg" class="img-fluid ht-40 wd-50" alt="" srcset="">
-                        </div>
-                        <div class="col-md-4 mg-t-20">
-                          <img src="../assets/img/zenith.png" class="img-fluid ht-40 wd-50" alt="" srcset="">
-                        </div>
-                      </div>
-                      <div class="mg-t-60 mg-lg-t-150">
-                        <p class="tx-gray mb-0">Can’t find your bank on the list? Let’s do it the old-fashioned way.</p>
-                        <a href="./manual-upload.html" class="btn btn-primary wd-md-50p wd-100 mg-t-10" type="button">Upload Manually</a>
+          <button class="btn btn-outline-dark" onclick="goBack()"><i class="fa fa-arrow-left mg-r-5"></i> Go back</button>
 
-                      </div>
-                    </form>
+          <div class="card shadow-sm bg-gray mg-t-30">
+            <div class="card-body pd-md-50">
+              <div class="col-md-7 col-lg-7">
+                <p class="tx-24 tx-bold mb-1">Manual Transaction</p>
+                <p class="mb-0 tx-14 tx-blac">Create your statement for easy analysis</p>
+                <form class="mg-t-30">
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-12 col-md-5 col-form-label ">Date of Transaction</label>
+                    <div class="col-12  col-md-7">
+                      <input type="date" class="form-control" placeholder="">
+                    </div>
                   </div>
-                </div>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-12 col-md-5 col-form-label ">Description</label>
+                    <div class="col-12  col-md-7">
+                      <textarea name="" id="" rows="4" class="form-control" placeholder="Write a description"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-12 col-md-5 col-form-label ">Category</label>
+                    <div class="col-12  col-md-7">
+                      <select id="category" class="custom-select">
+                        <option>   </option>
+                        <option value="1"> Agrotech  </option>
+                        <option value="2">Accounting & Auditing</option>
+                        <option value="3">Edutech</option>
+                        <option value="4">Transportation</option>
+                        <option value="5">Oil & Gas</option>
+                        <option value="6">Overseas remittances</option>
+                        <option value="7">Mining</option>
+                        <option value="8">Human Capital</option>
+                        <option value="9">Logistics</option>
+                        <option value="10">Health and Surgery</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-12 col-md-5 col-form-label ">Amount Spent (Debit)</label>
+                    <div class="col-12  col-md-7">
+                      <input type="text" class="form-control" placeholder="Enter amount spent">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-12 col-md-5 col-form-label ">Amount Received (Credit)</label>
+                    <div class="col-12  col-md-7">
+                      <input type="text" class="form-control" placeholder="Enter amount received">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-12 col-md-5 col-form-label ">Payee/Vendor</label>
+                    <div class="col-12  col-md-7">
+                      <input type="text" class="form-control" placeholder="">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputEmail3" class="col-12 col-md-5 col-form-label ">Payee/Vendor</label>
+                    <div class="col-12  col-md-7">
+                      <div class="dropdown">
+                        <button class="btn btn-outline-light bg-white dropdown-toggle w-100 tx-13" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Select your category
+                        </button>
+                        <div class="dropdown-menu openn" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Bank</a>
+                          <a class="dropdown-item" href="">Cash at hand</a>
+                        </div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="form-group row mg-b-20 mg-t-40">
+                    <div class="col-md-7 offset-md-5">
+                      <button type="submit" class="btn btn-primary w-100 tx-14">Submit</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
-            </div>
-        </div>
+          </div>
         
          <!-- Modal -->
        <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
@@ -219,48 +243,18 @@
     <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/lib/feather-icons/feather.min.js"></script>
     <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="../assets/lib/prismjs/prism.js"></script>
+    <script src="../assets/lib/select2/js/select2.min.js"></script>
     <script src="../assets/js/dashforge.js"></script>
     <script src="../assets/js/dashforge.aside.js"></script>
     <script src="../assets/js/dashforge.sampledata.js"></script>
-    <script src="../assets/lib/select2/js/select2.min.js"></script>
-
-    <!-- for multiselect dropdown  -->
-    <!-- <script type="text/javascript" src="../assets/js/bootstrap-multiselect.js"></script> -->
-    
      
   <script>
-   function showMoreInfo(){
-    let x = document.getElementById("more-info");
-    let y = document.getElementById("add-btn");
-
-      x.style.display = "block";
-      y.style.display = "none";
-
-  }
-  function showLessInfo(){
-    let x = document.getElementById("more-info");
-    let y = document.getElementById("add-btn");
-
-      x.style.display = "none";
-      y.style.display = "block";
-
-  }
-   // Listen for click on toggle checkbox
-   $("#selectAll").click(function () {
-     $('.custom-control-input').not(this).prop('checked', this.checked);
-    });
-  
-    //check for delete and categorize button
-    $(".table-input").on("click",function() {
-    $(".categorize").toggle(this.checked);
-  });
-  $('#bank').select2({
-    placeholder: 'Find your bank',
-    searchInputPlaceholder: 'Search options',
-      width: '100%' ,
-    });
-
+   $('#category').select2({
+          placeholder: 'Select Category',
+          searchInputPlaceholder: 'Search options',
+           width: '100%' ,
+         });
+    
   function goBack() {
   window.history.back();
 };
