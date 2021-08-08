@@ -671,7 +671,7 @@ table{
   border-right: .3em solid transparent;
   border-left: .3em solid transparent;
   float: right;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 .form-control.border-dash{
   border:1px dashed #435C0F;;
@@ -764,6 +764,18 @@ table{
 .dropdown .btn-outline-light:hover{
   background-color: #F2F5F9;
   color: #2E2E2E!important;
+}
+.tx-red{
+  color: #FF0000;
+}
+.table .detail-row .bd-t-0{
+  border:0!important
+}
+.table{
+  margin-bottom: 0;
+}
+.details-table tr td{
+  font-size: 14px;
 }
 /* .sub-input:checked ~ .sub-input::before{
   background-color: #00C644;

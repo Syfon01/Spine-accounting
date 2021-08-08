@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Spine Accounting">
+    <title>Spine Accounting</title>
+
+    <!-- Required External CSS -->
+    <link href="../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
+
+    <link href="../assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/select2/css/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <!-- DashForge CSS -->
+    <link rel="stylesheet" href="../assets/css/dashforge.css">
+    <!-- Page CSS --> 
+    <link rel="stylesheet" href="../assets/css/main.css">
+  </head>
+  <body>
+    <aside class="aside aside-fixed">
+      <div class="aside-header">
+        <a href="dashboard.html" class="aside-logo">
+          <div class="pd-50">
+            <img src="../assets/img/logo.svg" class="img-fluid logo" alt="" srcset="">
+          </div>
+        </a>
+        <a href="" class="aside-menu-link">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <!-- <div class="pd-b-30 pd-t-0 pd-x-40">
+          <p class="tx-14 tx-white mb-0">Account balance</p>
+          <p class="tx-14 tx-lighter mb-1">0124914917</p>
+          <p class="tx-18 tx-bold tx-white">1,298,000</p>
+
+          <button class="btn btn-light tx-dark">Import transaction</button>
+        </div> -->
+        <div class="nav-menu">
+          <ul class="nav nav-aside">
+            <li class="nav-item"><a href="../dashboard.html" class="nav-link"> <span class="marine-active-menu">Dashboard</span></a></li>
+            <li class="nav-item  active"><a href="./index.html" class="nav-link"><span>Transactions</span></a></li>
+            <li class="nav-item"><a href="../customers.html" class="nav-link"><span>Customers</span></a></li>
+            <li class="nav-item"><a href="../subscribers/index.html" class="nav-link"><span>Subscribers</span></a></li>
+            <li class="nav-item"><a href="../invoices.html" class="nav-link"><span>Invoices</span></a></li>
+            <li class="nav-item"><a href="../report.html" class="nav-link"><span>Report</span></a></li>
+            <li class="nav-item"><a href="../setting.html" class="nav-link"><span>Settings</span></a></li>
+          </ul>
+        </div>
+        <div class="fixed-bottom pd-x-40">
+          <button class="nav-link btn tx-white"><span>Log out</span></button>
+        </div>
+       
+      </div>
+    </aside>
+
+    <div class="content pd-0">
+  
+      <div class="content-header shadow-dash bd-b-0">
+        <div class="content-search">
+          <i data-feather="search"></i>
+          <input type="search" class="form-control" placeholder="Search...">
+        </div>
+        <nav class="nav">
+          
+          <div class="dropdown dropdown-notification ml-md-4 ml-2 mg-t-5">
+            <a href="" class="dropdown-link new-indicator" data-toggle="dropdown">
+              <i data-feather="bell"></i>
+              <span>2</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-header">Notifications</div>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../https://via.placeholder.com/350" class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
+                    <span>Mar 15 12:32pm</span>
+                  </div>
+                </div>
+              </a>
+              
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Adrian Monino</strong> added new comment on your photo</p>
+                    <span>Mar 12 10:40pm</span>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-footer"><a href="">View all Notifications</a></div>
+            </div><!-- dropdown-menu -->
+          </div>
+
+          <div class="dropdown dropdown-profile ml-md-4 ml-2">
+            <a href="" class="dropdown-link" data-toggle="dropdown" data-display="static">
+              <div class="avatar avatar-sm"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+            </a><!-- dropdown-link -->
+            <div class="dropdown-menu dropdown-menu-right ">
+              <div class="avatar avatar-lg mg-b-20"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+              <h6 class="tx-semibold mg-b-5">Katherine Pechon</h6>
+              <p class="mg-b-25 tx-12 tx-color-03">Administrator</p>
+  
+              <a href="" class="dropdown-item"><i data-feather="edit-3"></i> Edit Profile</a>
+              <a href="page-profile-view.html" class="dropdown-item"><i data-feather="user"></i> View Profile</a>
+              <div class="dropdown-divider"></div>
+              <a href="page-help-center.html" class="dropdown-item"><i data-feather="help-circle"></i> Help Center</a>
+              <a href="" class="dropdown-item"><i data-feather="life-buoy"></i> Forum</a>
+              <a href="" class="dropdown-item"><i data-feather="settings"></i>Account Settings</a>
+              <a href="" class="dropdown-item"><i data-feather="settings"></i>Privacy Settings</a>
+              <a href="page-signin.html" class="dropdown-item"><i data-feather="log-out"></i>Sign Out</a>
+            </div><!-- dropdown-menu -->
+          </div>
+        </nav>
+        
+      </div><!-- content-header -->
+
+      <div class="content-body">
+        
+        <div class="container">
+        <button class="btn btn-outline-dark mg-b-40" onclick="goBack()"><i class="fa fa-arrow-left mg-r-5"></i> Go back</button>
+
+         <div class="col-md-10 col-xl-9 pd-x-0">
+           <div class="row row-sm">
+             <div class="col-md-6">
+               <div class="card card-body pd-0">
+                <div class="table-responsive">
+                  <table class="table details-table">
+                    <tbody>
+                      <tr class="detail-row">
+                        <td class="bd-t-0">Account Name</td>
+                        <td class="tx-right bd-t-0">
+                          <p class="mb-0 tx-semibold"> Sherfii Shorunke</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Account Number</td>
+                        <td class="tx-right">
+                          <p class="mb-0 tx-semibold"> 014567839</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Bank Name</td>
+                        <td class="tx-right">
+                          <p class="mb-0 tx-semibold"> First Bank</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Number of Months</td>
+                        <td class="tx-right">
+                          <p class="mb-0 tx-semibold"> 19 months</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Start Date</td>
+                        <td class="tx-right">
+                          <p class="mb-0 tx-semibold"> 01/01/2021</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>End Date</td>
+                        <td class="tx-right">
+                          <p class="mb-0 tx-semibold"> 01/07/2021</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Currency</td>
+                        <td class="tx-right">
+                          <p class="mb-0 tx-semibold"> NGN</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+               </div>
+
+             </div>
+             <div class="col-md-6 mg-t-15 mg-md-t-0">
+              <div class="card card-body pd-0">
+               <div class="table-responsive">
+                 <table class="table details-table">
+                   <tbody>
+                     <tr class="detail-row">
+                       <td class="bd-t-0">Total Inflow</td>
+                       <td class="tx-right bd-t-0">
+                         <p class="mb-0 tx-semibold"> N10,000,000.00</p>
+                       </td>
+                     </tr>
+                     <tr>
+                       <td>Total Outflow</td>
+                       <td class="tx-right">
+                         <p class="mb-0 tx-semibold"> N8,500,000.00</p>
+                       </td>
+                     </tr>
+                     <tr>
+                       <td>Average Monthly Inflow</td>
+                       <td class="tx-right">
+                         <p class="mb-0 tx-semibold"> N420,000.00</p>
+                       </td>
+                     </tr>
+                     <tr>
+                       <td>Average Monthly Outflow</td>
+                       <td class="tx-right">
+                         <p class="mb-0 tx-semibold"> N300,000.00</p>
+                       </td>
+                     </tr>
+                     <tr>
+                       <td>Median Debit</td>
+                       <td class="tx-right">
+                         <p class="mb-0 tx-semibold"> N360,000.00</p>
+                       </td>
+                     </tr>
+                     <tr>
+                       <td>Maximum Credit</td>
+                       <td class="tx-right">
+                         <p class="mb-0 tx-semibold"> N3,000,000.00</p>
+                       </td>
+                     </tr>
+                     <tr>
+                       <td>Maximum Debit</td>
+                       <td class="tx-right">
+                         <p class="mb-0 tx-semibold">N1,200,000.00</p>
+                       </td>
+                     </tr>
+                   </tbody>
+                 </table>
+               </div>
+              </div>
+            </div>
+           </div>
+         </div>
+
+         <p class="mg-t-30 mg-b-10 mg-b-0 tx-16 tx-bold">Account Details</p>
+          <div class="row mg-b-30 justify-content-between">
+            <div class="col-md-6 col-12 mg-t-10">
+              <div class="row row-sm">
+                <div class="col-5 col-md-3">
+                  <div class="dropdown">
+                    <button class="btn btn-outline-light dropdown-toggle w-100 tx-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Sort By
+                    </button>
+                    <div class="dropdown-menu open" aria-labelledby="dropdownMenuButton">
+                      <span class="dropdown-item">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="sortDate">
+                          <label class="custom-control-label" for="sortDate">Date</label>
+                        </div>
+                      </span>
+                      <span class="dropdown-item">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="sortCheque">
+                          <label class="custom-control-label" for="sortCheque">Cheque No.</label>
+                        </div>
+                      </span>
+                      <span class="dropdown-item">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="sortDescription">
+                          <label class="custom-control-label" for="sortDescription">Description</label>
+                        </div>
+                      </span>
+                      <span class="dropdown-item">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="sortDebit">
+                          <label class="custom-control-label" for="sortDebit">Debit</label>
+                        </div>
+                      </span>
+                      <span class="dropdown-item">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="sortCredit">
+                          <label class="custom-control-label" for="sortCredit">Credit</label>
+                        </div>
+                      </span>
+                      <span class="dropdown-item">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="sortCategory">
+                          <label class="custom-control-label" for="sortCategory">Category</label>
+                        </div>
+                      </span>
+                      <span class="dropdown-item">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="sortVendor">
+                          <label class="custom-control-label" for="sortVendor">Payee/vendor</label>
+                        </div>
+                      </span>
+                    </div>
+                  </div>
+                  
+                 </div>
+                 <div class="col-7 col-md-5">
+                  <div id="reportrange" class="form-control date-picker ">
+                    <i class="fa fa-calendar"></i>&nbsp;
+                    <span></span> <i class="fa fa-caret-down"></i>
+                  </div>
+                 </div>
+                 <div class="col-md-4 mg-md-t-0 mg-t-15 ">
+                  <select class="custom-select">
+                    <option selected>Show Enteries 10</option>
+                    <option value="1">Show Enteries 10 </option>
+                    <option value="2">Show Enteries 20</option>
+                    <option value="3">Show Enteries 30</option>
+                  </select>
+                  
+                 </div>
+               </div>
+            </div>
+            <div class="col-md-5 col-12 mg-t-10">
+              <div class="d-flex float-md-right">
+                <div class="categorize mg-r-10 mg-t-10">
+                  <button class="btn pd-0"> <i class="fa fa-trash-alt tx-danger mg-r-5 tx-20"></i></button>
+                </div>
+               
+               <div class="">
+                <div class="dropdown pd-x-5">
+                  <button class="btn btn-outline-light dropdown-toggle tx-13" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Export as
+                  </button>
+                  <div class="dropdown-menu openn" aria-labelledby="dropdownMenuButton">
+                    <span class="dropdown-item">PDF</span>
+                    <a class="dropdown-item" href="./excel-upload">Excel</a>
+                  </div>
+                </div>
+  
+               </div>
+              </div>
+            </div>
+       </div>
+       
+       <div class="card card-body bd-0 shadow-sm pd-0">
+         <div class="table-responsive">
+           <table class="table table-hover" id="employee">
+             <thead class="thead tx-bold">
+               <tr class="tx-bold">
+                 <th scope="col">
+                   <div class="custom-control custom-checkbox">
+                   <input type="checkbox" class="custom-control-input" id="selectAll">
+                   <label class="custom-control-label" for="selectAll"></label>
+                 </div>
+                 </th>
+                 <th scope="col">Date</th>
+                 <th scope="col" class="">Cheque No.</th>
+                 <th scope="col" class="">Description</th>
+                 <th scope="col" class="">Debit</th>
+                 <th scope="col" class="">Credit</th>
+                 <th scope="col" class="">Category</th>
+                 <th scope="col" class="">Payee/vendor</th>
+               </tr>
+             </thead>
+     
+             <tbody>
+               <tr class=''>
+                 <th scope="row">
+                   <div class="custom-control custom-checkbox">
+                     <input type="checkbox" class="custom-control-input table-input" id="check2">
+                     <label class="custom-control-label" for="check2"></label>
+                   </div>
+                 </th>
+                 <td>
+                   12, Aug 2019 
+                 </td>
+                 <td>123456</td>
+                 <td>Lorem ipsum dolor sit amet consectetur adipisicing</td>
+                 <td class="tx-red">N25,000</td>
+                 <td class="tx-success">N25,000</td>
+
+                 <td>Card</td>
+                 <td>Kolawaole Abdul</td>
+               </tr>
+               <tr class=''>
+                 <th scope="row">
+                   <div class="custom-control custom-checkbox">
+                     <input type="checkbox" class="custom-control-input table-input" id="check3">
+                     <label class="custom-control-label" for="check3"></label>
+                   </div>
+                 </th>
+                 <td>
+                   12, Aug 2019 
+                 </td>
+                 <td>123456</td>
+                 <td>Lorem ipsum dolor sit amet consectetur adipisicing</td>
+                 <td class="tx-red">N25,000</td>
+                 <td class="tx-success">N25,000</td>
+                 <td>Card</td>
+                 <td>Kolawaole Abdul</td>
+               </tr>
+               <tr class=''>
+                 <th scope="row">
+                   <div class="custom-control custom-checkbox">
+                     <input type="checkbox" class="custom-control-input table-input" id="check4">
+                     <label class="custom-control-label" for="check4"></label>
+                   </div>
+                 </th>
+                 <td>
+                   12, Aug 2019 
+                 </td>
+                 <td>123456</td>
+                 <td>Lorem ipsum dolor sit amet consectetur adipisicing</td>
+                 <td class="tx-red">N25,000</td>
+                 <td class="tx-success">N25,000</td>
+
+                 <td>Card</td>
+                 <td>Kolawaole Abdul</td>
+               </tr>
+               <tr class=''>
+                 <th scope="row">
+                   <div class="custom-control custom-checkbox">
+                     <input type="checkbox" class="custom-control-input table-input" id="check5">
+                     <label class="custom-control-label" for="check5"></label>
+                   </div>
+                 </th>
+                 <td>
+                   12, Aug 2019 
+                 </td>
+                 <td>123456</td>
+                 <td>Lorem ipsum dolor sit amet consectetur adipisicing</td>
+                 <td class="tx-red">N25,000</td>
+                 <td class="tx-success">N25,000</td>
+
+                 <td>Card</td>
+                 <td>Kolawaole Abdul</td>
+               </tr>
+             </tbody>
+           </table>
+         </div>
+         
+       </div>
+   
+       <!-- Modal -->
+         <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
+           <div class="modal-dialog modal-dialog-centered" role="document" style="width: 400px;">
+             <div class="modal-content">
+               <div class="modal-header pd-md-x-30">
+                 <h5 class="modal-title" id="createModalLabel">Create New Invoice</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                 </button>
+               </div>
+               <div class="modal-body pd-md-30">
+                 <form action="">
+   
+                   <label for="" class="d-block">Choose upload Type</label>
+                   <div class="form-row">
+                     <div class="form-group col-md-6">
+                       <div class="custom-control custom-radio">
+                         <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                         <label class="custom-control-label text-secondary" for="customRadio1">Individual</label>
+                       </div>
+                     </div>
+                     <div class="form-group col-md-6">
+                       <div class="custom-control custom-radio">
+                         <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                         <label class="custom-control-label text-secondary" for="customRadio2">Bulk Upload</label>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="form-group mg-t-20">
+                     <label for="" class="d-block">What kind of Invoice will you like to create?</label>
+                     <select class="custom-select">
+                       <option selected>Invoice Type</option>
+                       <option value="1">Type 1</option>
+                       <option value="2">Tyoe 2</option>
+                       <option value="3">Type 3</option>
+                     </select>
+                   </div>
+                 </form>
+               </div>
+               <div class="modal-footer bd-t-0 pd-md-x-30 pd-md-b-30">
+                 <a href="./create-invoice.html" class="btn btn-primary w-100">Continue</a>
+               </div>
+             </div>
+           </div>
+         </div>
+         
+           <!--detail Modal -->
+           <div class="modal right fade" id="detailModal" tabindex="-1" role="dialog" aria-labelledby="detailModalLabel" aria-hidden="true">
+             <div class="modal-dialog" role="document">
+               <div class="modal-content ">
+                 <div class="modal-header pd-y-10 bd-b-0 modal-pink">
+                   <p class=" tx-24 tx-bold tx-center modal-title" id="detailModalLabel"></p>
+                    
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                     </button>
+                 </div>
+                 
+                 <div class="modal-body pd-x-0 modal-pink">
+                   <div class="bd-b pd-y-20 pd-x-20">
+                     <p class=" tx-24 tx-bold tx-center modal-title" id="detailModalLabel">-N25,000</p>
+                       <div class="row">
+                         <div class="col-md-6 mg-t-20">
+                         <p class="mb-0 tx-12 mg-t-10 mg-r-10">8:05am, Aug 12, 2019</p>
+                         </div> 
+                         <div class="col-md-6 pd-md-l-0 mg-t-20"> 
+                           <button class="btn bg-invoice rounded-20 pd-y-5 pd-x-5 w-100">Operating expenses <i class="fa fa-pen"></i></button>
+                         </div>
+                       </div>
+                     </div>
+                     <div class="bd-b pd-20">
+                       <div class="row">
+                         <div class="col-md-6 mg-t-20 mg-md-t-10">
+                           <p class="tx-12 mg-b-5">Recipient</p>
+                           <p class="tx-18 mb-0">Meathub</p>
+                           <p class="tx-12 mb-0">012489425 <br/> Zenith bank</p>
+                         </div>
+                         <div class="col-md-6 mg-t-20 mg-md-t-10">
+                           <p class="tx-12 mg-b-5">Category</p>
+                           <p class="tx-18 mb-0">Operating expenses</p>
+                         </div>
+   
+                         <div class="col-md-6 mg-t-20">
+                           <p class="tx-12 mg-b-5">Reference number</p>
+                           <p class="tx-18 mb-0">921N-1391V</p>
+                         </div>
+                         <div class="col-md-6 mg-t-20">
+                           <p class="tx-12 mg-b-5">Attachments</p>
+                           <p class="tx-14 mb-0">
+                           <img src="./assets/img/attachment.svg" class="wd-15 ht-15 mg-r-5"/>
+                             Oakceative139.pdf</p>
+                         </div>
+                       </div>
+                     </div>
+                     <div class="pd-20">
+                       <div class="d-flex">
+                         <img src="./assets/img/Upload Signature.svg" class="wd-20 ht-20 mg-r-5" alt="">
+                         <p class="mb-0">Upload attachments</p>
+                       </div>
+                     </div>
+                 </div> 
+                 <div class="modal-footer bg-white bd-t-0">
+                   <button type="button" class="btn btn-primary w-100" >Download proof of transaction</button>
+   
+                 </div>
+               </div>
+             </div>
+           </div>
+   
+            <!-- Modal -->
+         <div class="modal fade" id="categorizeModal" tabindex="-1" role="dialog" aria-labelledby="categorizeModalLabel" aria-hidden="true">
+           <div class="modal-dialog modal-dialog-centered" role="document" style="width: 400px;">
+             <div class="modal-content">
+               <div class="modal-header pd-md-x-30">
+                 <h5 class="modal-title" id="categorizeModalLabel">Start a Transaction</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                 </button>
+               </div>
+               <div class="modal-body pd-md-x-30 pd-md-t-30 pd-md-b-0">
+                 <form action="">
+   
+                   <ul class="nav nav-tabs bd-0" id="myTab" role="tablist">
+                     <li class="nav-item">
+                       <a class="nav-link cat" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Inflow tags</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link active cat" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Outflow tags</a>
+                     </li>
+                   </ul>
+                   <div class="tab-content pd-b-10 pd-t-20" id="myTabContent">
+                     <div class="tab-pane fade " id="home" role="tabpanel" aria-labelledby="home-tab">
+                       <p class="mg-b-8">Loan repayment</p>
+                       <p class="mg-b-8">Cost of sales</p>
+                       <p class="mg-b-8">Operating expenses </p>
+                       <p class="mg-b-8">Asset acquisition</p>
+   
+                       <button class="btn pd-x-0 tx-primary mg-b-8" onclick="myCategory()" type="button"> + New category</button>
+                       <div id="new-category">
+                         <div class="form-group">
+                           <input type="text" class="form-control" placeholder="Enter category name">
+                         </div>
+                         <div class="form-group">
+                           <select class="custom-select">
+                             <option selected>Select flow</option>
+                             <option value="1">Flow 1</option>
+                             <option value="2">Flow 2</option>
+                             <option value="3">Flow 3</option>
+                           </select>
+                         </div>
+                         <div class="form-group">
+                           <select class="custom-select">
+                             <option selected>Parent category</option>
+                             <option value="1">category 1</option>
+                             <option value="2">category 2</option>
+                             <option value="3">category 3</option>
+                           </select>
+                         </div>
+                       </div>
+   
+                     </div>
+                     <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <p class="mg-b-8">Loan repayment</p>
+                       <p class="mg-b-8">Cost of sales</p>
+                       <p class="mg-b-8">Operating expenses </p>
+                       <p class="mg-b-8">Asset acquisition</p>
+   
+                       <button class="btn pd-x-0 tx-primary mg-b-8" onclick="myCategor()" type="button"> + New category</button>
+                       <div id="new-categor">
+                         <div class="form-group">
+                           <input type="text" class="form-control" placeholder="Enter category name">
+                         </div>
+                         <div class="form-group">
+                           <select class="custom-select">
+                             <option selected>Select flow</option>
+                             <option value="1">Flow 1</option>
+                             <option value="2">Flow 2</option>
+                             <option value="3">Flow 3</option>
+                           </select>
+                         </div>
+                         <div class="form-group">
+                           <select class="custom-select">
+                             <option selected>Parent category</option>
+                             <option value="1">category 1</option>
+                             <option value="2">category 2</option>
+                             <option value="3">category 3</option>
+                           </select>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </form>
+               </div>
+               <div class="modal-footer bd-t-0 pd-md-x-30 pd-md-b-30">
+                 <a href="./transactions.html" class="btn btn-primary w-100">Continue</a>
+               </div>
+             </div>
+           </div>
+         </div>
+      
+          <!-- Filter Modal -->
+          <div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel" aria-hidden="true">
+           <div class="modal-dialog modal-dialog-centered" role="document">
+             <div class="modal-content">
+               <div class="modal-header pd-md-x-30">
+                 <h5 class="modal-title" id="createModalLabel">Filter By</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                 </button>
+               </div>
+               <div class="modal-body pd-md-30">
+                 <form action="">
+                   <div class="form-row">
+                     <div class="form-group col-md-6">
+                     <label for="" class="d-block">Invoice Number</label>
+                     <input type="text" class="form-control" placeholder="Enter Invoice Number">
+                     </div>
+                     <div class="form-group col-md-6">
+                       <label for="" class="d-block">Order Number</label>
+                       <input type="text" class="form-control" placeholder="Enter Order Number">
+                       </div>
+                   </div>
+                   <div class="form-row">
+                     <div class="form-group col-md-6">
+                     <label for="" class="d-block">Date Range</label>
+                     <div class="row">
+                       <div class="col-6">
+                         <input type="text" class="form-control" id="from" name="from" placeholder="From">
+                       </div>
+                       <div class="col-6">
+                         <input type="text" class="form-control" id="to" name="to" placeholder="To">
+                       </div>
+                     </div>
+                     </div>
+                     <div class="form-group col-md-6">
+                       <label for="" class="d-block">Status</label>
+                       <select class="custom-select">
+                         <option selected>Select Option</option>
+                         <option value="1">Type 1</option>
+                         <option value="2">Tyoe 2</option>
+                         <option value="3">Type 3</option>
+                       </select>
+                     </div>
+                   </div>
+                   <div class="form-row">
+                     <div class="form-group col-md-6">
+                     <label for="" class="d-block">Item Name</label>
+                     <input type="text" class="form-control" placeholder="Enter Item Name">
+                     </div>
+                     <div class="form-group col-md-6">
+                       <label for="" class="d-block">Item Description</label>
+                       <input type="text" class="form-control" placeholder="Enter description">
+                     </div>
+                   </div>
+   
+                   <div class="form-row">
+                     <div class="form-group col-md-6">
+                     <label for="" class="d-block">Customer Name</label>
+                     <input type="text" class="form-control" placeholder="Enter Customer Name">
+                     </div>
+                     <div class="form-group col-md-6">
+                       <label for="" class="d-block">Total Range</label>
+                       <input type="text" class="form-control" placeholder="Enter description">
+                     </div>
+                   </div>
+   
+                 </form>
+               </div>
+               <div class="modal-footer bd-t-0 pd-md-x-30 pd-md-b-30">
+                 <a href="./create-invoice.html" class="btn btn-primary wd-100p wd-md-50p">Apply</a>
+               </div>
+             </div>
+           </div>
+         </div>
+        
+   
+   
+       </div><!-- container -->
+      
+    </div>
+    </div>
+
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/lib/prismjs/prism.js"></script>
+    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="../assets/lib/typeahead.js/typeahead.jquery.min.js"></script>
+    <script src="../assets/lib/typeahead.js/typeahead.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="../assets/lib/chart.js/Chart1.min.js"></script>
+    <script src="../assets/lib/chart.js/utils.js"></script>
+
+    <script src="../assets/js/dashforge.js"></script>
+    <script src="../assets/js/dashforge.aside.js"></script>
+    <script src="../assets/js/dashforge.sampledata.js"></script>
+    <!-- for multiselect dropdown  -->
+    <!-- <script type="text/javascript" src="../assets/js/bootstrap-multiselect.js"></script> -->
+    
+    <script>
+      $(document).ready( function () {
+       $('.display').DataTable({
+         "paging": true,
+         "info": true,
+         "responsive": true,
+         "aoColumnDefs": [{
+             "bSortable": false,
+             "aTargets": ["no-sort"]
+         }],
+         
+         "bInfo": true
+       });
+       
+       $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+         $('.display:visible').each( function(e) {
+           $(this).DataTable().columns.adjust().responsive.recalc();
+         });
+       });
+
+         //date picker
+     let start = moment().subtract(29, 'days');
+      let end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMM YYYY ') + ' - ' + end.format('MMM  YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+
+     } );
+      </script>
+     
+  <script>
+   function showMoreInfo(){
+    let x = document.getElementById("more-info");
+    let y = document.getElementById("add-btn");
+
+      x.style.display = "block";
+      y.style.display = "none";
+
+  }
+  function showLessInfo(){
+    let x = document.getElementById("more-info");
+    let y = document.getElementById("add-btn");
+
+      x.style.display = "none";
+      y.style.display = "block";
+
+  }
+   // Listen for click on toggle checkbox
+   $("#selectAll").click(function () {
+     $('.custom-control-input').not(this).prop('checked', this.checked);
+    });
+  
+    //check for delete and categorize button
+    $(".table-input").on("click",function() {
+    $(".categorize").toggle(this.checked);
+  });
+
+</script>
+  </body>
+</html>

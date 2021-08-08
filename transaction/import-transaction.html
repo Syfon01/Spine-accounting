@@ -9,28 +9,28 @@
     <title>Spine Accounting</title>
 
     <!-- Required External CSS -->
-    <link href="assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
+    <link href="../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
 
-    <link href="assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
-    <link href="assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
-    <link href="assets/lib/select2/css/select2.min.css" rel="stylesheet">
+    <link href="../assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/select2/css/select2.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
 
     <!-- DashForge CSS -->
-    <link rel="stylesheet" href="assets/css/dashforge.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/dashforge.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
 
     <!-- Page CSS --> 
     
-    <link rel="stylesheet" href="assets/css/progress.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/progress.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 
   </head>
   <body>
@@ -47,27 +47,22 @@
         </a>
       </div>
       <div class="aside-body">
-        <div class="pd-b-30 pd-t-0 pd-x-40">
+        <!-- <div class="pd-b-30 pd-t-0 pd-x-40">
           <p class="tx-14 tx-white mb-0">Account balance</p>
           <p class="tx-14 tx-lighter mb-1">0124914917</p>
           <p class="tx-18 tx-bold tx-white">1,298,000</p>
 
           <button class="btn btn-light tx-dark">Import transaction</button>
-        </div>
+        </div> -->
         <div class="nav-menu">
           <ul class="nav nav-aside">
-            <li class="nav-item"><a href="dashboard.html" class="nav-link"> <span class="marine-active-menu">Dashboard</span></a></li>
-            <li class="nav-item"><a href="./transactions.html" class="nav-link"><span>Transactions</span></a></li>
-            <li class="nav-item"><a href="./customers.html" class="nav-link"><span>Customers</span></a></li>
-            <li class="nav-item active"><a href="./invoices.html" class="nav-link"><span>Invoices</span></a></li>
-            <li class="nav-item"><a href="./report.html" class="nav-link"><span>Report</span></a></li>
-            <li class="nav-item with-sub tx-14">
-              <a href="" class="nav-link"><span>Settings</span></a>
-              <ul>  
-                <li><a href="./setting.html">My Setup</a></li>
-                <li><a href="./profile.html">Business Profile</a></li>
-              </ul>
-            </li>
+            <li class="nav-item"><a href="../dashboard.html" class="nav-link"> <span class="marine-active-menu">Dashboard</span></a></li>
+            <li class="nav-item  active"><a href="./index.html" class="nav-link"><span>Transactions</span></a></li>
+            <li class="nav-item"><a href="../customers.html" class="nav-link"><span>Customers</span></a></li>
+            <li class="nav-item"><a href="../subscribers/index.html" class="nav-link"><span>Subscribers</span></a></li>
+            <li class="nav-item"><a href="../invoices.html" class="nav-link"><span>Invoices</span></a></li>
+            <li class="nav-item"><a href="../report.html" class="nav-link"><span>Report</span></a></li>
+            <li class="nav-item"><a href="../setting.html" class="nav-link"><span>Settings</span></a></li>
           </ul>
         </div>
         <div class="fixed-bottom pd-x-40">
@@ -142,10 +137,28 @@
       <div class="content-body">
       <div class="container">
         <button class="btn btn-outline-dark" onclick="goBack()"><i class="fa fa-arrow-left mg-r-5"></i> Go back</button>
-      <p class="tx-24 tx-bold mg-b-0 mg-t-20">Import Customers</p>
-      <p>You can upload your customers in CSV format</p>
+      <div class="row justify-content-between mg-t-20">
+        <div class="col-md-9">
+          <p class="tx-24 tx-bold mg-b-0 ">Import Transactions</p>
+          <p>You can upload your transactions in Pdf format</p>
+        </div>
+        <div class="col-md-3 col-lg-2 mg-t-10">
+          <div class="dropdown">
+            <button class="btn btn-outline-light dropdown-toggle w-100 tx-left tx-dark" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Select Account
+            </button>
+            <div class="dropdown-menu open large-dropdown" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Kuda bank</a>
+              <a class="dropdown-item" href="#">WEMA Bank</a>
+              <a class="dropdown-item" href="#">First Bank</a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
       <div class="card card-body modal-pink tx-center pd-y-30 mg-t-20">
-        <p class="tx-20 tx-bold">Upload & manage your documents</p>
+        <p class="tx-20 tx-bold">Upload & manage your transaction</p>
         <p>No documents</p>
 
         <form action="">
@@ -155,7 +168,7 @@
                 <div class="drop-zone-form pd-40">
                   <div class="cell"> 
                     <div class="drop-zone__prompt">
-                      <img src="./assets/img/upload.svg" alt="" srcset="">
+                      <img src="../assets/img/upload.svg" alt="" srcset="">
                       <p class="p-14 mg-t-20 text-gray-700">Drop your files here or</p>
                       <button class="btn btn-primary mg-t-30 pd-x-30" type="button">Browse disk</button>
                     </div>
