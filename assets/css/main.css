@@ -730,7 +730,6 @@ table{
   background-color: #b3b7c9;
   height: 60px;
   width: 60px;
-  
 }
 .blue-div{
   width:18.5rem;
@@ -738,6 +737,33 @@ table{
 .badge-lightt{
   background-color: #1DB93117;
   border-radius: 5px;
+}
+.bg-grey-roundd{
+  background-color: #b3b7c9;
+  height: 45px;
+  width: 45px;
+}
+.tx-whitee{
+  color: rgba(255, 255, 255, 0.8);
+}
+.bg-sky-blue{
+  background-color: rgba(13, 58, 219, 1);
+}
+.bg-blue-2{
+  background-color: rgba(9, 41, 156, 1);
+}
+.bg-blue-3{
+  background-color: #06185C;
+}
+.bg-black-1{
+  background-color: #030E36;
+}
+.bg-chart-red{
+  background-color: #FF0000;
+}
+.dropdown .btn-outline-light:hover{
+  background-color: #F2F5F9;
+  color: #2E2E2E!important;
 }
 /* .sub-input:checked ~ .sub-input::before{
   background-color: #00C644;
