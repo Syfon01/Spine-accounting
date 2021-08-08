@@ -133,69 +133,175 @@
         
         <div class="container">
         <button class="btn btn-outline-dark mg-b-40" onclick="goBack()"><i class="fa fa-arrow-left mg-r-5"></i> Go back</button>
-        <div class="col-md-7 col-lg-6 pd-x-0">
-          <form>
-            <div class="form-group row">
-              <label for="inputEmail3" class="col-12 col-md-3 col-form-label ">Choose Bank</label>
-              <div class="col-12  col-md-9">
-                <select class="custom-select">
-                  <option selected>Select you Bank</option>
-                  <option value="1">Kuda Bank</option>
-                  <option value="2">Wema Bank</option>
-                  <option value="3">GT Bank</option>
-                </select>
-              </div>
+        <div class="">
+          <p class="tx-26 tx-semibold  mg-t-10">Transaction Overview</p>
+          <div class="row mg-y-30">
+            <div class="col-lg-2 col-md-10">
+             <div class="dropdown">
+               <button class="btn btn-outline-light dropdown-toggle w-100 tx-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Create Account
+               </button>
+               <div class="dropdown-menu open large-dropdown" aria-labelledby="dropdownMenuButton">
+                 <a class="dropdown-item" href="./create-account">Create Manually</a>
+                 <a class="dropdown-item" href="./connect-bank">Connect to a Bank</a>
+               </div>
+             </div>
+             <div class="card card-body bg-deep-blue tx-white pd-x-15 mg-t-10">
+               <p class="mb-0 tx-whitee">Account details</p>
+               <p class="tx-20 tx-bold mb-0">032812849</p>
+             </div>
             </div>
-            <div class="form-group row">
-              <label for="inputPassword3" class="col-12 col-md-3 col-form-label ">Choose File</label>
-              <div class="col-12 col-md-9">
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input bg-white" id="customFile">
-                  <label class="custom-file-label" for="customFile">No file selected</label>
-                </div>
-              </div>
-            </div>
-            
-            <div class="form-group row mg-b-60 mg-t-40">
-              <div class="col-12 col-md-4">
-                <a href="./excel-preview.html" type="submit" class="btn btn-primary w-100 tx-14">Match Column</a>
-              </div>
-            </div>
-          </form>
-        </div>
-         
-       
-       <div class="card card-body bd-0 shadow-sm pd-0">
-         <div class="table-responsive">
-           <table class="table table-hover" id="employee">
-             <thead class="thead tx-bold">
-               <tr class="tx-bold">
-                 <th scope="col">
-                   <div class="custom-control custom-checkbox">
-                   <input type="checkbox" class="custom-control-input" id="selectAll">
-                   <label class="custom-control-label" for="selectAll"></label>
+            <div class="col-lg-10 col-md-12 mg-t-20 mg-lg-t-0">
+             <div class="row row-sm">
+               <div class="col-lg-3 col-md-6 mg-t-10 mg-lg-t-0">
+                 <div class="card card-body bg-sky-blue tx-white pd-t-15">
+                   <div class="rounded-circle bg-grey-roundd d-flex align-items-center justify-content-center">
+                   <i class="fa fa-users tx-16"></i>
+                   </div>
+                   <p class="mb-0 mg-t-10 tx-whitee">Bank Balance</p>
+                   <p class="tx-20 tx-bold mb-0">N1,298,000.60</p>
                  </div>
-                 </th>
-                 <th scope="col">Date</th>
-                 <th scope="col" class="">Cheque No.</th>
-                 <th scope="col" class="">Description</th>
-                 <th scope="col" class="">Debit</th>
-                 <th scope="col" class="">Credit</th>
-                 <th scope="col" class="">Category</th>
-                 <th scope="col" class="">Payee/vendor</th>
-               </tr>
-             </thead>
-     
-             <tbody>
-              
-               <tr class=''>
-                 
-               </tr>
-             </tbody>
-           </table>
-         </div>
-         
-       </div>
+               </div>
+               <div class="col-lg-3 col-md-6 mg-t-10 mg-lg-t-0">
+                 <div class="card card-body bg-blue-2 tx-white pd-t-15">
+                   <div class="rounded-circle bg-grey-roundd d-flex align-items-center justify-content-center">
+                   <i class="fa fa-users tx-16"></i>
+                   </div>
+                   <p class="mb-0 mg-t-10 tx-whitee">Cash at hand</p>
+                   <p class="tx-20 tx-bold mb-0">N1,298,000.60</p>
+                 </div>
+               </div>
+               <div class="col-lg-3 col-md-6 mg-t-10 mg-lg-t-0">
+                 <div class="card card-body bg-blue-3 tx-white pd-t-15">
+                   <div class="rounded-circle bg-grey-roundd d-flex align-items-center justify-content-center">
+                   <i class="fa fa-users tx-16"></i>
+                   </div>
+                   <p class="mb-0 mg-t-10 tx-whitee">Income</p>
+                   <p class="tx-20 tx-bold mb-0">N1,298,000.60</p>
+                 </div>
+               </div>
+               <div class="col-lg-3 col-md-6 mg-t-10 mg-lg-t-0">
+                 <div class="card card-body bg-black-1 tx-white pd-t-15">
+                   <div class="rounded-circle bg-grey-roundd d-flex align-items-center justify-content-center">
+                   <i class="fa fa-users tx-16"></i>
+                   </div>
+                   <p class="mb-0 mg-t-10 tx-whitee">Expenses</p>
+                   <p class="tx-20 tx-bold mb-0">N1,298,000.60</p>
+                 </div>
+               </div>
+             </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-body bd-0 shadow-sm pd-0">
+          <div class="table-responsive">
+            <table class="table table-hover" id="employee">
+              <thead class="thead tx-bold">
+                <tr class="tx-bold">
+                  <th scope="col">
+                    <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="selectAll">
+                    <label class="custom-control-label" for="selectAll"></label>
+                  </div>
+                  </th>
+                  <th scope="col">Date</th>
+                  <th scope="col" class="">Cheque No.</th>
+                  <th scope="col" class="">Description</th>
+                  <th scope="col" class="">Debit</th>
+                  <th scope="col" class="">Credit</th>
+                  <th scope="col" class="">Category</th>
+                  <th scope="col" class="">Payee/vendor</th>
+                </tr>
+              </thead>
+      
+              <tbody>
+                <tr class=''>
+                  <th scope="row">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input table-input" id="check2">
+                      <label class="custom-control-label" for="check2"></label>
+                    </div>
+                  </th>
+                  <td>
+                    12, Aug 2019 
+                  </td>
+                  <td>123456</td>
+                  <td>Lorem ipsum dolor sit amet consectetur adipisicing</td>
+                  <td class="tx-red">N25,000</td>
+                  <td class="tx-success">N25,000</td>
+ 
+                  <td>Card</td>
+                  <td>Kolawaole Abdul</td>
+                </tr>
+                <tr class=''>
+                  <th scope="row">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input table-input" id="check3">
+                      <label class="custom-control-label" for="check3"></label>
+                    </div>
+                  </th>
+                  <td>
+                    12, Aug 2019 
+                  </td>
+                  <td>123456</td>
+                  <td>Lorem ipsum dolor sit amet consectetur adipisicing</td>
+                  <td class="tx-red">N25,000</td>
+                  <td class="tx-success">N25,000</td>
+                  <td>Card</td>
+                  <td>Kolawaole Abdul</td>
+                </tr>
+                <tr class=''>
+                  <th scope="row">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input table-input" id="check4">
+                      <label class="custom-control-label" for="check4"></label>
+                    </div>
+                  </th>
+                  <td>
+                    12, Aug 2019 
+                  </td>
+                  <td>123456</td>
+                  <td>Lorem ipsum dolor sit amet consectetur adipisicing</td>
+                  <td class="tx-red">N25,000</td>
+                  <td class="tx-success">N25,000</td>
+ 
+                  <td>Card</td>
+                  <td>Kolawaole Abdul</td>
+                </tr>
+                <tr class=''>
+                  <th scope="row">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input table-input" id="check5">
+                      <label class="custom-control-label" for="check5"></label>
+                    </div>
+                  </th>
+                  <td>
+                    12, Aug 2019 
+                  </td>
+                  <td>123456</td>
+                  <td>Lorem ipsum dolor sit amet consectetur adipisicing</td>
+                  <td class="tx-red">N25,000</td>
+                  <td class="tx-success">N25,000</td>
+ 
+                  <td>Card</td>
+                  <td>Kolawaole Abdul</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+        </div>
+        
+        <nav aria-label="Page navigation example" class="mg-t-50">
+          <ul class="pagination justify-content-end bd-0">
+            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
    
        </div><!-- container -->
       
