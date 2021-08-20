@@ -131,19 +131,104 @@
 
       <div class="content-body">
       <div class="container">
-       <div class="blue-div pd-x-0">
-         <p class="tx-26 tx-semibold  mg-t-10">Subscribers</p>
-         <div class="card card-body bg-deep-blue tx-white">
-           <div class="rounded-circle bg-grey-round d-flex align-items-center justify-content-center">
-           <i class="fa fa-users fa-2x"></i>
-           </div>
-           <p class="tx-28 tx-bold mg-t-20 mb-0">2,854</p>
-           <p class="mb-0">Total number of Customers</p>
-         </div>
+        <div class="row row-sm col-xl-11 pd-x-0">
+          <div class="col-md-6 col-lg-3 col-12 mg-b-20">
+            <div class="card bg-primary tx-white bd-0">
+              <div class="card-header pd-10">
+                <p class="mb-0 col-xl-8 pd-x-0 tx-light">Total Number Of Subscribers</p>
+              </div>
+              <div class="card-body pd-10">
+                <div class="row">
+                  <div class="col-md-8 col-8">
+                    <p class="tx-24 tx-bold mg-b-10">2,854</p>
+                  </div>
+                  <div class="col-md-4 col-4">
+                    <img src="../assets/img/Chart_2.svg" class="img-fluid pd-md-t-20" alt="" srcset="">
+                  </div>
+                </div>
+               <p class="tx-11 mb-0 tx-light">25% more than last month</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-12 mg-b-20">
+            <div class="card bg-gray bd-0">
+              <div class="card-header pd-10">
+                <p class="mb-0 col-xl-8 pd-x-0 tx-light">Total Number Of Active Subscribers</p>
+              </div>
+              <div class="card-body pd-10">
+                <div class="row">
+                  <div class="col-md-8 col-8">
+                    <p class="tx-24 tx-bold mg-b-10">2,500</p>
+                  </div>
+                  <div class="col-md-4 col-4">
+                    <img src="../assets/img/Chart_2.svg" class="img-fluid pd-md-t-20" alt="" srcset="">
+                  </div>
+                </div>
+               <p class="tx-11 mb-0 tx-light tx-success">25% more than last month</p>
+              </div>
+            </div>
+          </div>
          
-       </div>
-
-       <div class="row mg-y-30 justify-content-between">
+          <div class="col-md-6 col-lg-3 col-12 mg-b-20">
+            <div class="card bg-gray bd-0">
+              <div class="card-header pd-10">
+                <p class="mb-0 col-xl-10 pd-x-0 tx-light">Total Number of Active Subscribers on a Plan</p>
+              </div>
+              <div class="card-body pd-10">
+                <div class="d-flex justify-content-between mg-b-7">
+                  <div>
+                    <p class="tx-11 mb-0 tx-gray tx-semibold">
+                      Free Trial
+                    </p>
+                  </div>
+                  <div>
+                    <p class="mb-0 tx-11">(1,000)</p>
+                  </div>
+                </div> 
+                <div class="d-flex justify-content-between  mg-b-7">
+                  <div>
+                    <p class="tx-11 mb-0 tx-gray tx-semibold">
+                      Basic Plan
+                    </p>
+                  </div>
+                  <div>
+                    <p class="mb-0 tx-11">(500)</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <p class="tx-11 mb-0 tx-gray tx-semibold">
+                      Standard Subscription
+                    </p>
+                  </div>
+                  <div>
+                    <p class="mb-0 tx-11">(1,000)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-12 mg-b-20">
+            <div class="card bg-gray bd-0">
+              <div class="card-header pd-10">
+                <p class="mb-0 col-xl-10 pd-x-0 tx-light">Total Number Of Inactive Subscribers</p>
+              </div>
+              <div class="card-body pd-10">
+                <div class="row">
+                  <div class="col-md-8 col-8">
+                    <p class="tx-24 tx-bold mg-b-10">354</p>
+                  </div>
+                  <div class="col-md-4 col-4">
+                    <img src="../assets/img/Chart.svg" class="img-fluid pd-md-t-20" alt="" srcset="">
+                  </div>
+                </div>
+               <p class="tx-11 mb-0 tx-light tx-red">25% more than last month</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+       <div class="row mg-y-10 justify-content-between">
          <div class="col-md-5 col-lg-5 col-12 mg-t-10">
            <div class="row">
             <div class="col-5">
@@ -189,212 +274,425 @@
             </div>
             
             <div class="col-md-4 col-6 mg-t-20 mg-md-t-0">
-              <a href="./create-sub.html" type="button" class="btn btn-primary w-100">
+              <button  type="button" class="btn btn-primary w-100" data-toggle="modal" data-target="#createModal">
                 Create New
-              </a>
+              </button>
             </div>
            </div>
          </div>
     </div>
-    <div class="d-flex justify-content-between mg-t-40">
+    <div class="d-flex mg-t-40">
       <p class="tx-20 title-text my-0 tx-semibold mb-2">All Subscribers</p>
+      <div>
+        <ul class="nav nav-pills mg-l-20" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active bd mg-r-20 pd-y-5" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bd pd-y-5" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Inactive</a>
+          </li>
+          
+        </ul>
+      </div>
+      
+      
       <!-- <a href="./notification.html" class="tx-semibold">View all invoices</a> -->
     </div>
-    <div class="card card-body pd-0 bd-0 shadow-sm">
-      <div class="table-responsive">
-        <table class="table  table-hover mb-0" id="employee">
-          <thead class="thead-bg">
-            <tr class="">
-              <th scope="col">
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck">
-                  <label class="custom-control-label pd-y-10" for="customCheck">
-                  </label>
-                </div>
-              </th>
-              <th scope="col">Name</th>
-              <th scope="col" class="">Email Address</th>
-              <th scope="col" class="">Phone Number</th>
-              <th scope="col" class="">Business type</th>
-              <th scope="col" class="">Opening Balance</th>
-              <th scope="col" class="">Status</th>
-              <th></th>
-            </tr>
-          </thead>
-  
-          <tbody>
-            <tr class=''>
-              <th scope="row" style="width: 15px;">
-                <div class="custom-control custom-checkbox pb-0 pd-t-13">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1">
-                  <label class="custom-control-label" for="customCheck1">
-                  </label>
-                </div>
-              </th>
-              <td>
-                <img src="../assets/img/Invoices.svg" class="wd-30 ht-30 img-fluid mg-r-10"/>
-                Kolawaole Abdul 
-              </td>
-              <td class="">Sherif@gmail.com</td>
-              <td class="">08089257362</td>
-              <td>Partnership</td>
-              <td>N250,000.00</td>
-              <td><span class="tx-active">Active</span></td>
-
-              <td>
-                  <div class="dropdown">
-                  <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
-                  </span>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="./customer-invoice.html"> View</a>
-                    <a class="dropdown-item" href="#">Edit</a>
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addCustomer">Add Note</a>
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewInvoice">View Invoice</a>
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#setReminder" >Set reminder</a>
-                    <a class="dropdown-item" href="#">
-                      <div class="d-flex justify-content-between">
-                        <span>Activate</span>
-                        <div class="custom-control custom-switch mg-t-5">
-                          <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
-                          <label class="custom-control-label" for="customSwitch3"></label>
-                        </div>
+    <div class="tab-content pd-y-20" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="card card-body pd-0 bd-0 shadow-sm">
+          <div class="table-responsive">
+            <table class="table  table-hover mb-0" id="employee">
+              <thead class="thead-bg">
+                <tr class="">
+                  <th scope="col">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck">
+                      <label class="custom-control-label pd-y-10" for="customCheck">
+                      </label>
+                    </div>
+                  </th>
+                  <th scope="col">Name</th>
+                  <th scope="col" class="">Email Address</th>
+                  <th scope="col" class="">Phone Number</th>
+                  <th scope="col" class="">Plan</th>
+                  <th scope="col" class="">Business type</th>
+                  <th scope="col" class="">Opening Balance</th>
+                  <th scope="col" class="">Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+      
+              <tbody>
+                <tr class=''>
+                  <th scope="row" style="width: 15px;">
+                    <div class="custom-control custom-checkbox pb-0 pd-t-13">
+                      <input type="checkbox" class="custom-control-input" id="customCheck1">
+                      <label class="custom-control-label" for="customCheck1">
+                      </label>
+                    </div>
+                  </th>
+                  <td>
+                    Kolawaole Abdul 
+                  </td>
+                  <td class="">Sherif@gmail.com</td>
+                  <td class="">08089257362</td>
+                  <td class="">Free Trial</td>
+                  <td>Partnership</td>
+                  <td>N250,000.00</td>
+                  <td><span class="tx-active">Active</span></td>
+    
+                  <td>
+                      <div class="dropdown">
+                      <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
+                      </span>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="./customer-invoice.html"> View</a>
+                        <a class="dropdown-item" href="#">Edit</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addCustomer">Add Note</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewInvoice">View Invoice</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#setReminder" >Set reminder</a>
+                        <a class="dropdown-item" href="#">
+                          <div class="d-flex justify-content-between">
+                            <span>Activate</span>
+                            <div class="custom-control custom-switch mg-t-5">
+                              <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
+                              <label class="custom-control-label" for="customSwitch3"></label>
+                            </div>
+                          </div>
+                        </a>
                       </div>
-                    </a>
-                  </div>
-                </div>
-                </td>
-            </tr>
-            <tr class=''>
-              <th scope="row" style="width: 15px;">
-                <div class="custom-control custom-checkbox pb-0 pd-t-13">
-                  <input type="checkbox" class="custom-control-input" id="customCheck2">
-                  <label class="custom-control-label" for="customCheck2">
-                  </label>
-                </div>
-              </th>
-              <td>
-                <img src="../assets/img/Invoices.svg" class="wd-30 ht-30 img-fluid mg-r-10"/>
-                Kolawaole Abdul 
-              </td>
-              <td class="">Sherif@gmail.com</td>
-              <td class="">08089257362</td>
-              <td>Partnership</td>
-              <td>N250,000.00</td>
-              <td><span class="tx-danger">In Active</span></td>
-
-              <td>
-                  <div class="dropdown">
-                  <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
-                  </span>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="./customer-invoice.html"> View</a>
-                    <a class="dropdown-item" href="#">Edit</a>
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addCustomer">Add Note</a>
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewInvoice">View Invoice</a>
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#setReminder" >Set reminder</a>
-                    <a class="dropdown-item" href="#">
-                      <div class="d-flex justify-content-between">
-                        <span>Activate</span>
-                        <div class="custom-control custom-switch mg-t-5">
-                          <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
-                          <label class="custom-control-label" for="customSwitch3"></label>
-                        </div>
+                    </div>
+                    </td>
+                </tr>
+                <tr class=''>
+                  <th scope="row" style="width: 15px;">
+                    <div class="custom-control custom-checkbox pb-0 pd-t-13">
+                      <input type="checkbox" class="custom-control-input" id="customCheck2">
+                      <label class="custom-control-label" for="customCheck2">
+                      </label>
+                    </div>
+                  </th>
+                  <td>
+                    Kolawaole Abdul 
+                  </td>
+                  <td class="">Sherif@gmail.com</td>
+                  <td class="">08089257362</td>
+                  <td class="">Free Trial</td>
+                  <td>Partnership</td>
+                  <td>N250,000.00</td>
+                  <td><span class="tx-active">Active</span></td>
+                  <td>
+                      <div class="dropdown">
+                      <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
+                      </span>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="./customer-invoice.html"> View</a>
+                        <a class="dropdown-item" href="#">Edit</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addCustomer">Add Note</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewInvoice">View Invoice</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#setReminder" >Set reminder</a>
+                        <a class="dropdown-item" href="#">
+                          <div class="d-flex justify-content-between">
+                            <span>Activate</span>
+                            <div class="custom-control custom-switch mg-t-5">
+                              <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
+                              <label class="custom-control-label" for="customSwitch3"></label>
+                            </div>
+                          </div>
+                        </a>
                       </div>
-                    </a>
-                  </div>
-                </div>
-                </td>
-            </tr>
-            <tr class=''>
-              <th scope="row" style="width: 15px;">
-                <div class="custom-control custom-checkbox pb-0 pd-t-13">
-                  <input type="checkbox" class="custom-control-input" id="customCheck3">
-                  <label class="custom-control-label" for="customCheck3">
-                  </label>
-                </div>
-              </th>
-              <td>
-                <img src="../assets/img/Invoices.svg" class="wd-30 ht-30 img-fluid mg-r-10"/>
-                Kolawaole Abdul 
-              </td>
-              <td class="">Sherif@gmail.com</td>
-              <td class="">08089257362</td>
-              <td>Partnership</td>
-              <td>N250,000.00</td>
-              <td><span class="tx-active">Active</span></td>
-
-              <td>
-                  <div class="dropdown">
-                  <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
-                  </span>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="./customer-invoice.html"> View</a>
-                    <a class="dropdown-item" href="#">Edit</a>
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addCustomer">Add Note</a>
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewInvoice">View Invoice</a>
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#setReminder" >Set reminder</a>
-                    <a class="dropdown-item" href="#">
-                      <div class="d-flex justify-content-between">
-                        <span>Activate</span>
-                        <div class="custom-control custom-switch mg-t-5">
-                          <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
-                          <label class="custom-control-label" for="customSwitch3"></label>
-                        </div>
+                    </div>
+                    </td>
+                </tr>
+                <tr class=''>
+                  <th scope="row" style="width: 15px;">
+                    <div class="custom-control custom-checkbox pb-0 pd-t-13">
+                      <input type="checkbox" class="custom-control-input" id="customCheck3">
+                      <label class="custom-control-label" for="customCheck3">
+                      </label>
+                    </div>
+                  </th>
+                  <td>
+                    Kolawaole Abdul 
+                  </td>
+                  <td class="">Sherif@gmail.com</td>
+                  <td class="">08089257362</td>
+                  <td class="">Basic</td>
+                  <td>Partnership</td>
+                  <td>N250,000.00</td>
+                  <td><span class="tx-active">Active</span></td>
+    
+                  <td>
+                      <div class="dropdown">
+                      <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
+                      </span>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="./customer-invoice.html"> View</a>
+                        <a class="dropdown-item" href="#">Edit</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addCustomer">Add Note</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewInvoice">View Invoice</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#setReminder" >Set reminder</a>
+                        <a class="dropdown-item" href="#">
+                          <div class="d-flex justify-content-between">
+                            <span>Activate</span>
+                            <div class="custom-control custom-switch mg-t-5">
+                              <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
+                              <label class="custom-control-label" for="customSwitch3"></label>
+                            </div>
+                          </div>
+                        </a>
                       </div>
-                    </a>
-                  </div>
-                </div>
-                </td>
-            </tr>
-            <tr class=''>
-              <th scope="row" style="width: 15px;">
-                <div class="custom-control custom-checkbox pb-0 pd-t-13">
-                  <input type="checkbox" class="custom-control-input" id="customCheck4">
-                  <label class="custom-control-label" for="customCheck4">
-                  </label>
-                </div>
-              </th>
-              <td>
-                <img src="../assets/img/Invoices.svg" class="wd-30 ht-30 img-fluid mg-r-10"/>
-                Kolawaole Abdul 
-              </td>
-              <td class="">Sherif@gmail.com</td>
-              <td class="">08089257362</td>
-              <td>Partnership</td>
-              <td>N250,000.00</td>
-              <td><span class="tx-active">Active</span></td>
-
-              <td>
-                  <div class="dropdown">
-                  <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
-                  </span>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="./customer-invoice.html"> View</a>
-                    <a class="dropdown-item" href="#">Edit</a>
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addCustomer">Add Note</a>
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewInvoice">View Invoice</a>
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#setReminder" >Set reminder</a>
-                    <a class="dropdown-item" href="#">
-                      <div class="d-flex justify-content-between">
-                        <span>Activate</span>
-                        <div class="custom-control custom-switch mg-t-5">
-                          <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
-                          <label class="custom-control-label" for="customSwitch3"></label>
-                        </div>
+                    </div>
+                    </td>
+                </tr>
+                <tr class=''>
+                  <th scope="row" style="width: 15px;">
+                    <div class="custom-control custom-checkbox pb-0 pd-t-13">
+                      <input type="checkbox" class="custom-control-input" id="customCheck4">
+                      <label class="custom-control-label" for="customCheck4">
+                      </label>
+                    </div>
+                  </th>
+                  <td>
+                    Kolawaole Abdul 
+                  </td>
+                  <td class="">Sherif@gmail.com</td>
+                  <td class="">08089257362</td>
+                  <td class="">Free Trial</td>
+                  <td>Sole Proprietorship</td>
+                  <td>N250,000.00</td>
+                  <td><span class="tx-active">Active</span></td>
+    
+                  <td>
+                      <div class="dropdown">
+                      <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
+                      </span>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="./customer-invoice.html"> View</a>
+                        <a class="dropdown-item" href="#">Edit</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addCustomer">Add Note</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewInvoice">View Invoice</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#setReminder" >Set reminder</a>
+                        <a class="dropdown-item" href="#">
+                          <div class="d-flex justify-content-between">
+                            <span>Activate</span>
+                            <div class="custom-control custom-switch mg-t-5">
+                              <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
+                              <label class="custom-control-label" for="customSwitch3"></label>
+                            </div>
+                          </div>
+                        </a>
                       </div>
-                    </a>
-                  </div>
-                </div>
-                </td>
-            </tr>
-          </tbody>
-        </table>
+                    </div>
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="card card-body pd-0 bd-0 shadow-sm">
+          <div class="table-responsive">
+            <table class="table  table-hover mb-0" id="employee">
+              <thead class="thead-bg">
+                <tr class="">
+                  <th scope="col">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="inactive">
+                      <label class="custom-control-label pd-y-10" for="inactive">
+                      </label>
+                    </div>
+                  </th>
+                  <th scope="col">Name</th>
+                  <th scope="col" class="">Email Address</th>
+                  <th scope="col" class="">Phone Number</th>
+                  <th scope="col" class="">Plan</th>
+                  <th scope="col" class="">Business type</th>
+                  <th scope="col" class="">Opening Balance</th>
+                  <th scope="col" class="">Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+      
+              <tbody>
+                <tr class=''>
+                  <th scope="row" style="width: 15px;">
+                    <div class="custom-control custom-checkbox pb-0 pd-t-13">
+                      <input type="checkbox" class="custom-control-input" id="inactive1">
+                      <label class="custom-control-label" for="inactive1">
+                      </label>
+                    </div>
+                  </th>
+                  <td>
+                    Kolawaole Abdul 
+                  </td>
+                  <td class="">Sherif@gmail.com</td>
+                  <td class="">08089257362</td>
+                  <td class="">Free Trial</td>
+                  <td>Sole Proprietorship</td>
+                  <td>N250,000.00</td>
+                  <td><span class="tx-danger">In Active</span></td>
+                  <td>
+                      <div class="dropdown">
+                      <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
+                      </span>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="./customer-invoice.html"> View</a>
+                        <a class="dropdown-item" href="#">Edit</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addCustomer">Add Note</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewInvoice">View Invoice</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#setReminder" >Set reminder</a>
+                        <a class="dropdown-item" href="#">
+                          <div class="d-flex justify-content-between">
+                            <span>Activate</span>
+                            <div class="custom-control custom-switch mg-t-5">
+                              <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
+                              <label class="custom-control-label" for="customSwitch3"></label>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    </td>
+                </tr>
+                <tr class=''>
+                  <th scope="row" style="width: 15px;">
+                    <div class="custom-control custom-checkbox pb-0 pd-t-13">
+                      <input type="checkbox" class="custom-control-input" id="customCheck2">
+                      <label class="custom-control-label" for="customCheck2">
+                      </label>
+                    </div>
+                  </th>
+                  <td>
+                    Kolawaole Abdul 
+                  </td>
+                  <td class="">Sherif@gmail.com</td>
+                  <td class="">08089257362</td>
+                  <td class="">Free Trial</td>
+                  <td>Partnership</td>
+                  <td>N250,000.00</td>
+                  <td><span class="tx-danger">In Active</span></td>
+    
+                  <td>
+                      <div class="dropdown">
+                      <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
+                      </span>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="./customer-invoice.html"> View</a>
+                        <a class="dropdown-item" href="#">Edit</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addCustomer">Add Note</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewInvoice">View Invoice</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#setReminder" >Set reminder</a>
+                        <a class="dropdown-item" href="#">
+                          <div class="d-flex justify-content-between">
+                            <span>Activate</span>
+                            <div class="custom-control custom-switch mg-t-5">
+                              <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
+                              <label class="custom-control-label" for="customSwitch3"></label>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    </td>
+                </tr>
+                <tr class=''>
+                  <th scope="row" style="width: 15px;">
+                    <div class="custom-control custom-checkbox pb-0 pd-t-13">
+                      <input type="checkbox" class="custom-control-input" id="customCheck3">
+                      <label class="custom-control-label" for="customCheck3">
+                      </label>
+                    </div>
+                  </th>
+                  <td>
+                    Kolawaole Abdul 
+                  </td>
+                  <td class="">Sherif@gmail.com</td>
+                  <td class="">08089257362</td>
+                  <td class="">Free Trial</td>
+                  <td>Partnership</td>
+                  <td>N250,000.00</td>
+                  <td><span class="tx-danger">In Active</span></td>
+                  <td>
+                      <div class="dropdown">
+                      <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
+                      </span>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="./customer-invoice.html"> View</a>
+                        <a class="dropdown-item" href="#">Edit</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addCustomer">Add Note</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewInvoice">View Invoice</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#setReminder" >Set reminder</a>
+                        <a class="dropdown-item" href="#">
+                          <div class="d-flex justify-content-between">
+                            <span>Activate</span>
+                            <div class="custom-control custom-switch mg-t-5">
+                              <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
+                              <label class="custom-control-label" for="customSwitch3"></label>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    </td>
+                </tr>
+                <tr class=''>
+                  <th scope="row" style="width: 15px;">
+                    <div class="custom-control custom-checkbox pb-0 pd-t-13">
+                      <input type="checkbox" class="custom-control-input" id="customCheck4">
+                      <label class="custom-control-label" for="customCheck4">
+                      </label>
+                    </div>
+                  </th>
+                  <td>
+                    Kolawaole Abdul 
+                  </td>
+                  <td class="">Sherif@gmail.com</td>
+                  <td class="">08089257362</td>
+                  <td class="">Basic</td>
+                  <td>Sole Proprietorship</td>
+                  <td>N250,000.00</td>
+                  <td><span class="tx-danger">In Active</span></td>
+                  <td>
+                      <div class="dropdown">
+                      <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
+                      </span>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="./customer-invoice.html"> View</a>
+                        <a class="dropdown-item" href="#">Edit</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addCustomer">Add Note</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewInvoice">View Invoice</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#setReminder" >Set reminder</a>
+                        <a class="dropdown-item" href="#">
+                          <div class="d-flex justify-content-between">
+                            <span>Activate</span>
+                            <div class="custom-control custom-switch mg-t-5">
+                              <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
+                              <label class="custom-control-label" for="customSwitch3"></label>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
+   
     <nav aria-label="Page navigation example" class="mg-t-50">
       <ul class="pagination justify-content-end bd-0">
         <li class="page-item"><a class="page-link" href="#">Prev</a></li>
@@ -404,12 +702,13 @@
         <li class="page-item"><a class="page-link" href="#">Next</a></li>
       </ul>
     </nav>
+
     <!-- Modal -->
       <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document" style="width: 400px;">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
           <div class="modal-content">
             <div class="modal-header pd-md-x-30">
-              <h5 class="modal-title" id="createModalLabel">Create New Inventory</h5>
+              <h5 class="modal-title" id="createModalLabel">Create New Subscriber</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -467,9 +766,6 @@
             <label for="" class="tx-14 mb-1">Time</label>
             <input type="time" class="form-control">
           </div>
-
-
-          
         </form>
       </div>
       <div class="modal-footer bd-t-0 pd-md-x-30 pd-md-b-30">
