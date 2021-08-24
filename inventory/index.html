@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Spine Accounting">
+    <title>Spine Accounting</title>
+
+    <!-- Required External CSS -->
+    <link href="../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
+
+    <link href="../assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/select2/css/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <!-- DashForge CSS -->
+    <link rel="stylesheet" href="../assets/css/dashforge.css">
+    <!-- Page CSS --> 
+    <link rel="stylesheet" href="../assets/css/main.css">
+  </head>
+  <body>
+    <aside class="aside aside-fixed">
+      <div class="aside-header">
+        <a href="dashboard.html" class="aside-logo">
+          <div class="pd-50">
+            <img src="../assets/img/logo.svg" class="img-fluid logo" alt="" srcset="">
+          </div>
+        </a>
+        <a href="" class="aside-menu-link">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="pd-b-30 pd-t-0 pd-x-40">
+          <p class="tx-14 tx-white mb-0">Account balance</p>
+          <p class="tx-14 tx-lighter mb-1">0124914917</p>
+          <p class="tx-18 tx-bold tx-white">1,298,000</p>
+
+          <button class="btn btn-light tx-dark">Import transaction</button>
+        </div>
+        <div class="nav-menu">
+          <ul class="nav nav-aside">
+            <li class="nav-item"><a href="../dashboard.html" class="nav-link"> <span class="marine-active-menu">Dashboard</span></a></li>
+            <li class="nav-item"><a href="../transactions.html" class="nav-link"><span>Transactions</span></a></li>
+            <li class="nav-item"><a href="../customers.html" class="nav-link"><span>Customers</span></a></li>
+            <li class="nav-item"><a href="./index.html" class="nav-link"><span>Subscribers</span></a></li>
+            <li class="nav-item"><a href="../invoices.html" class="nav-link"><span>Invoices</span></a></li>
+            <li class="nav-item active show with-sub tx-14">
+              <a href="" class="nav-link"><span>Inventory</span></a>
+              <ul>  
+                <li class="active"><a href="./index.html">Product</a></li>
+                <li><a href="./services.html">Services</a></li>
+              </ul>
+            </li>
+            <li class="nav-item with-sub tx-14">
+              <a href="" class="nav-link"><span>Inventory Setting</span></a>
+              <ul>  
+                <li class=""><a href="./location.html">Location</a></li>
+                <li><a href="./item-category.html">Item category</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="../report.html" class="nav-link"><span>Report</span></a></li>
+            <li class="nav-item"><a href="../setting.html" class="nav-link"><span>Settings</span></a></li>
+          </ul>
+        </div>
+        <div class="fixed-bottom pd-x-40">
+          <button class="nav-link btn tx-white"><span>Log out</span></button>
+        </div>
+       
+      </div>
+    </aside>
+
+    <div class="content pd-0">
+  
+      <div class="content-header shadow-dash bd-b-0">
+        <div class="content-search">
+          <i data-feather="search"></i>
+          <input type="search" class="form-control" placeholder="Search...">
+        </div>
+        <nav class="nav">
+          
+          <div class="dropdown dropdown-notification ml-md-4 ml-2 mg-t-5">
+            <a href="" class="dropdown-link new-indicator" data-toggle="dropdown">
+              <i data-feather="bell"></i>
+              <span>2</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-header">Notifications</div>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../https://via.placeholder.com/350" class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
+                    <span>Mar 15 12:32pm</span>
+                  </div>
+                </div>
+              </a>
+              
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Adrian Monino</strong> added new comment on your photo</p>
+                    <span>Mar 12 10:40pm</span>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-footer"><a href="">View all Notifications</a></div>
+            </div><!-- dropdown-menu -->
+          </div>
+
+          <div class="dropdown dropdown-profile ml-md-4 ml-2">
+            <a href="" class="dropdown-link" data-toggle="dropdown" data-display="static">
+              <div class="avatar avatar-sm"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+            </a><!-- dropdown-link -->
+            <div class="dropdown-menu dropdown-menu-right ">
+              <div class="avatar avatar-lg mg-b-20"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+              <h6 class="tx-semibold mg-b-5">Katherine Pechon</h6>
+              <p class="mg-b-25 tx-12 tx-color-03">Administrator</p>
+  
+              <a href="" class="dropdown-item"><i data-feather="edit-3"></i> Edit Profile</a>
+              <a href="page-profile-view.html" class="dropdown-item"><i data-feather="user"></i> View Profile</a>
+              <div class="dropdown-divider"></div>
+              <a href="page-help-center.html" class="dropdown-item"><i data-feather="help-circle"></i> Help Center</a>
+              <a href="" class="dropdown-item"><i data-feather="life-buoy"></i> Forum</a>
+              <a href="" class="dropdown-item"><i data-feather="settings"></i>Account Settings</a>
+              <a href="" class="dropdown-item"><i data-feather="settings"></i>Privacy Settings</a>
+              <a href="page-signin.html" class="dropdown-item"><i data-feather="log-out"></i>Sign Out</a>
+            </div><!-- dropdown-menu -->
+          </div>
+        </nav>
+        
+      </div><!-- content-header -->
+
+      <div class="content-body">
+      <div class="container">
+        <p class="tx-24 tx-bold">Product</p>
+        <div class="row row-sm col-xl-11 pd-x-0">
+          <div class="col-md-6 col-lg-3 col-12 mg-b-20">
+            <div class="card">
+              <div class="card-body pd-10">
+                <div class="avatar avatar-sm"><img src="../assets/img/Attach.svg" class="rounded-circle bg-primary" alt=""></div>
+                <p class="tx-40 tx-bold mb-0">0</p>
+                <p class="tx-14 mb-0 tx-gray">Total Products</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-12 mg-b-20">
+            <div class="card">
+              <div class="card-body pd-10">
+                <div class="avatar avatar-sm"><img src="../assets/img/Attach.svg" class="rounded-circle bg-primary" alt=""></div>
+                <p class="tx-40 tx-bold mb-0">0</p>
+                <p class="tx-14 mb-0 tx-gray">Total Services</p>
+              </div>
+            </div>
+          </div>
+         
+          <div class="col-md-6 col-lg-3 col-12 mg-b-20">
+            <div class="card">
+              <div class="card-body pd-10">
+                <div class="avatar avatar-sm"><img src="../assets/img/Attach.svg" class="rounded-circle bg-primary" alt=""></div>
+                <p class="tx-40 tx-bold mb-0">0</p>
+                <p class="tx-14 mb-0 tx-gray">Below Threshold</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 col-12 mg-b-20">
+            <div class="card">
+              <div class="card-body pd-10">
+                <div class="avatar avatar-sm"><img src="../assets/img/Attach.svg" class="rounded-circle bg-primary" alt=""></div>
+                <p class="tx-40 tx-bold mb-0">0</p>
+                <p class="tx-14 mb-0 tx-gray">Within Threshold</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row mg-t-30 mg-b-20 mg-md-t-50">
+          <div class="col-md-3 offset-md-9 col-lg-2 offset-lg-10 pd-lg-l-0">
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Create New
+              </button>
+              <div class="dropdown-menu openn" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="./create-product.html">Product</a>
+                <a class="dropdown-item" href="./create-service.html">Service</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+       <div class="row mg-y-10 justify-content-between">
+         <div class="col-md-12 col-lg-4 col-12 mg-t-10">
+           <div class="row row-sm">
+            <div class="col-5">
+              <div class="dropdown">
+                <button class="btn btn-outline-light dropdown-toggle w-100 tx-left" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Sort By
+                </button>
+                <div class="dropdown-menu open large-dropdown" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Alphabetical Order</a>
+                  <a class="dropdown-item" href="#">Date of last Transaction</a>
+                  <a class="dropdown-item" href="#">Onboarding Date</a>
+                </div>
+              </div>
+              
+             </div>
+             <div class="col-7 col-md-6">
+              <div id="reportrange" class="form-control date-picker ">
+                <i class="fa fa-calendar"></i>&nbsp;
+                <span></span> <i class="fa fa-caret-down"></i>
+              </div>
+             </div>
+           </div>
+         </div>
+         <div class="col-md-12 col-lg-8 col-12 mg-t-10 pd-md-l-0">
+           <div class="row row-sm">
+            <div class="col-md-4 col-12 mg-t-10 mg-md-t-0">
+              <div class="search-form">
+                <input type="search" class="form-control" placeholder="Search Inventory">
+                <button class="btn" type="button"><i data-feather="search"></i></button>
+              </div>
+            </div>
+            <div class="col-md-2 col-6 mg-t-20 mg-md-t-0">
+              <div class="dropdown">
+                <button class="btn btn-outline-light dropdown-toggle pd-x-5 w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Export as
+                </button>
+                <div class="dropdown-menu openn" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">PDF</a>
+                  <a class="dropdown-item" href="#">Excel</a>
+                  <a class="dropdown-item" href="#">CSV</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-3 col-6 mg-t-20 mg-md-t-0">
+              <button  type="button" class="btn bg-gray w-100" data-toggle="modal" data-target="">
+                Allocate Product
+              </button>
+            </div>
+
+            <div class="col-md-3 col-6 mg-t-20 mg-md-t-0">
+              <a href="./import-inventory.html"  type="button" class="btn bg-gray w-100">
+                Import Inventory
+              </a>
+            </div>
+           </div>
+         </div>
+    </div>
+    <div class="d-flex mg-t-40">
+      <p class="tx-20 title-text my-0 tx-semibold mb-2">All Products</p>
+      <div>
+      </div>
+      
+      
+      <!-- <a href="./notification.html" class="tx-semibold">View all invoices</a> -->
+    </div>
+  
+        <div class="card card-body pd-0 bd-0 shadow-sm">
+          <div class="table-responsive">
+            <table class="table  table-hover mb-0" id="employee">
+              <thead class="thead-bg">
+                <tr class="">
+                  <th scope="col">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck">
+                      <label class="custom-control-label pd-y-10" for="customCheck">
+                      </label>
+                    </div>
+                  </th>
+                  <th scope="col">Product Name</th>
+                  <th scope="col" class="">Description</th>
+                  <th scope="col" class="">Available Qty</th>
+                  <th scope="col" class="tx-right">Purchase Price</th>
+                  <th scope="col" class="tx-right">Sales Price</th>
+                  <th scope="col" class="">Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+      
+              <tbody>
+                <tr class=''>
+                  <th scope="row" style="width: 15px;">
+                    <div class="custom-control custom-checkbox pb-0 pd-t-13">
+                      <input type="checkbox" class="custom-control-input" id="customCheck1">
+                      <label class="custom-control-label" for="customCheck1">
+                      </label>
+                    </div>
+                  </th>
+                  <td>
+                    Goods and services
+                  </td>
+                  <td class="">Current order of goods</td>
+                  <td class="tx-center">5</td>
+                  <td class="tx-right">N20,000</td>
+                  <td class="tx-right">N20,000</td>
+                  <td><span class="tx-active">Available</span></td>
+    
+                  <td>
+                      <div class="dropdown">
+                      <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
+                      </span>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="./customer-invoice.html"> View</a>
+                        <a class="dropdown-item" href="#">Edit</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addCustomer">Add Note</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewInvoice">Restock</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#setReminder" >Allocate Product</a>
+                        <a class="dropdown-item" href="#">
+                          <div class="d-flex justify-content-between">
+                            <span>Put on hold</span>
+                            <div class="custom-control custom-switch mg-t-5">
+                              <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
+                              <label class="custom-control-label" for="customSwitch2"></label>
+                            </div>
+                          </div>
+                        </a>
+                        <a class="dropdown-item" href="#">
+                          <div class="d-flex justify-content-between">
+                            <span>Discontinue</span>
+                            <div class="custom-control custom-switch mg-t-5">
+                              <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
+                              <label class="custom-control-label" for="customSwitch3"></label>
+                            </div>
+                          </div>
+                        </a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="" >Delete</a>
+                      </div>
+                    </div>
+                    </td>
+                </tr>
+                <tr class=''>
+                  <th scope="row" style="width: 15px;">
+                    <div class="custom-control custom-checkbox pb-0 pd-t-13">
+                      <input type="checkbox" class="custom-control-input" id="customCheck2">
+                      <label class="custom-control-label" for="customCheck2">
+                      </label>
+                    </div>
+                  </th>
+                  <td>
+                    Goods and services
+                  </td>
+                  <td class="">Current order of goods</td>
+                  <td class="tx-center">5</td>
+                  <td class="tx-right">N20,000</td>
+                  <td class="tx-right">N20,000</td>
+                  <td><span class="tx-active">Available</span></td>
+    
+                  <td>
+                    <div class="dropdown">
+                    <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
+                    </span>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="./customer-invoice.html"> View</a>
+                      <a class="dropdown-item" href="#">Edit</a>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addCustomer">Add Note</a>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewInvoice">Restock</a>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#setReminder" >Allocate Product</a>
+                      <a class="dropdown-item" href="#">
+                        <div class="d-flex justify-content-between">
+                          <span>Put on hold</span>
+                          <div class="custom-control custom-switch mg-t-5">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
+                            <label class="custom-control-label" for="customSwitch2"></label>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <div class="d-flex justify-content-between">
+                          <span>Discontinue</span>
+                          <div class="custom-control custom-switch mg-t-5">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
+                            <label class="custom-control-label" for="customSwitch3"></label>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="" >Delete</a>
+                    </div>
+                  </div>
+                  </td>
+                </tr>
+                <tr class=''>
+                  <th scope="row" style="width: 15px;">
+                    <div class="custom-control custom-checkbox pb-0 pd-t-13">
+                      <input type="checkbox" class="custom-control-input" id="customCheck3">
+                      <label class="custom-control-label" for="customCheck3">
+                      </label>
+                    </div>
+                  </th>
+                  <td>
+                    Goods and services
+                  </td>
+                  <td class="">Current order of goods</td>
+                  <td class="tx-center">5</td>
+                  <td class="tx-right">N20,000</td>
+                  <td class="tx-right">N20,000</td>
+                  <td><span class="tx-danger">In active</span></td>
+    
+                  <td>
+                    <div class="dropdown">
+                    <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
+                    </span>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="./customer-invoice.html"> View</a>
+                      <a class="dropdown-item" href="#">Edit</a>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addCustomer">Add Note</a>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewInvoice">Restock</a>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#setReminder" >Allocate Product</a>
+                      <a class="dropdown-item" href="#">
+                        <div class="d-flex justify-content-between">
+                          <span>Put on hold</span>
+                          <div class="custom-control custom-switch mg-t-5">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
+                            <label class="custom-control-label" for="customSwitch2"></label>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <div class="d-flex justify-content-between">
+                          <span>Discontinue</span>
+                          <div class="custom-control custom-switch mg-t-5">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
+                            <label class="custom-control-label" for="customSwitch3"></label>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="" >Delete</a>
+                    </div>
+                  </div>
+                  </td>
+                </tr>
+                <tr class=''>
+                  <th scope="row" style="width: 15px;">
+                    <div class="custom-control custom-checkbox pb-0 pd-t-13">
+                      <input type="checkbox" class="custom-control-input" id="customCheck4">
+                      <label class="custom-control-label" for="customCheck4">
+                      </label>
+                    </div>
+                  </th>
+                  <td>
+                    Goods and services
+                  </td>
+                  <td class="">Current order of goods</td>
+                  <td class="tx-center">5</td>
+                  <td class="tx-right">N20,000</td>
+                  <td class="tx-right">N20,000</td>
+                  <td><span class="tx-active">Available</span></td>
+    
+                  <td>
+                    <div class="dropdown">
+                    <span class="" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
+                    </span>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="./customer-invoice.html"> View</a>
+                      <a class="dropdown-item" href="#">Edit</a>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#addCustomer">Add Note</a>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewInvoice">Restock</a>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="#setReminder" >Allocate Product</a>
+                      <a class="dropdown-item" href="#">
+                        <div class="d-flex justify-content-between">
+                          <span>Put on hold</span>
+                          <div class="custom-control custom-switch mg-t-5">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch2" checked>
+                            <label class="custom-control-label" for="customSwitch2"></label>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <div class="d-flex justify-content-between">
+                          <span>Discontinue</span>
+                          <div class="custom-control custom-switch mg-t-5">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch3" checked>
+                            <label class="custom-control-label" for="customSwitch3"></label>
+                          </div>
+                        </div>
+                      </a>
+                      <a class="dropdown-item" href="#" data-toggle="modal" data-target="" >Delete</a>
+                    </div>
+                  </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      
+    </div>
+   
+    <nav aria-label="Page navigation example" class="mg-t-50">
+      <ul class="pagination justify-content-end bd-0">
+        <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
+
+    <!-- Modal -->
+      <div class="modal fade" id="createModal" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header pd-md-x-30">
+              <h5 class="modal-title" id="createModalLabel">Create New Subscriber</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body pd-md-30">
+              <form action="">
+
+                <label for="" class="d-block">Choose upload Type</label>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                      <label class="custom-control-label text-secondary" for="customRadio1">Individual</label>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label text-secondary" for="customRadio2">Bulk Upload</label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer bd-t-0 pd-md-x-30 pd-md-b-30">
+              <a href="./create-sub.html" class="btn btn-primary w-100">Continue</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Set Reminder Modal -->
+ <div class="modal fade" id="setReminder" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="width: 400px;">
+    <div class="modal-content">
+      <div class="modal-header pd-md-x-30 pd-y-20 bd-b-0">
+        <h5 class="modal-title" id="createModalLabel">Set Reminder</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body pd-md-x-30 pd-t-0">
+        <form action="">
+          <div class="form-group">
+            <label for="" class="tx-14 mb-1">Description</label>
+            <textarea name="" id="" cols="" class="form-control border-dash" rows="4" placeholder="Type here"></textarea>
+          </div>
+          <div class="form-group">
+            <p class="tx-14 tx-gray mg-t-20">Remind on:</p>
+
+            <label for="" class="tx-14 mb-1">Date</label>
+            <input type="date" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="" class="tx-14 mb-1">Time</label>
+            <input type="time" class="form-control">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer bd-t-0 pd-md-x-30 pd-md-b-30">
+        <a href="./notification.html" class="btn btn-primary w-100">Set Reminder</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!--Add Subscriber Note Modal -->
+ <div class="modal fade" id="addCustomer" tabindex="-1" role="dialog" aria-labelledby="createModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="width: 400px;">
+    <div class="modal-content">
+      <div class="modal-header pd-md-x-30 pd-y-20 bd-b-0">
+        <h5 class="modal-title" id="createModalLabel">Add Product Notes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body pd-md-x-30 pd-t-0">
+        <form action="">
+          <textarea name="" id="" cols="" class="form-control border-dash" rows="10" placeholder="Type here (max. of 500 characters)"></textarea>
+        </form>
+      </div>
+      <div class="modal-footer bd-t-0 pd-md-x-30 pd-md-b-30">
+        <button class="btn btn-primary w-100" data-dismiss="modal">Add Note</butt>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!--View Invoice Modal -->
+ <div class="modal fade" id="viewInvoice" tabindex="-1" role="dialog" aria-labelledby="viewInvoiceLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document" style="width: 650px;">
+    <div class="modal-content">
+      <div class="modal-header pd-md-x-30 pd-y-40 bd-b-0 bg-yellow">
+        <h5 class="modal-title" id="createModalLabel"></h5>
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <div class="modal-body pd-md-x-30">
+       <div class="tx-center neg-top">
+         <img src="../assets/img/staff.png" alt="" class="ht-75 wd-75" srcset="">
+         <div class="d-flex align-items-center justify-content-center">
+          <span class="active-dot mg-r-3"></span>
+         <label for="" class="tx-active d-block tx-12">  Active</label>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-md-3 col-2">
+           <label for="" class="tx-gray tx-12 mb-1">Gender</label>
+           <p class=" tx-bold">Male</p>
+         </div>
+         <div class="col-md-5 tx-center col-5 ">
+          <label for="" class="tx-gray tx-12 mb-1">Name</label>
+          <p class=" tx-bold">Samson Ajibade Jones</p>
+        </div>
+        <div class="col-md-4 tx-center col-4 pd-r-0 pd-r-md-15">
+          <label for="" class="tx-gray tx-12 mb-1">Onboarded on</label>
+          <p class=" tx-bold">21st July, 2021</p>
+        </div>
+       </div>
+       <div class="col-md-9 col-12 mx-auto">
+         <div class="card card-body bg-light">
+           <div class="row">
+             <div class="col-6 bd-r">
+              <label for="" class="tx-gray tx-12 mb-1">Total Purchases</label>
+              <p class=" tx-bold tx-18 mb-0">N215,456.00</p>
+             </div>
+             <div class="col-6">
+              <label for="" class="tx-gray tx-12 mb-1">Balance</label>
+              <p class=" tx-bold tx-18 mb-0">N18,712.00</p>
+             </div>
+           </div>
+         </div>
+       </div>
+       <div class="card card-body rounded-15 pd-15 mg-t-20">
+         <p class="tx-bold mb-0">Contact Info</p>
+         <hr class="mg-y-5">
+         <div class="row">
+           <div class="col-md-6 pd-mr-0">
+             <div class="mg-b-10">
+              <i class="fa fa-phone tx-gray mg-r-5"></i> <span>09056743892</span>
+             </div>
+             <div>
+              <i class="fa fa-envelope tx-gray mg-r-5"></i> <span>Kolawaoleabdul@gmail.com</span>
+             </div>
+           </div>
+           <div class="col-md-6">
+            <i class="fa fa-map-marker tx-gray mg-r-5"></i> <span>2B, Dove close, Ekwa estate, Victoria Island, Lagos</span>
+          </div>
+         </div>
+       </div>
+
+       <div class="card card-body rounded-15 pd-15 mg-t-20">
+        <p class="tx-bold mb-0">Business Info</p>
+        <hr class="mg-y-5">
+        <div class="row">
+          <div class="col-md-6 pd-mr-0">
+            <div class="mg-b-10">
+              <i class="fa fa-briefcase tx-gray mg-r-5"></i> <span class="">Oriade and Sons Enterprise</span></br>
+            </div>
+            <div>
+              <i class="fa fa-chart-pie tx-gray mg-r-5"></i> <span class="">Sector - Transportation</span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mg-b-10">
+            <i class="fa fa-user tx-gray mg-r-5"></i> <span class="">Type - Partnership</span>
+            </div>
+            <div>
+              <i class="fa fa-brand tx-gray mg-r-5"></i> <span class="">TIN - TN-124 A021</span>
+            </div>
+         </div>
+        </div>
+      </div>
+      <div class="card card-body rounded-15 pd-15 mg-t-20">
+        <p class="tx-bold mb-0">Billing/Shipping Info</p>
+        <hr class="mg-y-5">
+        <div class="row">
+          <div class="col-md-12 pd-mr-0">
+            <div class="d-flex justify-content-between">
+              <div>
+                <i class="fa fa-map-marker tx-gray mg-r-5"></i> <span class="">2B, Dove close, Ekwa estate, Victoria Island. <br>
+                  Lagos, Nigeria <br/>
+                  Postal Code - 110001
+                </span>
+              </div>
+              <div>
+                <span class="badge badge-lightt tx-success float-right">Primary</span>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col-md-12 mg-t-20">
+            <i class="fa fa-map-marker tx-gray mg-r-5"></i> <span class="">2B, Dove close, Ekwa estate, Victoria Island. <br>
+              Lagos, Nigeria <br/>
+              Postal Code - 110001
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="card card-body rounded-15 pd-15 mg-t-20">
+        <p class="tx-bold mb-0">Notes</p>
+        <hr class="mg-y-5">
+        <p class="mb-0 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      </div>
+      </div>
+      <div class="modal-footer bd-t-0 pd-md-x-30 pd-md-b-30">
+        <button class="btn btn-primary pd-x-70" data-dismiss="modal">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ 
+       
+    </div><!-- container -->
+      
+  
+  
+    </div>
+    </div>
+
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/lib/prismjs/prism.js"></script>
+    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="../assets/lib/typeahead.js/typeahead.jquery.min.js"></script>
+    <script src="../assets/lib/typeahead.js/typeahead.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="../assets/lib/chart.js/Chart1.min.js"></script>
+    <script src="../assets/lib/chart.js/utils.js"></script>
+
+    <script src="../assets/js/dashforge.js"></script>
+    <script src="../assets/js/dashforge.aside.js"></script>
+    <script src="../assets/js/dashforge.sampledata.js"></script>
+    <!-- for multiselect dropdown  -->
+    <!-- <script type="text/javascript" src="../assets/js/bootstrap-multiselect.js"></script> -->
+
+    <script>
+      $(document).ready( function () {
+       $('.display').DataTable({
+         "paging": true,
+         "info": true,
+         "responsive": true,
+         "aoColumnDefs": [{
+             "bSortable": false,
+             "aTargets": ["no-sort"]
+         }],
+         
+         "bInfo": true
+       });
+       
+       $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+         $('.display:visible').each( function(e) {
+           $(this).DataTable().columns.adjust().responsive.recalc();
+         });
+       });
+
+         //date picker
+     let start = moment().subtract(29, 'days');
+      let end = moment();
+
+    function cb(start, end) {
+        $('#reportrange span').html(start.format('MMM ') + ' - ' + end.format('MMM  YYYY'));
+    }
+
+    $('#reportrange').daterangepicker({
+        startDate: start,
+        endDate: end,
+        ranges: {
+          'Today': [moment(), moment()],
+          'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+          'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+          'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+          'This Month': [moment().startOf('month'), moment().endOf('month')],
+          'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        }
+    }, cb);
+
+    cb(start, end);
+
+     } );
+      </script>
+     
+  <script>
+    /* Set the width of the sidebar to 250px (show it) */
+  function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+  }
+
+  /* Set the width of the sidebar to 0 (hide it) */
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+</script>
+  </body>
+</html>
