@@ -59,8 +59,8 @@
             <li class="nav-item active show with-sub tx-14">
               <a href="" class="nav-link"><span>Inventory</span></a>
               <ul>  
-                <li class="active"><a href="./index.html">Product</a></li>
-                <li><a href="./services.html">Services</a></li>
+                <li><a href="./index.html">Product</a></li>
+                <li  class="active"><a href="./services.html">Services</a></li>
               </ul>
             </li>
             <li class="nav-item with-sub tx-14">
@@ -150,91 +150,43 @@
               <button class="btn btn-outline-dark" onclick="goBack()"><i class="fa fa-arrow-left mg-r-5"></i> Go back</button>
           </div>
           <div class="col-lg-9 col-md-11 col-12 pd-lg-r-0 mg-t-20 mg-md-t-0">
-            <div class="card shadow-sm bg-white">
+            <div class="card shadow-sm bg-white pd-md-b-100">
               <div class="card-body pd-md-50">
-                <p class="tx-24 tx-bold mb-1">Create New Product</p>
-                <p class="mb-0 tx-16 tx-blac">Let’s set up your new product</p>
+                <p class="tx-24 tx-bold mb-1">Create Services</p>
+                <p class="mb-0 tx-16 tx-blac">Let’s set up the services you render.</p>
                 <form class="mg-t-30">
                     <div class="form-row">
-                      <div class="form-group col-md-6 col-12 required">
-                         <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray control-label">Item Name </label>
-                         <input type="text" class="form-control bg-gray" placeholder="Enter item name">
+                      <div class="form-group col-md-3 col-12 required">
+                         <label for="formGroupExampleInput" class="mb-1 tx-14 tx-medium control-label">Service Name</label>
                       </div>
-                      <div class="form-group col-md-6 col-12">
-                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray">Item Category</label>
-                        <select class="custom-select bg-gray">
-                          <option selected>Select or enter item category</option>
-                          <option value="1">Stationery</option>
-                          <option value="2">Kitchen</option>
-                          <option value="3">Food item</option>
-                          <option value="4">Electronics</option>
-                          <option value="5">Baby</option>
-                          <option value="6">Wine & Spirit</option>
-                          <option value="7">Beverages</option>
-                        </select>
+                      <div class="form-group col-md-5 col-12">
+                        <input type="text" class="form-control bg-gray" placeholder="Enter your service Name">
                       </div>
                     </div>
                     <div class="form-row">
-                      <div class="form-group col-md-6 col-12 required">
-                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray control-label">Stock Quantity</label>
-                        <input type="text" class="form-control bg-gray" placeholder="Enter Stock Quantity">
-                       </div>
-                      <div class="form-group col-md-6 col-12">
-                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray">Date</label>
-                       <input type="date" class="form-control bg-gray" placeholder="">
+                      <div class="form-group col-md-3 col-12 required">
+                         <label for="formGroupExampleInput" class="mb-1 tx-14 tx-medium control-label">Sales Price </label>
                       </div>
-
-                      <div class="form-group col-md-6 col-12">
-                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray">Stock Keeping Number</label>
-                        <input type="text" class="form-control bg-gray" placeholder="Enter stock keeping number">
-                       </div>
-                      <div class="form-group col-md-6 col-12 required">
-                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray control-label">Item Serial Number (Isbn)</label>
-                       <input type="text" class="form-control bg-gray" placeholder="Enter item serial number">
-                      </div>
-
-                      <div class="form-group col-md-6 col-12 required">
-                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray control-label">Reorder Level Limit</label>
-                        <input type="text" class="form-control bg-gray" placeholder="Enter Reorder level limit">
-                       </div>
-                      <div class="form-group col-md-6 col-12">
-                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray ">Item Reorder Quantity</label>
-                       <input type="text" class="form-control bg-gray" placeholder="Enter item reorder quantity">
-                      </div>
-                      <div class="form-group col-md-6 col-12">
-                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray">Description</label>
-                        <input type="text" class="form-control bg-gray" placeholder="Write a custom description">
-                       </div>
-                      <div class="form-group col-md-6 col-12">
-                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray">Unit Of Measurement</label>
-                       <select class="custom-select bg-gray">
-                          <option selected>Select unit of measurement</option>
-                          <option value="1">M</option>
-                          <option value="2">G</option>
-                          <option value="3">Kg</option>
-                          <option value="4">L</option>
-                          <option value="5">ML</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-md-6 col-12 required">
-                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray control-label">Cost Per Item</label>
-                        <input type="text" class="form-control bg-gray" placeholder="Enter cost per item">
-                       </div>
-                      <div class="form-group col-md-6 col-12 required">
-                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray control-label">Sales Price</label>
-                       <input type="text" class="form-control bg-gray" placeholder="Enter sales price">
+                      <div class="form-group col-md-5 col-12">
+                        <input type="text" class="form-control bg-gray" placeholder="Enter your service sales price">
                       </div>
                     </div>
-
-                   <div class="form-group mg-t-20">
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="customCheck1">
-                      <label class="custom-control-label" for="customCheck1">Out of Stock Notification</label>
+                    <div class="form-row">
+                      <div class="form-group col-md-3 col-12">
+                         <label for="formGroupExampleInput" class="mb-1 tx-14 tx-medium">Service Description</label>
+                      </div>
+                      <div class="form-group col-md-5 col-12">
+                        <input type="text" class="form-control bg-gray" placeholder="Write a custom description for your service">
+                      </div>
                     </div>
-                    
-                   </div> 
-                    <button class="btn btn-primary pd-x-50 mg-t-30" type="button" data-toggle="modal" data-target="#successModal">Add Product</button>
-
+                    <div class="form-row">
+                      <div class="form-group col-md-3 col-12">
+                      </div>
+                      <div class="form-group col-md-5 col-12 ">
+                        <button class="btn btn-primary w-100 mg-t-30" type="button" data-toggle="modal" data-target="#successModal">Add Service</button>
+                      </div>
+                    </div> 
+                  </div>
                 </form>
               </div>
           </div>
