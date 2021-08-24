@@ -25,20 +25,15 @@
 
     <!-- DashForge CSS -->
     <link rel="stylesheet" href="../assets/css/dashforge.css">
-    <link rel="stylesheet" href="../assets/css/main.css">
-
     <!-- Page CSS --> 
-    
-    <link rel="stylesheet" href="../assets/css/progress.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-
+    <link rel="stylesheet" href="../assets/css/main.css">
   </head>
   <body>
     <aside class="aside aside-fixed">
       <div class="aside-header">
         <a href="dashboard.html" class="aside-logo">
           <div class="pd-50">
-            <img src="./assets/img/logo.svg" class="img-fluid logo" alt="" srcset="">
+            <img src="../assets/img/logo.svg" class="img-fluid logo" alt="" srcset="">
           </div>
         </a>
         <a href="" class="aside-menu-link">
@@ -47,13 +42,13 @@
         </a>
       </div>
       <div class="aside-body">
-        <!-- <div class="pd-b-30 pd-t-0 pd-x-40">
+        <div class="pd-y-30 pd-x-40">
           <p class="tx-14 tx-white mb-0">Account balance</p>
           <p class="tx-14 tx-lighter mb-1">0124914917</p>
-          <p class="tx-18 tx-bold tx-white">1,298,000</p>
+          <p class="tx-16 tx-bold tx-white">1,298,000</p>
 
           <button class="btn btn-light tx-dark">Import transaction</button>
-        </div> -->
+        </div>
         <div class="nav-menu">
           <ul class="nav nav-aside">
             <li class="nav-item"><a href="../dashboard.html" class="nav-link"> <span class="marine-active-menu">Dashboard</span></a></li>
@@ -64,8 +59,8 @@
             <li class="nav-item active show with-sub tx-14">
               <a href="" class="nav-link"><span>Inventory</span></a>
               <ul>  
-                <li><a href="./index.html">Product</a></li>
-                <li class="active"><a href="./services.html">Services</a></li>
+                <li class="active"><a href="./index.html">Product</a></li>
+                <li><a href="./services.html">Services</a></li>
                 <li><a href="./purchase-order.html">Purchase Order</a></li>
               </ul>
             </li>
@@ -92,7 +87,7 @@
       <div class="content-header shadow-dash bd-b-0">
         <div class="content-search">
           <i data-feather="search"></i>
-          <input type="search" class="form-control" placeholder="Search...">
+          <input type="search" class="form-control bg-gray" placeholder="Search...">
         </div>
         <nav class="nav">
           
@@ -151,43 +146,116 @@
 
       <div class="content-body">
       <div class="container">
-        <button class="btn btn-outline-dark" onclick="goBack()"><i class="fa fa-arrow-left mg-r-5"></i> Go back</button>
-      <div class="row justify-content-between mg-t-20">
-        <div class="col-md-9">
-          <p class="tx-24 tx-bold mg-b-0 ">Import Service</p>
-          <p>You can upload your product inventory in CSV format.</p>
-        </div>
-        
-      </div>
-      
-      <div class="card card-body modal-pink tx-center pd-y-30 mg-t-20">
-        <p class="tx-20 tx-bold">Upload & manage your Service</p>
-        <p>No documents</p>
-
-        <form action="">
-          <div class="form-group">
-            <div class="col-md-4 mx-auto">
-              <div class="form-drop">
-                <div class="drop-zone-form pd-40">
-                  <div class="cell"> 
-                    <div class="drop-zone__prompt">
-                      <img src="../assets/img/upload.svg" alt="" srcset="">
-                      <p class="p-14 mg-t-20 text-gray-700">Drop your files here <br> or</p>
-                      <button class="btn btn-primary mg-t-20 pd-x-30" type="button">Browse disk</button>
-                    </div>
-                    <input type="file" name="myFile" class="drop-zone__input">
-                  </div>
-                </div>
-              </div>
-            </div>
-            
+        <div class="row  mb-5">
+          <div class="col-lg-2 col-md-3 col-12 mt-2 pd-lg-r-0"> 
+              <button class="btn btn-outline-dark" onclick="goBack()"><i class="fa fa-arrow-left mg-r-5"></i> Go back</button>
           </div>
-        </form>
-       
+          <div class="col-lg-9 col-md-11 col-12 pd-lg-r-0 mg-t-20 mg-md-t-0">
+            <div class="card shadow-sm bg-white">
+              <div class="card-body pd-md-50">
+                <p class="tx-24 tx-bold mb-1">Restock New Product</p>
+                <p class="mb-0 tx-16 tx-blac">Let’s restock your good’s Inventory</p>
+                <form class="mg-t-30">
+                    <div class="form-row">
+                      <div class="form-group col-md-6 col-12 required">
+                         <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray control-label">Item Name </label>
+                         <input type="text" class="form-control bg-gray" placeholder="Enter item name">
+                      </div>
+                      <div class="form-group col-md-6 col-12">
+                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray">Item Category</label>
+                        <select class="custom-select bg-gray">
+                          <option selected>Select or enter item category</option>
+                          <option value="1">Stationery</option>
+                          <option value="2">Kitchen</option>
+                          <option value="3">Food item</option>
+                          <option value="4">Electronics</option>
+                          <option value="5">Baby</option>
+                          <option value="6">Wine & Spirit</option>
+                          <option value="7">Beverages</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6 col-12 required">
+                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray control-label">Stock Quantity</label>
+                        <input type="text" class="form-control bg-gray" placeholder="Enter Stock Quantity">
+                       </div>
+                      <div class="form-group col-md-6 col-12">
+                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray">Date</label>
+                       <input type="date" class="form-control bg-gray" placeholder="">
+                      </div>
+
+                      <div class="form-group col-md-6 col-12 required">
+                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray control-label">Reorder Level Limit</label>
+                        <input type="text" class="form-control bg-gray" placeholder="Enter Reorder level limit">
+                       </div>
+                      <div class="form-group col-md-6 col-12">
+                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray ">Item Reorder Quantity</label>
+                       <input type="text" class="form-control bg-gray" placeholder="Enter item reorder quantity">
+                      </div>
+                      <div class="form-group col-md-6 col-12">
+                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray">Description</label>
+                        <input type="text" class="form-control bg-gray" placeholder="Write a custom description">
+                       </div>
+                      <div class="form-group col-md-6 col-12">
+                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray">Unit Of Measurement</label>
+                       <select class="custom-select bg-gray">
+                          <option selected>Select unit of measurement</option>
+                          <option value="1">M</option>
+                          <option value="2">G</option>
+                          <option value="3">Kg</option>
+                          <option value="4">L</option>
+                          <option value="5">ML</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-6 col-12 required">
+                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray control-label">Cost Per Item</label>
+                        <input type="text" class="form-control bg-gray" placeholder="Enter cost per item">
+                       </div>
+                      <div class="form-group col-md-6 col-12 required">
+                        <label for="formGroupExampleInput" class="mb-1 tx-12 tx-medium tx-gray control-label">Sales Price</label>
+                       <input type="text" class="form-control bg-gray" placeholder="Enter sales price">
+                      </div>
+                    </div>
+
+                   <div class="form-group mg-t-20">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="customCheck1">
+                      <label class="custom-control-label" for="customCheck1">Out of Stock Notification</label>
+                    </div>
+                    
+                   </div> 
+                    <button class="btn btn-primary pd-x-50 mg-t-30" type="button" data-toggle="modal" data-target="#successModal">Submit</button>
+
+                </form>
+              </div>
+          </div>
+          </div>
       </div>
-      <div class="card-footer mg-t-20 pd-x-0">
-        <a href="./customers.html" class="btn btn-primary float-md-right pd-x-30">Continue</a>
+
+       <!-- Modal -->
+       <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header pd-md-x-30 bd-b-0">
+              <h5 class="modal-title" id="successModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body pd-md-30 tx-center">
+              <img src="../assets/img/Success.svg" class="img-fluid" alt="" srcset="">
+              <p class="tx-24">Success!</p>
+              <p class="tx-16">Subscription has been activated!</p>
+              <a href="./customers.html" class="btn btn-primary w-50 mg-t-10 mg-b-30">View Subscriber</a>
+
+            </div>
+          </div>
+        </div>
       </div>
+   
+
+      
     </div><!-- container -->
       
   
@@ -216,82 +284,24 @@
     <script src="../assets/js/dashforge.sampledata.js"></script>
     <!-- for multiselect dropdown  -->
     <!-- <script type="text/javascript" src="../assets/js/bootstrap-multiselect.js"></script> -->
- 
-<script>
-      document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
-          const dropZoneElement = inputElement.closest(".drop-zone-form");
 
-          dropZoneElement.addEventListener("click", (e) => {
-            inputElement.click();
-          });
 
-          inputElement.addEventListener("change", (e) => {
-            if (inputElement.files.length) {
-              updateThumbnail(dropZoneElement, inputElement.files[0]);
-            }
-          });
-
-          dropZoneElement.addEventListener("dragover", (e) => {
-            e.preventDefault();
-            dropZoneElement.classList.add("drop-zone--over");
-          });
-
-          ["dragleave", "dragend"].forEach((type) => {
-            dropZoneElement.addEventListener(type, (e) => {
-              dropZoneElement.classList.remove("drop-zone--over");
-            });
-          });
-
-          dropZoneElement.addEventListener("drop", (e) => {
-            e.preventDefault();
-
-            if (e.dataTransfer.files.length) {
-              inputElement.files = e.dataTransfer.files;
-              updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
-            }
-
-            dropZoneElement.classList.remove("drop-zone--over");
-          });
-        });
-
-        /**
-         * Updates the thumbnail on a drop zone element.
-         *
-         * @param {HTMLElement} dropZoneElement
-         * @param {File} file
-         */
-        function updateThumbnail(dropZoneElement, file) {
-          let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
-
-          // First time - remove the prompt
-          if (dropZoneElement.querySelector(".drop-zone__prompt")) {
-            dropZoneElement.querySelector(".drop-zone__prompt").remove();
-          }
-
-          // First time - there is no thumbnail element, so lets create it
-          if (!thumbnailElement) {
-            thumbnailElement = document.createElement("div");
-            thumbnailElement.classList.add("drop-zone__thumb");
-            dropZoneElement.appendChild(thumbnailElement);
-          }
-
-          thumbnailElement.dataset.label = file.name;
-
-          // Show thumbnail for image files
-          if (file.type.startsWith("image/")) {
-            const reader = new FileReader();
-
-            reader.readAsDataURL(file);
-            reader.onload = () => {
-              thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
-            };
-          } else {
-            thumbnailElement.style.backgroundImage = null;
-          }
-        }
+  <script>
     function goBack() {
   window.history.back();
-};
+  };
+  function addMoreInfo(){
+    console.log('click')
+    // let x = document.getElementById("userAccess");
+    // x.style.display = "block"
+    let x = document.getElementById("more-info");
+    let y = document.getElementById("add-btn");
+
+      x.style.display = "block";
+      y.style.display = "none";
+
+  }
+
   </script>
  
   </body>
