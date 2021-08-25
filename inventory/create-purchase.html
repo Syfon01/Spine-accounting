@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Spine Accounting">
+    <title>Spine Accounting</title>
+
+    <!-- Required External CSS -->
+    <link href="../assets/lib/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="../assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../assets/lib/jqvmap/jqvmap.min.css" rel="stylesheet">
+
+    <link href="../assets/lib/prismjs/themes/prism-vs.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-dt/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/datatables.net-responsive-dt/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="../assets/lib/select2/css/select2.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.png">
+
+    <!-- DashForge CSS -->
+    <link rel="stylesheet" href="../assets/css/dashforge.css">
+    <!-- Page CSS --> 
+    <link rel="stylesheet" href="../assets/css/main.css">
+  </head>
+  <body>
+    <aside class="aside aside-fixed">
+      <div class="aside-header">
+        <a href="dashboard.html" class="aside-logo">
+          <div class="pd-50">
+            <img src="../assets/img/logo.svg" class="img-fluid logo" alt="" srcset="">
+          </div>
+        </a>
+        <a href="" class="aside-menu-link">
+          <i data-feather="menu"></i>
+          <i data-feather="x"></i>
+        </a>
+      </div>
+      <div class="aside-body">
+        <div class="pd-y-30 pd-x-40">
+          <p class="tx-14 tx-white mb-0">Account balance</p>
+          <p class="tx-14 tx-lighter mb-1">0124914917</p>
+          <p class="tx-16 tx-bold tx-white">1,298,000</p>
+
+          <button class="btn btn-light tx-dark">Import transaction</button>
+        </div>
+        <div class="nav-menu">
+          <ul class="nav nav-aside">
+            <li class="nav-item"><a href="../dashboard.html" class="nav-link"> <span class="marine-active-menu">Dashboard</span></a></li>
+            <li class="nav-item"><a href="../transactions.html" class="nav-link"><span>Transactions</span></a></li>
+            <li class="nav-item"><a href="../customers.html" class="nav-link"><span>Customers</span></a></li>
+            <li class="nav-item"><a href="./index.html" class="nav-link"><span>Subscribers</span></a></li>
+            <li class="nav-item"><a href="../invoices.html" class="nav-link"><span>Invoices</span></a></li>
+            <li class="nav-item active show with-sub tx-14">
+              <a href="" class="nav-link"><span>Inventory</span></a>
+              <ul>  
+                <li><a href="./index.html">Product</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li class="active"><a href="./purchase-order.html">Purchase Order</a></li>
+              </ul>
+            </li>
+            <li class="nav-item with-sub tx-14">
+              <a href="" class="nav-link"><span>Inventory Setting</span></a>
+              <ul>  
+                <li class=""><a href="./location.html">Location</a></li>
+                <li><a href="./item-category.html">Item category</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="../report.html" class="nav-link"><span>Report</span></a></li>
+            <li class="nav-item"><a href="../setting.html" class="nav-link"><span>Settings</span></a></li>
+          </ul>
+        </div>
+        <div class="fixed-bottom pd-x-40">
+          <button class="nav-link btn tx-white"><span>Log out</span></button>
+        </div>
+       
+      </div>
+    </aside>
+
+    <div class="content pd-0">
+  
+      <div class="content-header shadow-dash bd-b-0">
+        <div class="content-search">
+          <i data-feather="search"></i>
+          <input type="search" class="form-control bg-gray" placeholder="Search...">
+        </div>
+        <nav class="nav">
+          
+          <div class="dropdown dropdown-notification ml-md-4 ml-2 mg-t-5">
+            <a href="" class="dropdown-link new-indicator" data-toggle="dropdown">
+              <i data-feather="bell"></i>
+              <span>2</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-header">Notifications</div>
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../https://via.placeholder.com/350" class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p>Congratulate <strong>Socrates Itumay</strong> for work anniversaries</p>
+                    <span>Mar 15 12:32pm</span>
+                  </div>
+                </div>
+              </a>
+              
+              <a href="" class="dropdown-item">
+                <div class="media">
+                  <div class="avatar avatar-sm avatar-online"><img src="../https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+                  <div class="media-body mg-l-15">
+                    <p><strong>Adrian Monino</strong> added new comment on your photo</p>
+                    <span>Mar 12 10:40pm</span>
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-footer"><a href="">View all Notifications</a></div>
+            </div><!-- dropdown-menu -->
+          </div>
+
+          <div class="dropdown dropdown-profile ml-md-4 ml-2">
+            <a href="" class="dropdown-link" data-toggle="dropdown" data-display="static">
+              <div class="avatar avatar-sm"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+            </a><!-- dropdown-link -->
+            <div class="dropdown-menu dropdown-menu-right tx-13">
+              <div class="avatar avatar-lg mg-b-20"><img src="https://via.placeholder.com/500" class="rounded-circle" alt=""></div>
+              <h6 class="tx-semibold mg-b-5">Katherine Pechon</h6>
+              <p class="mg-b-25 tx-12 tx-color-03">Administrator</p>
+  
+              <a href="" class="dropdown-item"><i data-feather="edit-3"></i> Edit Profile</a>
+              <a href="page-profile-view.html" class="dropdown-item"><i data-feather="user"></i> View Profile</a>
+              <div class="dropdown-divider"></div>
+              <a href="page-help-center.html" class="dropdown-item"><i data-feather="help-circle"></i> Help Center</a>
+              <a href="" class="dropdown-item"><i data-feather="life-buoy"></i> Forum</a>
+              <a href="" class="dropdown-item"><i data-feather="settings"></i>Account Settings</a>
+              <a href="" class="dropdown-item"><i data-feather="settings"></i>Privacy Settings</a>
+              <a href="page-signin.html" class="dropdown-item"><i data-feather="log-out"></i>Sign Out</a>
+            </div><!-- dropdown-menu -->
+          </div>
+        </nav>
+        
+      </div><!-- content-header -->
+
+      <div class="content-body">
+      <div class="container">
+        <div class="row  mb-5">
+          <div class="col-lg-2 col-md-3 col-12 mt-2 pd-lg-r-0 pd-x-0"> 
+              <button class="btn btn-outline-dark" onclick="goBack()"><i class="fa fa-arrow-left mg-r-5"></i> Go back</button>
+          </div>
+          <div class="mg-t-30">
+            <p class="tx-24 tx-bold mb-1">Create New Purchase Order</p>
+            <p class="mb-0 tx-16 tx-blac">Let’s set up your purchase Order</p>
+            <form class="mg-t-30">
+                <div class="form-row">
+                  <div class="form-group col-md-3 col-12">
+                     <label for="formGroupExampleInput" class="mg-t-5 tx-14 tx-medium ">Vendor Name</label>
+                  </div>
+                  <div class="form-group col-md-4 col-12">
+                    <input type="text" class="form-control" placeholder="Enter Vendor Name">
+
+                  </div>
+                </div>
+                <div class="card card-body pd-x-0 shadow-sm bd-0 pd-t-0">
+                  <div class="table-responsive">
+                    <table id="" class="table mb-0">
+                      <thead class="thead">
+                          <tr class="">
+                            <th scope="col">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck">
+                                <label class="custom-control-label pd-y-10" for="customCheck">
+                                </label>
+                              </div>
+                            </th>
+                              <th>Product/ Service</th>
+                              <th>Description</th>
+                              <th>Quantity</th>
+                              <th>Rate</th>
+                              <th>Amount</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                            <th scope="row" style="width: 15px;">
+                              <div class="custom-control custom-checkbox pb-0 pd-t-13">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1">
+                                </label>
+                              </div>
+                            </th>
+                              <td  class="tx-gray"><input type="text" class="form-control bg-gray" placeholder="Enter Product/Service"></td>
+                              <td  class="tx-gray" style="width: 300px;"><input type="text" class="form-control bg-gray" placeholder="Enter description"></td>
+                              <td  class="tx-gray"><input type="text" class="form-control bg-gray" placeholder="Enter quantity"></td>
+                              <td  class="tx-gray"><input type="text" class="form-control bg-gray" placeholder="Enter Rate"></td>
+                              <td  class="tx-gray"><input type="text" class="form-control bg-gray" placeholder="Enter Amount in Naira"></td>
+                          </tr>
+              
+                          <tr>
+                            <th scope="row" style="width: 15px;">
+                              <div class="custom-control custom-checkbox pb-0 pd-t-13">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label" for="customCheck2">
+                                </label>
+                              </div>
+                            </th>
+                            <td  class="tx-gray"><input type="text" class="form-control bg-gray" placeholder="Enter Product/Service"></td>
+                              <td  class="tx-gray" style="width: 300px;"><input type="text" class="form-control bg-gray" placeholder="Enter description"></td>
+                              <td  class="tx-gray"><input type="text" class="form-control bg-gray" placeholder="Enter quantity"></td>
+                              <td  class="tx-gray"><input type="text" class="form-control bg-gray" placeholder="Enter Rate"></td>
+                              <td  class="tx-gray"><input type="text" class="form-control bg-gray" placeholder="Enter Amount in Naira"></td>
+                        </tr>
+                      </tbody>
+              
+                    </table>
+                  </div>
+                </div>
+                
+                <div class="">
+                  <div class="row justify-content-between mg-t-10">
+                    <div class="col-lg-2 col-md-3 col-12 mt-2">
+                        <button class="btn bg-bluish tx-primary w-100 tx-left"><i class="fa fa-plus-circle mr-3"></i> Add More</button>
+                      </div>
+                    <div class="col-lg-4 col-12 mt-2">
+                      <div class="card shadow-sm bd-0">
+                        <div class="card-body pd-y-10">
+                        <div class="d-flex justify-content-between">
+                          <p class="text-uppercase mb-0 font-weight-bold">
+                            Total
+                          </p>
+                          <p class="mb-0 tx-right">
+                            N25,000.00
+                          </p>
+                        </div>
+                        </div>
+                      </div>
+  
+                    </div>
+                  </div>
+                </div>
+                 <div class="d-flex mg-t-40">
+                   <div>
+                    <a href="./purchase-order.html" class="btn btn-primary pd-x-50 mg-t-30 mr-3" type="button">Create</a>
+                   </div>
+                   <div>
+                    <a href="./preview-receipt.html" class="btn bg-gray pd-x-50 mg-t-30" type="button">Create & Send</a>
+                   </div>
+                 </div>
+               
+            </form>
+          </div>
+      </div>
+
+       <!-- Modal -->
+       <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header pd-md-x-30 bd-b-0">
+              <h5 class="modal-title" id="successModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body pd-md-30 tx-center">
+              <img src="../assets/img/Success.svg" class="img-fluid" alt="" srcset="">
+              <p class="tx-24">Success!</p>
+              <p class="tx-16">Subscription has been activated!</p>
+              <a href="./customers.html" class="btn btn-primary w-50 mg-t-10 mg-b-30">View Subscriber</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+   
+
+      
+    </div><!-- container -->
+      
+  
+  
+    </div>
+    </div>
+
+    <script src="../assets/lib/jquery/jquery.min.js"></script>
+    <script src="../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/feather-icons/feather.min.js"></script>
+    <script src="../assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="../assets/lib/prismjs/prism.js"></script>
+    <script src="../assets/lib/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-dt/js/dataTables.dataTables.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../assets/lib/datatables.net-responsive-dt/js/responsive.dataTables.min.js"></script>
+    <script src="../assets/lib/typeahead.js/typeahead.jquery.min.js"></script>
+    <script src="../assets/lib/typeahead.js/typeahead.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="../assets/lib/chart.js/Chart1.min.js"></script>
+    <script src="../assets/lib/chart.js/utils.js"></script>
+
+    <script src="../assets/js/dashforge.js"></script>
+    <script src="../assets/js/dashforge.aside.js"></script>
+    <script src="../assets/js/dashforge.sampledata.js"></script>
+    <!-- for multiselect dropdown  -->
+    <!-- <script type="text/javascript" src="../assets/js/bootstrap-multiselect.js"></script> -->
+
+
+  <script>
+    function goBack() {
+  window.history.back();
+  };
+  function addMoreInfo(){
+    console.log('click')
+    // let x = document.getElementById("userAccess");
+    // x.style.display = "block"
+    let x = document.getElementById("more-info");
+    let y = document.getElementById("add-btn");
+
+      x.style.display = "block";
+      y.style.display = "none";
+
+  }
+
+  </script>
+ 
+  </body>
+</html>
