@@ -438,8 +438,8 @@ table{
 .modal.right .modal-dialog {
   position: fixed;
   margin: auto;
-  width: 390px;
-  top: 60px;
+  width: 590px;
+  /* top: 60px; */
   height: 90%;
   -webkit-transform: translate3d(0%, 0, 0);
   -ms-transform: translate3d(0%, 0, 0);
@@ -461,8 +461,8 @@ table{
   -o-transition: opacity 0.3s linear, right 0.3s ease-out;
    transition: opacity 0.3s linear, right 0.3s ease-out;
 }
-.modal-pink{
-  background-color: #FFF1D5!important;
+.modal-gray{
+  background-color: #FBFCFD!important;
 }
 .categorize{
   display: none;
@@ -758,6 +758,9 @@ table{
 .bg-blue-3{
   background-color: #06185C;
 }
+.bg-main-black{
+  background-color: #000;
+}
 .bg-black-1{
   background-color: #030E36;
 }
@@ -787,3 +790,6 @@ table{
 /* .sub-input:checked ~ .sub-input::before{
   background-color: #00C644;
 } */
+.bg-sky-blue{
+  background-color: #CCE3FF41;
+}
