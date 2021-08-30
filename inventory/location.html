@@ -253,7 +253,7 @@
                         <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
                       </span>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">View</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewModal">View</a>
                         <a class="dropdown-item" href="#">Edit</a>
                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="" >Delete</a>
                       </div>
@@ -282,7 +282,7 @@
                         <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
                       </span>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">View</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewModal">View</a>
                         <a class="dropdown-item" href="#">Edit</a>
                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="" >Delete</a>
                       </div>
@@ -311,7 +311,7 @@
                         <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
                       </span>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">View</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewModal">View</a>
                         <a class="dropdown-item" href="#">Edit</a>
                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="" >Delete</a>
                       </div>
@@ -340,7 +340,7 @@
                         <i class="fa fa-ellipsis-h tx-primary" aria-hidden="true"></i>
                       </span>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">View</a>
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewModal">View</a>
                         <a class="dropdown-item" href="#">Edit</a>
                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="" >Delete</a>
                       </div>
@@ -423,6 +423,57 @@
     </div>
   </div>
  
+  <!--View  Modal -->
+ <div class="modal fade" id="viewModal" tabindex="-1" role="dialog" aria-labelledby="viewInvoiceLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document" style="width: 650px;">
+    <div class="modal-content">
+      <div class="modal-header pd-md-x-30 pd-y-40 bd-b-0 bg-yellow">
+        <h5 class="modal-title" id="createModalLabel"></h5>
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <div class="modal-body pd-md-x-30">
+       <div class="tx-center neg-top">
+         <img src="../assets/img/staff.png" alt="" class="ht-75 wd-75" srcset="">
+         <div class="d-flex align-items-center justify-content-center">
+          <span class="active-dot mg-r-3"></span>
+         <label for="" class="tx-active d-block tx-12">  Active</label>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-md-3 col-2">
+           <label for="" class="tx-gray tx-12 mb-1">Location Name</label>
+           <p class=" tx-bold tx-center">Lekki</p>
+         </div>
+         <div class="col-md-5 tx-center col-5 ">
+          <label for="" class="tx-gray tx-12 mb-1">State</label>
+          <p class=" tx-bold tx-center">Lagos</p>
+        </div>
+        <div class="col-md-4 tx-center col-4 pd-r-0 pd-r-md-15">
+          <label for="" class="tx-gray tx-12 mb-1">Date Created</label>
+          <p class=" tx-bold">21st July, 2021</p>
+        </div>
+       </div>
+       
+       <div class="card card-body rounded-15 pd-15 mg-t-20">
+         <p class="tx-bold mb-0">Phone Number:<span class="tx-normal">+234 813 285 3417</span></p>
+       </div>
+       <div class="card card-body rounded-15 pd-15 mg-t-20">
+        <p class="tx-bold mb-0">Address</p>
+        <hr class="mg-y-5">
+          <div class="pd-t-10">
+           <i class="fa fa-map-marker tx-gray mg-r-5"></i> <span>2B, Dove close, Ekwa estate, Victoria Island, <br> Lagos, Nigeria</span>
+         </div>
+      </div>
+      </div>
+      <div class="modal-footer bd-t-0 pd-md-x-30 pd-md-b-30">
+        <button class="btn btn-primary pd-x-70" data-dismiss="modal">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
  
        
     </div><!-- container -->
