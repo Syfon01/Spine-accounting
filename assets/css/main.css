@@ -793,3 +793,8 @@ table{
 .bg-sky-blue{
   background-color: #CCE3FF41;
 }
+.modal-pink{
+  background-color:#FFF1D5;
+  border: 0;
+}
+/* .white-tooltip + .tooltip.top > .tooltip-inner {background-color: #fff!important;} */

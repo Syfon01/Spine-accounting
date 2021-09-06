@@ -142,35 +142,83 @@
       <div class="content-body">
       <div class="container">
         <button class="btn btn-outline-dark" onclick="goBack()"><i class="fa fa-arrow-left mg-r-5"></i> Go back</button>
-      <p class="tx-24 tx-bold mg-b-0 mg-t-20">Import Subscribers</p>
-      <p>You can upload your Subscribers in excel or CSV format</p>
-      <div class="card card-body modal-pink tx-center pd-y-30 mg-t-20">
-        <p class="tx-20 tx-bold">Upload & manage your subscribers</p>
-        <p>No documents</p>
+      <p class="tx-24 tx-bold mg-b-0 mg-t-20">Imported Subscribers</p>
 
-        <form action="">
-          <div class="form-group">
-            <div class="col-md-4 mx-auto">
-              <div class="form-drop">
-                <div class="drop-zone-form pd-40">
-                  <div class="cell"> 
-                    <div class="drop-zone__prompt">
-                      <img src="../assets/img/upload.svg" alt="" srcset="">
-                      <p class="p-14 mg-t-20 text-gray-700">Drop your files here or</p>
-                      <button class="btn btn-primary mg-t-30 pd-x-30" type="button">Browse disk</button>
-                    </div>
-                    <input type="file" name="myFile" class="drop-zone__input">
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-          </div>
-        </form>
-       
+      <div class="card card-body pd-0 bd-0 shadow-sm mg-t-40">
+        <div class="table-responsive">
+          <table class="table  table-hover mb-0" id="employee">
+                
+            <thead class="thead-bg">
+              <tr class="">
+                <th scope="col">Name</th>
+                <th scope="col" class="">Email Address</th>
+                <th scope="col" class="">Phone Number</th>
+                <th scope="col" class="">Business Name</th>
+                <th scope="col" class="">Business type</th>
+                <th scope="col" class="">Sector you operate in</th>
+                <!-- <th></th> -->
+              </tr>
+            </thead>
+    
+            <tbody>
+              <tr class=''>
+                <td>
+                  Kolawaole Abdul 
+                </td>
+                <td class="">Sherif@gmail.com</td>
+                <td class="">08089257362</td>
+                <td class="">Spine</td>
+                <td>Sole Proprietorship</td>
+                <td>Finance</td>
+                
+              </tr>
+              <tr class=''>
+                <td>
+                  Kolawaole Abdul 
+                </td>
+                <td class="">Sherif@gmail.com</td>
+                <td class="">08089257362</td>
+                <td class="">Spine</td>
+                <td>Partnership</td>
+                <td>Tele Communication</td>
+              </tr>
+              <tr class=''>
+                <td>
+                  Kolawaole Abdul 
+                </td>
+                <td class="">Sherif@gmail.com</td>
+                <td class="">08089257362</td>
+                <td class="">Spine</td>
+                <td>Partnership</td>
+                <td>Real Estate</td>
+              </tr>
+              <tr class=''>
+                <td>
+                  Kolawaole Abdul 
+                </td>
+                <td class="">Sherif@gmail.com</td>
+                <td class="">08089257362</td>
+                <td class="">Basic</td>
+                <td>Sole Proprietorship</td>
+                <td>Finance</td>
+                
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <div class="card-footer mg-t-20 pd-x-0">
-        <a href="./index.html" class="btn btn-primary float-md-right pd-x-30">Continue</a>
+      <nav aria-label="Page navigation example" class="mg-t-50">
+        <ul class="pagination justify-content-end bd-0">
+          <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+  
+      <div class="card-footer mg-t-20 pd-x-0 bd-t-0">
+        <a href="./plan.html" class="btn btn-primary float-md-righ pd-x-30">Continue</a>
       </div>
     </div><!-- container -->
       
@@ -202,78 +250,7 @@
     <!-- <script type="text/javascript" src="../assets/js/bootstrap-multiselect.js"></script> -->
  
 <script>
-      document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
-          const dropZoneElement = inputElement.closest(".drop-zone-form");
-
-          dropZoneElement.addEventListener("click", (e) => {
-            inputElement.click();
-          });
-
-          inputElement.addEventListener("change", (e) => {
-            if (inputElement.files.length) {
-              updateThumbnail(dropZoneElement, inputElement.files[0]);
-            }
-          });
-
-          dropZoneElement.addEventListener("dragover", (e) => {
-            e.preventDefault();
-            dropZoneElement.classList.add("drop-zone--over");
-          });
-
-          ["dragleave", "dragend"].forEach((type) => {
-            dropZoneElement.addEventListener(type, (e) => {
-              dropZoneElement.classList.remove("drop-zone--over");
-            });
-          });
-
-          dropZoneElement.addEventListener("drop", (e) => {
-            e.preventDefault();
-
-            if (e.dataTransfer.files.length) {
-              inputElement.files = e.dataTransfer.files;
-              updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
-            }
-
-            dropZoneElement.classList.remove("drop-zone--over");
-          });
-        });
-
-        /**
-         * Updates the thumbnail on a drop zone element.
-         *
-         * @param {HTMLElement} dropZoneElement
-         * @param {File} file
-         */
-        function updateThumbnail(dropZoneElement, file) {
-          let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
-
-          // First time - remove the prompt
-          if (dropZoneElement.querySelector(".drop-zone__prompt")) {
-            dropZoneElement.querySelector(".drop-zone__prompt").remove();
-          }
-
-          // First time - there is no thumbnail element, so lets create it
-          if (!thumbnailElement) {
-            thumbnailElement = document.createElement("div");
-            thumbnailElement.classList.add("drop-zone__thumb");
-            dropZoneElement.appendChild(thumbnailElement);
-          }
-
-          thumbnailElement.dataset.label = file.name;
-
-          // Show thumbnail for image files
-          if (file.type.startsWith("image/")) {
-            const reader = new FileReader();
-
-            reader.readAsDataURL(file);
-            reader.onload = () => {
-              thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
-            };
-          } else {
-            thumbnailElement.style.backgroundImage = null;
-          }
-        }
-    function goBack() {
+       function goBack() {
   window.history.back();
 };
   </script>
